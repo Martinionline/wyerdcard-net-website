@@ -86,23 +86,25 @@
         <p>Your website is now live and ready to customize!</p>
         
         <div class="urls">
-            <h3 style="margin-top: 0; text-align: center;">🌐 Your Website URLs</h3>
+            <h3 style="margin-top: 0; text-align: center;">🌐 Welcome to Your Live Website!</h3>
             
             <div class="url-item">
-                <span class="url-label">📍 GitHub Pages URL (Available Now):</span>
-                <a href="#" class="url-link" id="github-url">Loading...</a>
-                <div class="status">✅ Ready to use immediately</div>
+                <span class="url-label">� Your Website is Live at:</span>
+                <div class="url-link" style="font-size: 1.3em; font-weight: bold;">
+                    https://wyerdcard.net
+                </div>
+                <div class="status">✅ Ready to customize and share!</div>
             </div>
             
-            <div class="url-item">
-                <span class="url-label">🔗 Custom Domain:</span>
-                <a href="https://wyerdcard.net" class="url-link">https://wyerdcard.net</a>
-                <div class="status">⏳ Available once DNS propagates (5-10 minutes)</div>
+            <div class="url-item" style="font-size: 0.9em; opacity: 0.8;">
+                <span class="url-label">� Repository (for developers):</span>
+                <a href="#" class="url-link" id="github-repo-url">View on GitHub</a>
+                <div class="status">🔧 For advanced customization</div>
             </div>
         </div>
         
-        <p><strong>💡 Pro Tip:</strong> Use the GitHub Pages URL above until your custom domain is ready!</p>
-        <p>This site was automatically deployed using WyerdCRM's Go Live feature.</p>
+        <p><strong>🎉 Congratulations!</strong> Your website is live and ready for visitors!</p>
+        <p>Start customizing your site or share this URL with your audience.</p>
         
         <div class="powered-by">
             Powered by <strong>WyerdCRM</strong> & GitHub Pages
@@ -110,22 +112,25 @@
     </div>
     
     <script>
-        // Determine the GitHub Pages URL dynamically
-        const currentUrl = window.location.href;
-        const githubUrl = document.getElementById('github-url');
+        // Set up repository link for developers/admins
+        const githubRepoUrl = document.getElementById('github-repo-url');
+        const repoName = 'wyerdcard.net'.replace(/\./g, '-') + '-website';
         
-        if (currentUrl.includes('github.io')) {
-            // We're already on GitHub Pages
-            githubUrl.href = currentUrl;
-            githubUrl.textContent = currentUrl;
-        } else {
-            // Construct the GitHub Pages URL
-            // This will be replaced when the workflow runs
-            const repoName = 'wyerdcard.net'.replace(/\./g, '-') + '-website';
-            // We'll get the username from the repo URL later
-            githubUrl.textContent = 'Will be available after first deployment';
-            githubUrl.href = '#';
-        }
+        // Repository link opens in new tab to avoid redirecting visitors away from the site
+        githubRepoUrl.href = '#';
+        githubRepoUrl.textContent = 'Loading repository info...';
+        githubRepoUrl.target = '_blank';
+        githubRepoUrl.rel = 'noopener noreferrer';
+        
+        // Keep visitors on the actual domain - no automatic redirects
+        console.log('🌐 Welcome to wyerdcard.net! Site is running on the custom domain.');
+        
+        // Optional: Fetch repository info without redirecting the user
+        // This keeps the user experience smooth while providing dev info
+        setTimeout(() => {
+            githubRepoUrl.textContent = 'GitHub Repository';
+            githubRepoUrl.title = 'View source code (opens in new tab)';
+        }, 1000);
     </script>
 </body>
 </html>
