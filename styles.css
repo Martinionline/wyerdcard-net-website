@@ -9,6 +9,52 @@ body {
     padding: 0;
     color: #333;
     background-color: #fff;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+}
+
+/* Positioning Base */
+.division {
+    position: relative;
+    width: 100%;
+}
+
+.segment {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Feature Containers */
+.text-feature, .heading-feature, .button-feature, .image-feature, .feature {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-feature > *, .heading-feature > * {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.button-feature button {
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button-feature button:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
+}
+
+.image-feature img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Navigation */
