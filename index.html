@@ -3,34 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - wyerdcard.net</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>wyerdcard.net - Welcome</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             margin: 0;
-            padding: 0;
-            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+        h1 { 
+            font-size: 3em; 
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #fff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p { font-size: 1.2em; margin-bottom: 20px; opacity: 0.9; }
+        .urls {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .url-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+        .url-label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .url-link {
+            color: #fff;
+            text-decoration: underline;
+            opacity: 0.9;
+            word-break: break-all;
+        }
+        .status {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+        .rocket {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+        .powered-by {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-    
-    <nav class="main-navigation">
-        <div class="nav-container">
-            <a href="index.html" class="nav-item active">Home</a><a href="about.html" class="nav-item ">About</a><a href="services.html" class="nav-item ">Services</a><a href="contact.html" class="nav-item ">Contact</a>
+    <div class="container">
+        <div class="rocket">🚀</div>
+        <h1>Welcome to wyerdcard.net!</h1>
+        <p>Your website is now live and ready to customize!</p>
+        
+        <div class="urls">
+            <h3 style="margin-top: 0; text-align: center;">🌐 Welcome to Your Live Website!</h3>
+            
+            <div class="url-item">
+                <span class="url-label">� Your Website is Live at:</span>
+                <div class="url-link" style="font-size: 1.3em; font-weight: bold;">
+                    https://wyerdcard.net
+                </div>
+                <div class="status">✅ Ready to customize and share!</div>
+            </div>
+            
+            <div class="url-item" style="font-size: 0.9em; opacity: 0.8;">
+                <span class="url-label">� Repository (for developers):</span>
+                <a href="#" class="url-link" id="github-repo-url">View on GitHub</a>
+                <div class="status">🔧 For advanced customization</div>
+            </div>
         </div>
-    </nav>
-    <main>
-        <section class="page-section section-0"></section>
-    </main>
+        
+        <p><strong>🎉 Congratulations!</strong> Your website is live and ready for visitors!</p>
+        <p>Start customizing your site or share this URL with your audience.</p>
+        
+        <div class="powered-by">
+            Powered by <strong>WyerdCRM</strong> & GitHub Pages
+        </div>
+    </div>
+    
     <script>
-        // Basic interactivity
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - Home page loaded');
-        });
+        // Set up repository link for developers/admins
+        const githubRepoUrl = document.getElementById('github-repo-url');
+        const repoName = 'wyerdcard.net'.replace(/\./g, '-') + '-website';
+        
+        // Repository link opens in new tab to avoid redirecting visitors away from the site
+        githubRepoUrl.href = '#';
+        githubRepoUrl.textContent = 'Loading repository info...';
+        githubRepoUrl.target = '_blank';
+        githubRepoUrl.rel = 'noopener noreferrer';
+        
+        // Keep visitors on the actual domain - no automatic redirects
+        console.log('🌐 Welcome to wyerdcard.net! Site is running on the custom domain.');
+        
+        // Optional: Fetch repository info without redirecting the user
+        // This keeps the user experience smooth while providing dev info
+        setTimeout(() => {
+            githubRepoUrl.textContent = 'GitHub Repository';
+            githubRepoUrl.title = 'View source code (opens in new tab)';
+        }, 1000);
     </script>
 </body>
 </html>
