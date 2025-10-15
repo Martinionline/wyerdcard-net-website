@@ -1,0 +1,132 @@
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Navigation */
+.main-navigation {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.nav-item:hover, .nav-item.active {
+    background: #f3f4f6;
+    color: #2563eb;
+}
+
+/* Layout */
+.page-section {
+    padding: 2rem 0;
+}
+
+.division {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.segment {
+    margin: 1rem 0;
+}
+
+/* Features */
+.text-feature h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: #1f2937;
+}
+
+.text-feature h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    color: #374151;
+}
+
+.text-feature p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0 0 1rem 0;
+    color: #4b5563;
+}
+
+.button-feature {
+    margin: 1rem 0;
+}
+
+.custom-button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.custom-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.image-feature img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.empty-page {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .division {
+        padding: 0.5rem;
+    }
+    
+    .text-feature h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Custom Division Styles */
+
