@@ -170,14 +170,3 @@ body {
 
 /* Custom Division Styles */
 
-
-/* Button Hover Styles */
-
-.custom-button-btn-8qj0wzs4b:hover {
-    background-color: #3667c9; color: #ffffff; border-radius: 0px; font-size: 14px; font-weight: 500; text-align: center; padding: 8px 16px; font-family: Anton; border-style: dashed; border-width: 3px; letter-spacing: 3.4px; align-offset-x: -62; border-gap: 3px; icon-color: #ca1c1c;
-}
-
-.custom-button-btn-8qj0wzs4b:hover .button-icon {
-    color: #ca1c1c !important;
-}
-
