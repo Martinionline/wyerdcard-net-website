@@ -27,7 +27,7 @@ body {
 }
 
 /* Feature Containers */
-.text-feature, .heading-feature, .image-feature, .feature {
+.text-feature, .heading-feature, .button-feature, .image-feature, .feature {
     width: 100%;
     height: 100%;
     display: flex;
@@ -39,6 +39,17 @@ body {
     margin: 0;
     text-align: center;
     width: 100%;
+}
+
+.button-feature button {
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button-feature button:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
 }
 
 .image-feature img {
@@ -115,29 +126,24 @@ body {
 }
 
 .button-feature {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 1rem 0;
 }
 
 .custom-button {
-    /* Default styles - will be overridden by inline styles */
     background: #2563eb;
     color: white;
     border: none;
+    padding: 0.75rem 1.5rem;
     border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    /* Let the button size itself based on inline styles */
+    transition: all 0.2s;
 }
 
 .custom-button:hover {
+    background: #1d4ed8;
     transform: translateY(-1px);
-    filter: brightness(1.1);
 }
 
 .image-feature img {
@@ -169,11 +175,4 @@ body {
 }
 
 /* Custom Division Styles */
-
-
-/* Custom Button Hover Styles */
-
-.button-0:hover {
-    background-color: #3667c9; color: #ffffff; border-radius: 0px; font-size: 14px; font-weight: 500; text-align: center; padding: 8px 16px; font-family: Anton; border-style: dashed; border-width: 3px; letter-spacing: 3.4px; align-offset-x: -62; border-gap: 3px; icon-color: #ca1c1c;
-}
 
