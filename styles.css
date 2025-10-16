@@ -13,6 +13,37 @@ body {
     font-weight: 400;
 }
 
+/* Button Reset Styles */
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.custom-button {
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font: inherit !important;
+    cursor: pointer !important;
+    outline: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
 /* Positioning Base */
 .division {
     position: relative;
@@ -27,7 +58,7 @@ body {
 }
 
 /* Feature Containers */
-.text-feature, .heading-feature, .button-feature, .image-feature, .feature {
+.text-feature, .heading-feature, .image-feature, .feature {
     width: 100%;
     height: 100%;
     display: flex;
@@ -39,17 +70,6 @@ body {
     margin: 0;
     text-align: center;
     width: 100%;
-}
-
-.button-feature button {
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.button-feature button:hover {
-    opacity: 0.8;
-    transform: translateY(-1px);
 }
 
 .image-feature img {
@@ -126,24 +146,29 @@ body {
 }
 
 .button-feature {
-    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .custom-button {
+    /* Default styles - will be overridden by inline styles */
     background: #2563eb;
     color: white;
     border: none;
-    padding: 0.75rem 1.5rem;
     border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Let the button size itself based on inline styles */
 }
 
 .custom-button:hover {
-    background: #1d4ed8;
     transform: translateY(-1px);
+    filter: brightness(1.1);
 }
 
 .image-feature img {
