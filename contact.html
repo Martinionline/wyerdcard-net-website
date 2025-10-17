@@ -18,9 +18,92 @@
 </head>
 <body>
     
-    <nav class="main-navigation">
-        <div class="nav-container">
-            <a href="index.html" class="nav-item ">Home</a><a href="about.html" class="nav-item ">About</a><a href="services.html" class="nav-item ">Services</a><a href="contact.html" class="nav-item active">Contact</a>
+    <nav class="main-navigation" style="background-color: #ffffff; border-color: #e5e7eb; border-radius: 6px; border-style: solid; border-width: 1px; padding: 12px 16px; font-family: inherit; font-size: 14px; font-weight: 500; box-shadow: none; display: flex; align-items: center; justify-content: flex-start;">
+        <div class="nav-container" style="display: flex; align-items: center; width: 100%;">
+            
+      <div class="nav-title" 
+           style="
+             color: #1f2937;
+             font-family: inherit;
+             font-size: 20px;
+             font-weight: bold;
+             margin-right: 16px;
+             display: inline-block;
+             transition: color 0.2s ease;
+           "
+           onmouseover="this.style.color='#1d4ed8'"
+           onmouseout="this.style.color='#1f2937'"
+      >
+        My Website
+      </div>
+    
+            <div class="nav-items" style="display: flex; align-items: center;">
+                <a href="index.html" 
+                 class="nav-item "
+                 style="
+                   text-decoration: none;
+                   color: #374151;
+                   padding: 8px 12px;
+                   border-radius: 6px;
+                   transition: all 0.2s ease;
+                   display: inline-block;
+                   margin-right: 16px;
+                   font-family: inherit;
+                   font-size: 14px;
+                   font-weight: 500;
+                 "
+                 onmouseover="if (!this.classList.contains('active')) this.style.backgroundColor='#f3f4f6'"
+                 onmouseout="if (!this.classList.contains('active')) this.style.backgroundColor='transparent'"
+              >Home</a><a href="about.html" 
+                 class="nav-item "
+                 style="
+                   text-decoration: none;
+                   color: #374151;
+                   padding: 8px 12px;
+                   border-radius: 6px;
+                   transition: all 0.2s ease;
+                   display: inline-block;
+                   margin-right: 16px;
+                   font-family: inherit;
+                   font-size: 14px;
+                   font-weight: 500;
+                 "
+                 onmouseover="if (!this.classList.contains('active')) this.style.backgroundColor='#f3f4f6'"
+                 onmouseout="if (!this.classList.contains('active')) this.style.backgroundColor='transparent'"
+              >About</a><a href="services.html" 
+                 class="nav-item "
+                 style="
+                   text-decoration: none;
+                   color: #374151;
+                   padding: 8px 12px;
+                   border-radius: 6px;
+                   transition: all 0.2s ease;
+                   display: inline-block;
+                   margin-right: 16px;
+                   font-family: inherit;
+                   font-size: 14px;
+                   font-weight: 500;
+                 "
+                 onmouseover="if (!this.classList.contains('active')) this.style.backgroundColor='#f3f4f6'"
+                 onmouseout="if (!this.classList.contains('active')) this.style.backgroundColor='transparent'"
+              >Services</a><a href="contact.html" 
+                 class="nav-item active"
+                 style="
+                   text-decoration: none;
+                   background-color: #3b82f6; color: white;
+                   padding: 8px 12px;
+                   border-radius: 6px;
+                   transition: all 0.2s ease;
+                   display: inline-block;
+                   margin-right: 16px;
+                   font-family: inherit;
+                   font-size: 14px;
+                   font-weight: 500;
+                 "
+                 onmouseover="if (!this.classList.contains('active')) this.style.backgroundColor='#f3f4f6'"
+                 onmouseout="if (!this.classList.contains('active')) this.style.backgroundColor='transparent'"
+              >Contact</a>
+            </div>
         </div>
     </nav>
     <main>
