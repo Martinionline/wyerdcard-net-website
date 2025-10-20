@@ -114,9 +114,7 @@ button:focus {
 }
 
 .division {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+    /* Width, margin, and padding are handled inline based on division settings */
 }
 
 .segment {
