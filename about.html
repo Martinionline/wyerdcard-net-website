@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
+    <meta name="build-timestamp" content="1760922505740">
+    <meta name="build-version" content="1">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1760922505740">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -78,23 +80,6 @@
           <span>About</span>
         </button>
         <button class="transition-all duration-200 flex items-center gap-2 hover:shadow-sm" 
-                onclick="window.location.href='services.html'"
-                style="
-                  padding: 8px 12px;
-                  font-size: 16px;
-                  font-weight: 500;
-                  border-radius: 6px;
-                  background-color: transparent; color: #fafafa;
-                  border: none;
-                  cursor: pointer;
-                  transition: all 0.2s ease;
-                "
-                onmouseover="if (!false) { this.style.backgroundColor='#f3f4f6'; this.style.boxShadow='0 1px 2px rgba(0,0,0,0.05)'; }"
-                onmouseout="if (!false) { this.style.backgroundColor='transparent'; this.style.boxShadow='none'; }"
-        >
-          <span>Services</span>
-        </button>
-        <button class="transition-all duration-200 flex items-center gap-2 hover:shadow-sm" 
                 onclick="window.location.href='contact.html'"
                 style="
                   padding: 8px 12px;
@@ -110,6 +95,23 @@
                 onmouseout="if (!false) { this.style.backgroundColor='transparent'; this.style.boxShadow='none'; }"
         >
           <span>Contact</span>
+        </button>
+        <button class="transition-all duration-200 flex items-center gap-2 hover:shadow-sm" 
+                onclick="window.location.href='services.html'"
+                style="
+                  padding: 8px 12px;
+                  font-size: 16px;
+                  font-weight: 500;
+                  border-radius: 6px;
+                  background-color: transparent; color: #fafafa;
+                  border: none;
+                  cursor: pointer;
+                  transition: all 0.2s ease;
+                "
+                onmouseover="if (!false) { this.style.backgroundColor='#f3f4f6'; this.style.boxShadow='0 1px 2px rgba(0,0,0,0.05)'; }"
+                onmouseout="if (!false) { this.style.backgroundColor='transparent'; this.style.boxShadow='none'; }"
+        >
+          <span>Services</span>
         </button>
         <button class="transition-all duration-200 flex items-center gap-2 hover:shadow-sm" 
                 onclick="window.location.href='support.html'"
@@ -135,12 +137,69 @@
       </div>
     </nav>
     <main>
-        <section class="page-section section-0" style="height: 99px;"><div class="division division-0" id="division-1759206897595" style="position: relative; height: 99px;"><div class="segment segment-0" id="nav-segment-1759206897750" style="position: absolute;transform: translate(-50%, -50%);"></div></div></section>
+        <section class="page-section section-0" style="height: 99px;"><div class="division division-0" id="division-1759206897595" style="position: relative; height: 99px;"><div class="segment segment-0" id="nav-segment-1759206897750" style="position: absolute;left: 46.365607267170276%;top: 54.848487931068505%;transform: translate(-50%, -50%);width: 1292px;height: 105px;"></div></div></section>
     </main>
     <script>
-        // Basic interactivity
+        // Cache busting and auto-refresh mechanism
+        const CURRENT_BUILD_TIMESTAMP = 1760922505740;
+        const CURRENT_BUILD_VERSION = 1;
+        
+        // Check for updates every 30 seconds when page is visible
+        let updateCheckInterval;
+        
+        function checkForUpdates() {
+            // Only check for updates if the page is visible to avoid unnecessary requests
+            if (document.visibilityState === 'visible') {
+                fetch(window.location.href, { 
+                    method: 'HEAD',
+                    cache: 'no-cache'
+                })
+                .then(response => {
+                    // Get build timestamp from response headers or try a different approach
+                    return fetch('/?checkVersion=' + Date.now(), { cache: 'no-cache' });
+                })
+                .then(response => response.text())
+                .then(html => {
+                    // Extract build timestamp from the fetched HTML
+                    const timestampMatch = html.match(/name="build-timestamp" content="(d+)"/);
+                    const versionMatch = html.match(/name="build-version" content="(d+)"/);
+                    
+                    if (timestampMatch) {
+                        const serverTimestamp = parseInt(timestampMatch[1]);
+                        const serverVersion = versionMatch ? parseInt(versionMatch[1]) : 1;
+                        
+                        // If server has newer content, reload the page
+                        if (serverTimestamp > CURRENT_BUILD_TIMESTAMP || serverVersion > CURRENT_BUILD_VERSION) {
+                            console.log('🔄 New website version detected, refreshing page...');
+                            window.location.reload(true);
+                        }
+                    }
+                })
+                .catch(error => {
+                    // Silently handle errors to avoid console spam
+                    console.log('Update check failed:', error);
+                });
+            }
+        }
+        
+        // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded');
+            console.log('wyerdcard.net - About page loaded (build: 1760922505740)');
+            
+            // Check for updates immediately and then every 30 seconds
+            checkForUpdates();
+            updateCheckInterval = setInterval(checkForUpdates, 30000);
+            
+            // Stop checking when page becomes hidden to save resources
+            document.addEventListener('visibilitychange', function() {
+                if (document.visibilityState === 'hidden') {
+                    clearInterval(updateCheckInterval);
+                } else {
+                    // Resume checking when page becomes visible again
+                    updateCheckInterval = setInterval(checkForUpdates, 30000);
+                    checkForUpdates(); // Check immediately
+                }
+            });
         });
     </script>
 </body>
