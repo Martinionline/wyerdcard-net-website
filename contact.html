@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761059391220">
-    <meta name="build-version" content="141">
+    <meta name="build-timestamp" content="1761059889717">
+    <meta name="build-version" content="145">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761059391220">
+    <link rel="stylesheet" href="styles.css?v=1761059889717">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -130,6 +130,23 @@
         >
           <span>Support</span>
         </button>
+        <button class="transition-all duration-200 flex items-center gap-2 hover:shadow-sm" 
+                onclick="window.location.href='job.html'"
+                style="
+                  padding: 8px 12px;
+                  font-size: 16px;
+                  font-weight: 500;
+                  border-radius: 6px;
+                  background-color: transparent; color: #fafafa;
+                  border: none;
+                  cursor: pointer;
+                  transition: all 0.2s ease;
+                "
+                onmouseover="if (!false) { this.style.backgroundColor='#f3f4f6'; this.style.boxShadow='0 1px 2px rgba(0,0,0,0.05)'; }"
+                onmouseout="if (!false) { this.style.backgroundColor='transparent'; this.style.boxShadow='none'; }"
+        >
+          <span>Job</span>
+        </button>
               </div>
             </div>
           </div>
@@ -141,8 +158,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761059391220;
-        const CURRENT_BUILD_VERSION = 141;
+        const CURRENT_BUILD_TIMESTAMP = 1761059889717;
+        const CURRENT_BUILD_VERSION = 145;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -184,7 +201,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - Contact page loaded (build: 1761059391220)');
+            console.log('wyerdcard.net - Contact page loaded (build: 1761059889717)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
