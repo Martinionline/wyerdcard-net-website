@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761096721498">
-    <meta name="build-version" content="346">
+    <meta name="build-timestamp" content="1761097904036">
+    <meta name="build-version" content="357">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761096721498">
+    <link rel="stylesheet" href="styles.css?v=1761097904036">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -25,25 +25,27 @@
       <div class="navigation-container h-full flex flex-col justify-center transition-opacity duration-200" 
            style="background-color: #4d0d8c; border: 1px solid #e5e7eb; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; font-family: Courier New; padding: 12px 16px; font-size: 16px; font-weight: 500; color: #374151; height: 144px; min-height: 144px">
         
-          <div class="flex items-center w-full h-full justify-center">
-            <div class="flex items-center" style="gap: 24px;">
+            <div class="flex items-center w-full h-full justify-between">
               
       <div class="flex items-center mr-4">
-        <div class="font-bold cursor-pointer transition-colors duration-200" 
-             style="
-               color: #1f2937;
-               font-family: inherit;
-               font-size: 20px;
-               font-weight: bold;
-             "
-             onmouseover="this.style.color='#1d4ed8'"
-             onmouseout="this.style.color='#1f2937'"
-        >
-          My Website
-        </div>
+        
+          <div class="font-bold cursor-pointer transition-colors duration-200" 
+               style="
+                 color: #1f2937;
+                 font-family: inherit;
+                 font-size: 29px;
+                 font-weight: bold;
+                 transform: translate(45px, 0px);
+               "
+               onmouseover="this.style.color='#1d4ed8'"
+               onmouseout="this.style.color='#1f2937'"
+          >
+            My Website
+          </div>
+        
       </div>
     
-              <div class="flex items-center" style="gap: 16px;">
+              <div class="flex items-center  flex  flex-1 justify-center" style="gap: 16px;">
                 
         <button class="transition-all duration-200 flex items-center gap-2 hover:shadow-sm" 
                 onclick="window.location.href='index.html'"
@@ -149,8 +151,7 @@
         </button>
               </div>
             </div>
-          </div>
-        
+          
       </div>
     </nav>
     <main>
@@ -158,8 +159,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761096721498;
-        const CURRENT_BUILD_VERSION = 346;
+        const CURRENT_BUILD_TIMESTAMP = 1761097904036;
+        const CURRENT_BUILD_VERSION = 357;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -201,7 +202,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1761096721498)');
+            console.log('wyerdcard.net - About page loaded (build: 1761097904036)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
