@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761194670415">
-    <meta name="build-version" content="571">
+    <meta name="build-timestamp" content="1761195331305">
+    <meta name="build-version" content="576">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761194670415">
+    <link rel="stylesheet" href="styles.css?v=1761195331305">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -189,9 +189,9 @@
         "><form class="contact-form" style="width: 100%;"><div class="form-group"><label style="
         display: block;
         margin-bottom: 4px;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 500;
-        color: #000000;
+        color: #374151;
         font-family: Arial;
       ">Name</label>
           <input
@@ -212,13 +212,13 @@
           /></div><div class="form-group"><label style="
         display: block;
         margin-bottom: 4px;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 500;
-        color: #000000;
+        color: #374151;
         font-family: Arial;
       ">Email</label>
           <input
-            type="text"
+            type="email"
             name="email"
             placeholder="Enter your email"
             style="
@@ -235,9 +235,9 @@
           /></div><div class="form-group"><label style="
         display: block;
         margin-bottom: 4px;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 500;
-        color: #000000;
+        color: #374151;
         font-family: Arial;
       ">Message</label>
           <textarea
@@ -254,7 +254,30 @@
         box-sizing: border-box;
        resize: vertical; min-height: 60px;"
             
-          ></textarea></div>
+          ></textarea></div><div class="form-group"><label style="
+        display: block;
+        margin-bottom: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #374151;
+        font-family: Arial;
+      ">New Field</label>
+          <input
+            type="rating"
+            name="new field"
+            placeholder="Enter your new field"
+            style="
+        width: 100%;
+        border: 1px solid #d1d5db;
+        border-radius: 4px;
+        font-family: Arial;
+        font-size: 14px;
+        padding: 8px 12px;
+        margin-bottom: 12px;
+        box-sizing: border-box;
+      "
+            
+          /></div>
         <button type="submit" style="
       background-color: #3b82f6;
       color: white;
@@ -281,8 +304,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761194670415;
-        const CURRENT_BUILD_VERSION = 571;
+        const CURRENT_BUILD_TIMESTAMP = 1761195331305;
+        const CURRENT_BUILD_VERSION = 576;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -324,7 +347,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1761194670415)');
+            console.log('wyerdcard.net - About page loaded (build: 1761195331305)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
