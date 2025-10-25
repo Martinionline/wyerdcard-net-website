@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761420382236">
-    <meta name="build-version" content="789">
+    <meta name="build-timestamp" content="1761420794093">
+    <meta name="build-version" content="791">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761420382236">
+    <link rel="stylesheet" href="styles.css?v=1761420794093">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -394,6 +394,8 @@
           column-gap: 4px;
           height: 100%;
           width: 100%;
+          overflow: hidden;
+          position: relative;
         ">
           <div class="gallery-item" style="
             break-inside: avoid;
@@ -404,6 +406,8 @@
             border: 1px solid #e5e7eb;
             height: 60px;
             display: block;
+            width: 100%;
+            box-sizing: border-box;
           ">
             <img 
               src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
@@ -424,6 +428,8 @@
             border: 1px solid #e5e7eb;
             height: 80px;
             display: block;
+            width: 100%;
+            box-sizing: border-box;
           ">
             <img 
               src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
@@ -444,6 +450,8 @@
             border: 1px solid #e5e7eb;
             height: 60px;
             display: block;
+            width: 100%;
+            box-sizing: border-box;
           ">
             <img 
               src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
@@ -464,6 +472,8 @@
             border: 1px solid #e5e7eb;
             height: 80px;
             display: block;
+            width: 100%;
+            box-sizing: border-box;
           ">
             <img 
               src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
@@ -982,8 +992,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761420382236;
-        const CURRENT_BUILD_VERSION = 789;
+        const CURRENT_BUILD_TIMESTAMP = 1761420794093;
+        const CURRENT_BUILD_VERSION = 791;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -1025,7 +1035,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1761420382236)');
+            console.log('wyerdcard.net - About page loaded (build: 1761420794093)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
