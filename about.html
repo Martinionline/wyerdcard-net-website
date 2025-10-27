@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761593683769">
-    <meta name="build-version" content="900">
+    <meta name="build-timestamp" content="1761594303376">
+    <meta name="build-version" content="902">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761593683769">
+    <link rel="stylesheet" href="styles.css?v=1761594303376">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -418,6 +418,9 @@
                 height: 100%;
                 object-fit: cover;
                 transition: all 500ms ease;
+                image-rendering: -webkit-optimize-contrast;
+                backface-visibility: hidden;
+                transform: translateZ(0);
               "
               
               loading="lazy"
@@ -451,6 +454,9 @@
                 height: 100%;
                 object-fit: cover;
                 transition: all 500ms ease;
+                image-rendering: -webkit-optimize-contrast;
+                backface-visibility: hidden;
+                transform: translateZ(0);
               "
               
               loading="lazy"
@@ -484,6 +490,9 @@
                 height: 100%;
                 object-fit: cover;
                 transition: all 500ms ease;
+                image-rendering: -webkit-optimize-contrast;
+                backface-visibility: hidden;
+                transform: translateZ(0);
               "
               
               loading="lazy"
@@ -517,6 +526,9 @@
                 height: 100%;
                 object-fit: cover;
                 transition: all 500ms ease;
+                image-rendering: -webkit-optimize-contrast;
+                backface-visibility: hidden;
+                transform: translateZ(0);
               "
               
               loading="lazy"
@@ -550,6 +562,9 @@
                 height: 100%;
                 object-fit: cover;
                 transition: all 500ms ease;
+                image-rendering: -webkit-optimize-contrast;
+                backface-visibility: hidden;
+                transform: translateZ(0);
               "
               
               loading="lazy"
@@ -583,6 +598,9 @@
                 height: 100%;
                 object-fit: cover;
                 transition: all 500ms ease;
+                image-rendering: -webkit-optimize-contrast;
+                backface-visibility: hidden;
+                transform: translateZ(0);
               "
               
               loading="lazy"
@@ -764,40 +782,111 @@
         </div>
         
         <script>
-          let currentSlide_gallery_1761176574357 = 0;
-          const totalSlides_gallery_1761176574357 = 6;
-          
-          function moveSlide(sliderId, direction) {
-            const varName = 'currentSlide_' + sliderId.replace(/-/g, '_');
-            const totalVarName = 'totalSlides_' + sliderId.replace(/-/g, '_');
-            const currentSlide = window[varName];
-            const totalSlides = window[totalVarName];
+          (function() {
+            let currentSlide_gallery_1761176574357 = 0;
+            const totalSlides_gallery_1761176574357 = 6;
+            const sliderId = 'gallery-1761176574357';
             
-            window[varName] = (currentSlide + direction + totalSlides) % totalSlides;
-            updateSlider(sliderId);
-          }
-          
-          function goToSlide(sliderId, slideIndex) {
-            const varName = 'currentSlide_' + sliderId.replace(/-/g, '_');
-            window[varName] = slideIndex;
-            updateSlider(sliderId);
-          }
-          
-          function updateSlider(sliderId) {
-            const varName = 'currentSlide_' + sliderId.replace(/-/g, '_');
-            const currentSlide = window[varName];
-            const slider = document.getElementById('slider-' + sliderId);
-            const dots = document.querySelectorAll('.slider-dot');
+            // Add global functions to window object for button onclick handlers
+            window.moveSlide = function(id, direction) {
+              if (id !== sliderId) return;
+              const varName = 'currentSlide_' + id.replace(/-/g, '_');
+              const totalVarName = 'totalSlides_' + id.replace(/-/g, '_');
+              const currentSlide = window[varName] || 0;
+              const totalSlides = window[totalVarName] || 6;
+              
+              window[varName] = (currentSlide + direction + totalSlides) % totalSlides;
+              updateSlider(id);
+            };
             
-            if (slider) {
-              slider.style.transform = 'translateX(-' + (currentSlide * 16.666666666666668) + '%)';
+            window.goToSlide = function(id, slideIndex) {
+              if (id !== sliderId) return;
+              const varName = 'currentSlide_' + id.replace(/-/g, '_');
+              window[varName] = slideIndex;
+              updateSlider(id);
+            };
+            
+            function updateSlider(id) {
+              const varName = 'currentSlide_' + id.replace(/-/g, '_');
+              const currentSlide = window[varName] || 0;
+              const slider = document.getElementById('slider-' + id);
+              const dotsContainer = slider ? slider.parentElement.querySelector('.slider-dots') : null;
+              const dots = dotsContainer ? dotsContainer.querySelectorAll('.slider-dot') : [];
+              
+              if (slider) {
+                const translateX = currentSlide * (100 / 6);
+                slider.style.transform = 'translateX(-' + translateX + '%)';
+                slider.style.transition = 'transform 0.3s ease-in-out';
+              }
+              
+              // Update dots - only for this specific slider
+              dots.forEach((dot, index) => {
+                dot.style.background = index === currentSlide ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.5)';
+              });
             }
             
-            // Update dots
-            dots.forEach((dot, index) => {
-              dot.style.background = index === currentSlide ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.5)';
+            // Auto-play functionality
+            
+            let autoplayInterval_gallery_1761176574357;
+            const startAutoplay = () => {
+              autoplayInterval_gallery_1761176574357 = setInterval(() => {
+                window.moveSlide('gallery-1761176574357', 1);
+              }, 3000);
+            };
+            
+            const stopAutoplay = () => {
+              if (autoplayInterval_gallery_1761176574357) {
+                clearInterval(autoplayInterval_gallery_1761176574357);
+              }
+            };
+            
+            // Start autoplay
+            startAutoplay();
+            
+            // Pause on hover if enabled
+            
+            const sliderContainer = document.getElementById('slider-gallery-1761176574357').parentElement;
+            sliderContainer.addEventListener('mouseenter', stopAutoplay);
+            sliderContainer.addEventListener('mouseleave', startAutoplay);
+            
+            
+            
+            // Keyboard navigation
+            
+            document.addEventListener('keydown', (e) => {
+              if (e.key === 'ArrowLeft') {
+                window.moveSlide('gallery-1761176574357', -1);
+              } else if (e.key === 'ArrowRight') {
+                window.moveSlide('gallery-1761176574357', 1);
+              }
             });
-          }
+            
+            
+            // Touch/swipe support
+            
+            let touchStartX = 0;
+            let touchEndX = 0;
+            const sliderContainer = document.getElementById('slider-gallery-1761176574357').parentElement;
+            
+            sliderContainer.addEventListener('touchstart', (e) => {
+              touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            sliderContainer.addEventListener('touchend', (e) => {
+              touchEndX = e.changedTouches[0].screenX;
+              const swipeDistance = touchStartX - touchEndX;
+              const minSwipeDistance = 50;
+              
+              if (Math.abs(swipeDistance) > minSwipeDistance) {
+                if (swipeDistance > 0) {
+                  window.moveSlide('gallery-1761176574357', 1); // Swipe left - next slide
+                } else {
+                  window.moveSlide('gallery-1761176574357', -1); // Swipe right - previous slide
+                }
+              }
+            });
+            
+          })();
         </script></div></div></div><div class="division division-3" id="division-1761195977713" style="position: relative; width: 100%; box-sizing: border-box; height: 1261.7px !important; min-height: 1261.7px !important; max-height: 1261.7px !important; padding: 24px; "><div class="segment segment-0" id="1761244288032_0.08509369932979127" style="position: absolute; box-sizing: border-box; display: flex; align-items: stretch; justify-content: stretch;left: 29.787952111839516%;top: 47.63077487297024%;transform: translate(-50%, -50%);width: 620px;height: 1044.3px;">
       <div class="form-feature" style="
         width: 100%; 
@@ -1306,8 +1395,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761593683769;
-        const CURRENT_BUILD_VERSION = 900;
+        const CURRENT_BUILD_TIMESTAMP = 1761594303376;
+        const CURRENT_BUILD_VERSION = 902;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -1349,7 +1438,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1761593683769)');
+            console.log('wyerdcard.net - About page loaded (build: 1761594303376)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
