@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761592223679">
-    <meta name="build-version" content="887">
+    <meta name="build-timestamp" content="1761592425442">
+    <meta name="build-version" content="889">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761592223679">
+    <link rel="stylesheet" href="styles.css?v=1761592425442">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -392,10 +392,10 @@
         color: #000000;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
       ">
-        <div class="gallery-masonry" style="
+        <div class="gallery-mosaic" style="
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-auto-rows: minmax(120px, auto);
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(3, 1fr);
           gap: 16px;
           width: 100%;
           height: 100%;
@@ -407,7 +407,7 @@
             
             
             background-color: #f3f4f6;
-            grid-row: span 1;
+            grid-column: span 2; grid-row: span 2;
             transition: all 500ms ease;
           ">
             <img 
@@ -445,7 +445,7 @@
             
             
             background-color: #f3f4f6;
-            grid-row: span 2;
+            grid-column: span 2; grid-row: span 1;
             transition: all 500ms ease;
           ">
             <img 
@@ -483,7 +483,7 @@
             
             
             background-color: #f3f4f6;
-            grid-row: span 1;
+            grid-column: span 1; grid-row: span 1;
             transition: all 500ms ease;
           ">
             <img 
@@ -521,7 +521,7 @@
             
             
             background-color: #f3f4f6;
-            grid-row: span 3;
+            grid-column: span 1; grid-row: span 1;
             transition: all 500ms ease;
           ">
             <img 
@@ -559,7 +559,7 @@
             
             
             background-color: #f3f4f6;
-            grid-row: span 1;
+            grid-column: span 1; grid-row: span 1;
             transition: all 500ms ease;
           ">
             <img 
@@ -597,7 +597,7 @@
             
             
             background-color: #f3f4f6;
-            grid-row: span 2;
+            grid-column: span 1; grid-row: span 1;
             transition: all 500ms ease;
           ">
             <img 
@@ -1135,8 +1135,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761592223679;
-        const CURRENT_BUILD_VERSION = 887;
+        const CURRENT_BUILD_TIMESTAMP = 1761592425442;
+        const CURRENT_BUILD_VERSION = 889;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -1178,7 +1178,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1761592223679)');
+            console.log('wyerdcard.net - About page loaded (build: 1761592425442)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
