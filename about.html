@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761693412145">
-    <meta name="build-version" content="1080">
+    <meta name="build-timestamp" content="1761694841694">
+    <meta name="build-version" content="1093">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761693412145">
+    <link rel="stylesheet" href="styles.css?v=1761694841694">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -1070,27 +1070,49 @@
             
             // Touch/swipe support
             
-            let touchStartX = 0;
-            let touchEndX = 0;
-            const sliderContainer = document.getElementById('slider-gallery-1761176574357').parentElement;
-            
-            sliderContainer.addEventListener('touchstart', (e) => {
-              touchStartX = e.changedTouches[0].screenX;
-            });
-            
-            sliderContainer.addEventListener('touchend', (e) => {
-              touchEndX = e.changedTouches[0].screenX;
-              const swipeDistance = touchStartX - touchEndX;
-              const minSwipeDistance = 50;
+            function initTouchSupport() {
+              let touchStartX = 0;
+              let touchEndX = 0;
+              let swipeContainer = null;
               
-              if (Math.abs(swipeDistance) > minSwipeDistance) {
-                if (swipeDistance > 0) {
-                  window.moveSlide('gallery-1761176574357', 1); // Swipe left - next slide
-                } else {
-                  window.moveSlide('gallery-1761176574357', -1); // Swipe right - previous slide
-                }
+              // Find the appropriate container based on slider type
+              if (sliderType === 'thumbnail') {
+                swipeContainer = document.querySelector('.gallery-slider[data-slider-id="gallery-1761176574357"]');
+              } else {
+                const sliderElement = document.getElementById('slider-gallery-1761176574357');
+                swipeContainer = sliderElement ? sliderElement.parentElement : null;
               }
-            });
+              
+              if (!swipeContainer) {
+                console.log('⚠️ Swipe container not found for slider:', 'gallery-1761176574357');
+                return;
+              }
+              
+              swipeContainer.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+              });
+              
+              swipeContainer.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                const swipeDistance = touchStartX - touchEndX;
+                const minSwipeDistance = 50;
+                
+                if (Math.abs(swipeDistance) > minSwipeDistance) {
+                  if (swipeDistance > 0) {
+                    window.moveSlide('gallery-1761176574357', 1); // Swipe left - next slide
+                  } else {
+                    window.moveSlide('gallery-1761176574357', -1); // Swipe right - previous slide
+                  }
+                }
+              });
+            }
+            
+            // Initialize touch support after DOM is ready
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', initTouchSupport);
+            } else {
+              setTimeout(initTouchSupport, 100);
+            }
             
           })();
         </script></div></div></div><div class="division division-3" id="division-1761195977713" style="position: relative; width: 100%; box-sizing: border-box; height: 1261.7px !important; min-height: 1261.7px !important; max-height: 1261.7px !important; padding: 24px; ; display: block; clear: both; overflow: hidden;"><div class="segment segment-0" id="1761244288032_0.6091506744114428" style="position: absolute; box-sizing: border-box; display: flex; align-items: stretch; justify-content: stretch;left: 79.80621516942963%;top: 26.91054108544028%;transform: translate(-50%, -50%);width: 527px;height: 550.3px;">
@@ -1250,8 +1272,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761693412145;
-        const CURRENT_BUILD_VERSION = 1080;
+        const CURRENT_BUILD_TIMESTAMP = 1761694841694;
+        const CURRENT_BUILD_VERSION = 1093;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -1293,7 +1315,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1761693412145)');
+            console.log('wyerdcard.net - About page loaded (build: 1761694841694)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
