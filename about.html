@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761659767686">
-    <meta name="build-version" content="935">
+    <meta name="build-timestamp" content="1761660565043">
+    <meta name="build-version" content="943">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761659767686">
+    <link rel="stylesheet" href="styles.css?v=1761660565043">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -401,6 +401,9 @@
           height: 100%;
           overflow: hidden;
           border-radius: 8px;
+          background-color: #ffffff;
+          border: 4px dotted #e5e7eb;
+          box-shadow: 0px 10px 0px rgba(0,0,0,0.6);
         ">
           <div class="slider-container" style="
             display: flex;
@@ -626,6 +629,7 @@
           </div>
           </div>
           
+          
           <!-- Navigation arrows -->
           <button 
             class="slider-prev" 
@@ -635,21 +639,24 @@
               left: 16px;
               top: 50%;
               transform: translateY(-50%);
-              background: rgba(0,0,0,0.5);
+              background: #043481aa;
               color: white;
               border: none;
               border-radius: 50%;
-              width: 40px;
-              height: 40px;
-              font-size: 18px;
+              width: 44px;
+              height: 44px;
+              font-size: 20px;
               cursor: pointer;
               display: flex;
               align-items: center;
               justify-content: center;
-              z-index: 10;
+              z-index: 15;
+              font-weight: bold;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+              transition: all 200ms ease;
             "
-            onmouseover="this.style.background='rgba(0,0,0,0.7)'"
-            onmouseout="this.style.background='rgba(0,0,0,0.5)'"
+            onmouseover="this.style.background='#043481'; this.style.transform='translateY(-50%) scale(1.1)'"
+            onmouseout="this.style.background='#043481aa'; this.style.transform='translateY(-50%) scale(1)'"
           >
             ❮
           </button>
@@ -662,24 +669,29 @@
               right: 16px;
               top: 50%;
               transform: translateY(-50%);
-              background: rgba(0,0,0,0.5);
+              background: #043481aa;
               color: white;
               border: none;
               border-radius: 50%;
-              width: 40px;
-              height: 40px;
-              font-size: 18px;
+              width: 44px;
+              height: 44px;
+              font-size: 20px;
               cursor: pointer;
               display: flex;
               align-items: center;
               justify-content: center;
-              z-index: 10;
+              z-index: 15;
+              font-weight: bold;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+              transition: all 200ms ease;
             "
-            onmouseover="this.style.background='rgba(0,0,0,0.7)'"
-            onmouseout="this.style.background='rgba(0,0,0,0.5)'"
+            onmouseover="this.style.background='#043481'; this.style.transform='translateY(-50%) scale(1.1)'"
+            onmouseout="this.style.background='#043481aa'; this.style.transform='translateY(-50%) scale(1)'"
           >
             ❯
           </button>
+          
+          
           
           <!-- Dots indicator -->
           <div class="slider-dots" style="
@@ -688,144 +700,181 @@
             left: 50%;
             transform: translateX(-50%);
             display: flex;
-            gap: 8px;
-            z-index: 10;
+            gap: 10px;
+            z-index: 15;
+            background: rgba(0,0,0,0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
           ">
-          <button 
-            class="slider-dot" 
-            onclick="goToSlide('gallery-1761176574357', 0)"
-            style="
-              width: 12px;
-              height: 12px;
-              border-radius: 50%;
-              border: none;
-              background: rgba(255,255,255,0.9);
-              cursor: pointer;
-              transition: background 0.3s;
-            "
-            onmouseover="this.style.background='rgba(255,255,255,0.9)'"
-            onmouseout="this.style.background='rgba(255,255,255,0.9)'"
-          ></button>
-          <button 
-            class="slider-dot" 
-            onclick="goToSlide('gallery-1761176574357', 1)"
-            style="
-              width: 12px;
-              height: 12px;
-              border-radius: 50%;
-              border: none;
-              background: rgba(255,255,255,0.5);
-              cursor: pointer;
-              transition: background 0.3s;
-            "
-            onmouseover="this.style.background='rgba(255,255,255,0.9)'"
-            onmouseout="this.style.background='rgba(255,255,255,0.5)'"
-          ></button>
-          <button 
-            class="slider-dot" 
-            onclick="goToSlide('gallery-1761176574357', 2)"
-            style="
-              width: 12px;
-              height: 12px;
-              border-radius: 50%;
-              border: none;
-              background: rgba(255,255,255,0.5);
-              cursor: pointer;
-              transition: background 0.3s;
-            "
-            onmouseover="this.style.background='rgba(255,255,255,0.9)'"
-            onmouseout="this.style.background='rgba(255,255,255,0.5)'"
-          ></button>
-          <button 
-            class="slider-dot" 
-            onclick="goToSlide('gallery-1761176574357', 3)"
-            style="
-              width: 12px;
-              height: 12px;
-              border-radius: 50%;
-              border: none;
-              background: rgba(255,255,255,0.5);
-              cursor: pointer;
-              transition: background 0.3s;
-            "
-            onmouseover="this.style.background='rgba(255,255,255,0.9)'"
-            onmouseout="this.style.background='rgba(255,255,255,0.5)'"
-          ></button>
-          <button 
-            class="slider-dot" 
-            onclick="goToSlide('gallery-1761176574357', 4)"
-            style="
-              width: 12px;
-              height: 12px;
-              border-radius: 50%;
-              border: none;
-              background: rgba(255,255,255,0.5);
-              cursor: pointer;
-              transition: background 0.3s;
-            "
-            onmouseover="this.style.background='rgba(255,255,255,0.9)'"
-            onmouseout="this.style.background='rgba(255,255,255,0.5)'"
-          ></button>
-          <button 
-            class="slider-dot" 
-            onclick="goToSlide('gallery-1761176574357', 5)"
-            style="
-              width: 12px;
-              height: 12px;
-              border-radius: 50%;
-              border: none;
-              background: rgba(255,255,255,0.5);
-              cursor: pointer;
-              transition: background 0.3s;
-            "
-            onmouseover="this.style.background='rgba(255,255,255,0.9)'"
-            onmouseout="this.style.background='rgba(255,255,255,0.5)'"
-          ></button>
+            <button 
+              class="slider-dot" 
+              onclick="goToSlide('gallery-1761176574357', 0)"
+              style="
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                border: 2px solid white;
+                background: #043481;
+                cursor: pointer;
+                transition: all 300ms ease;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+              "
+              onmouseover="this.style.background='#043481'; this.style.transform='scale(1.2)'"
+              onmouseout="this.style.background='#043481'; this.style.transform='scale(1)'"
+            ></button>
+            <button 
+              class="slider-dot" 
+              onclick="goToSlide('gallery-1761176574357', 1)"
+              style="
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                border: 2px solid white;
+                background: rgba(255,255,255,0.4);
+                cursor: pointer;
+                transition: all 300ms ease;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+              "
+              onmouseover="this.style.background='#043481'; this.style.transform='scale(1.2)'"
+              onmouseout="this.style.background='rgba(255,255,255,0.4)'; this.style.transform='scale(1)'"
+            ></button>
+            <button 
+              class="slider-dot" 
+              onclick="goToSlide('gallery-1761176574357', 2)"
+              style="
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                border: 2px solid white;
+                background: rgba(255,255,255,0.4);
+                cursor: pointer;
+                transition: all 300ms ease;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+              "
+              onmouseover="this.style.background='#043481'; this.style.transform='scale(1.2)'"
+              onmouseout="this.style.background='rgba(255,255,255,0.4)'; this.style.transform='scale(1)'"
+            ></button>
+            <button 
+              class="slider-dot" 
+              onclick="goToSlide('gallery-1761176574357', 3)"
+              style="
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                border: 2px solid white;
+                background: rgba(255,255,255,0.4);
+                cursor: pointer;
+                transition: all 300ms ease;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+              "
+              onmouseover="this.style.background='#043481'; this.style.transform='scale(1.2)'"
+              onmouseout="this.style.background='rgba(255,255,255,0.4)'; this.style.transform='scale(1)'"
+            ></button>
+            <button 
+              class="slider-dot" 
+              onclick="goToSlide('gallery-1761176574357', 4)"
+              style="
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                border: 2px solid white;
+                background: rgba(255,255,255,0.4);
+                cursor: pointer;
+                transition: all 300ms ease;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+              "
+              onmouseover="this.style.background='#043481'; this.style.transform='scale(1.2)'"
+              onmouseout="this.style.background='rgba(255,255,255,0.4)'; this.style.transform='scale(1)'"
+            ></button>
+            <button 
+              class="slider-dot" 
+              onclick="goToSlide('gallery-1761176574357', 5)"
+              style="
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                border: 2px solid white;
+                background: rgba(255,255,255,0.4);
+                cursor: pointer;
+                transition: all 300ms ease;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+              "
+              onmouseover="this.style.background='#043481'; this.style.transform='scale(1.2)'"
+              onmouseout="this.style.background='rgba(255,255,255,0.4)'; this.style.transform='scale(1)'"
+            ></button>
           </div>
         </div>
         
         <script>
           (function() {
-            let currentSlide_gallery_1761176574357 = 0;
-            const totalSlides_gallery_1761176574357 = 6;
             const sliderId = 'gallery-1761176574357';
+            const slideCount = 6;
+            let currentSlide = 0;
             
-            // Add global functions to window object for button onclick handlers
-            window.moveSlide = function(id, direction) {
-              if (id !== sliderId) return;
-              const varName = 'currentSlide_' + id.replace(/-/g, '_');
-              const totalVarName = 'totalSlides_' + id.replace(/-/g, '_');
-              const currentSlide = window[varName] || 0;
-              const totalSlides = window[totalVarName] || 6;
+            // Initialize slider state storage if not exists
+            if (!window.sliderStates) window.sliderStates = {};
+            window.sliderStates[sliderId] = { currentSlide: 0, totalSlides: slideCount };
+            
+            // Enhanced global functions for better compatibility
+            if (!window.moveSlide) {
+              window.moveSlide = function(id, direction) {
+                const state = window.sliderStates[id];
+                if (!state) return;
+                
+                state.currentSlide = (state.currentSlide + direction + state.totalSlides) % state.totalSlides;
+                updateSliderById(id);
+              };
+            }
+            
+            if (!window.goToSlide) {
+              window.goToSlide = function(id, slideIndex) {
+                const state = window.sliderStates[id];
+                if (!state) return;
+                
+                state.currentSlide = slideIndex;
+                updateSliderById(id);
+              };
+            }
+            
+            function updateSliderById(id) {
+              const state = window.sliderStates[id];
+              if (!state) return;
               
-              window[varName] = (currentSlide + direction + totalSlides) % totalSlides;
-              updateSlider(id);
-            };
-            
-            window.goToSlide = function(id, slideIndex) {
-              if (id !== sliderId) return;
-              const varName = 'currentSlide_' + id.replace(/-/g, '_');
-              window[varName] = slideIndex;
-              updateSlider(id);
-            };
-            
-            function updateSlider(id) {
-              const varName = 'currentSlide_' + id.replace(/-/g, '_');
-              const currentSlide = window[varName] || 0;
-              const slider = document.getElementById('slider-' + id);
-              const dotsContainer = slider ? slider.parentElement.querySelector('.slider-dots') : null;
+              const sliderContainer = document.getElementById('slider-' + id);
+              const gallerySlider = sliderContainer ? sliderContainer.parentElement : null;
+              const dotsContainer = gallerySlider ? gallerySlider.querySelector('.slider-dots') : null;
               const dots = dotsContainer ? dotsContainer.querySelectorAll('.slider-dot') : [];
               
-              if (slider) {
-                const translateX = currentSlide * (100 / 6);
-                slider.style.transform = 'translateX(-' + translateX + '%)';
-                slider.style.transition = 'transform 0.3s ease-in-out';
+              if (sliderContainer) {
+                const translateX = state.currentSlide * (100 / state.totalSlides);
+                sliderContainer.style.transform = 'translateX(-' + translateX + '%)';
+                sliderContainer.style.transition = 'transform 500ms ease-in-out';
               }
               
-              // Update dots - only for this specific slider
+              // Update dots appearance
               dots.forEach((dot, index) => {
-                dot.style.background = index === currentSlide ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.5)';
+                dot.style.background = index === state.currentSlide ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.5)';
               });
+            }
+            
+            // Initialize slider when DOM is ready
+            function initSlider() {
+              const sliderContainer = document.getElementById('slider-' + sliderId);
+              if (sliderContainer) {
+                updateSliderById(sliderId);
+                console.log('✅ Slider initialized for ID:', sliderId);
+              } else {
+                // Retry initialization after a short delay
+                setTimeout(initSlider, 100);
+              }
+            }
+            
+            // Start initialization
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', initSlider);
+            } else {
+              initSlider();
             }
             
             // Auto-play functionality
@@ -1047,8 +1096,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761659767686;
-        const CURRENT_BUILD_VERSION = 935;
+        const CURRENT_BUILD_TIMESTAMP = 1761660565043;
+        const CURRENT_BUILD_VERSION = 943;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -1090,7 +1139,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1761659767686)');
+            console.log('wyerdcard.net - About page loaded (build: 1761660565043)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
