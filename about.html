@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761691794874">
-    <meta name="build-version" content="1064">
+    <meta name="build-timestamp" content="1761693412145">
+    <meta name="build-version" content="1080">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761691794874">
+    <link rel="stylesheet" href="styles.css?v=1761693412145">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -395,7 +395,7 @@
         contain: layout style;
         isolation: isolate;
       ">
-        <div class="gallery-slider" style="
+        <div class="gallery-slider" data-slider-id="gallery-1761176574357" style="
           position: relative;
           width: 100%;
           height: 100%;
@@ -874,20 +874,32 @@
             // Enhanced global functions for better compatibility
             if (!window.moveSlide) {
               window.moveSlide = function(id, direction) {
+                console.log('🎯 moveSlide called:', id, direction);
                 const state = window.sliderStates[id];
-                if (!state) return;
+                if (!state) {
+                  console.error('❌ No slider state found for ID:', id);
+                  return;
+                }
                 
+                const oldSlide = state.currentSlide;
                 state.currentSlide = (state.currentSlide + direction + state.totalSlides) % state.totalSlides;
+                console.log('📱 Slide changed from', oldSlide, 'to', state.currentSlide);
                 updateSliderById(id);
               };
             }
             
             if (!window.goToSlide) {
               window.goToSlide = function(id, slideIndex) {
+                console.log('🎯 goToSlide called:', id, slideIndex);
                 const state = window.sliderStates[id];
-                if (!state) return;
+                if (!state) {
+                  console.error('❌ No slider state found for ID:', id);
+                  return;
+                }
                 
+                const oldSlide = state.currentSlide;
                 state.currentSlide = slideIndex;
+                console.log('📱 Slide jumped from', oldSlide, 'to', state.currentSlide);
                 updateSliderById(id);
               };
             }
@@ -898,13 +910,30 @@
               
               console.log('📱 Updating slider to slide:', state.currentSlide, 'Type:', state.sliderType);
               
-              const sliderContainer = document.getElementById('slider-' + id);
-              const gallerySlider = sliderContainer ? sliderContainer.parentElement : null;
+              // For thumbnail sliders, we need to find the gallery-slider container directly
+              let sliderContainer, gallerySlider;
+              
+              if (state.sliderType === 'thumbnail') {
+                // For thumbnails, find the gallery-slider container
+                gallerySlider = document.querySelector('.gallery-slider[data-slider-id="' + id + '"]') || 
+                               document.querySelector('.gallery-slider');
+                sliderContainer = gallerySlider ? gallerySlider.querySelector('.thumbnail-main-area') : null;
+              } else {
+                // For other slider types, use the regular slider container
+                sliderContainer = document.getElementById('slider-' + id);
+                gallerySlider = sliderContainer ? sliderContainer.parentElement : null;
+              }
+              
               const dotsContainer = gallerySlider ? gallerySlider.querySelector('.slider-dots') : null;
               const dots = dotsContainer ? dotsContainer.querySelectorAll('.slider-dot') : [];
               
-              if (!sliderContainer) {
+              if (!sliderContainer && state.sliderType !== 'thumbnail') {
                 console.error('❌ Slider container not found:', 'slider-' + id);
+                return;
+              }
+              
+              if (!gallerySlider) {
+                console.error('❌ Gallery slider container not found for:', id);
                 return;
               }
               
@@ -912,15 +941,18 @@
               switch(state.sliderType || 'carousel') {
                 case 'thumbnail':
                   console.log('🖼️ Applying thumbnail slider effect');
-                  // Update main slides (instead of using sliderContainer, find parent gallery slider)
-                  const gallerySlider = document.querySelector('.gallery-slider');
+                  // Use the gallerySlider we already found
                   const thumbnailMainSlides = gallerySlider ? gallerySlider.querySelectorAll('.thumbnail-main-slide') : [];
                   const thumbnailBtns = gallerySlider ? gallerySlider.querySelectorAll('.thumbnail-btn') : [];
+                  
+                  console.log('🔍 Found main slides:', thumbnailMainSlides.length);
+                  console.log('🔍 Found thumbnail buttons:', thumbnailBtns.length);
                   
                   // Update main slides
                   thumbnailMainSlides.forEach((slide, index) => {
                     slide.style.opacity = index === state.currentSlide ? '1' : '0';
                     slide.style.transition = 'opacity 500ms ease-in-out';
+                    console.log('📱 Slide', index, 'opacity:', slide.style.opacity);
                   });
                   
                   // Update thumbnail buttons
@@ -937,7 +969,7 @@
                       btn.style.boxShadow = 'none';
                     }
                   });
-                  return; // Skip the default slider container logic
+                  break; // Continue to update dots
                 
                 case 'fade':
                   console.log('🔄 Applying fade effect');
@@ -969,11 +1001,24 @@
             
             // Initialize slider when DOM is ready
             function initSlider() {
-              const sliderContainer = document.getElementById('slider-' + sliderId);
-              if (sliderContainer) {
-                updateSliderById(sliderId);
-                console.log('✅ Slider initialized for ID:', sliderId);
+              let sliderExists = false;
+              
+              if (sliderType === 'thumbnail') {
+                // For thumbnail sliders, check for gallery-slider container
+                const gallerySlider = document.querySelector('.gallery-slider[data-slider-id="' + sliderId + '"]') ||
+                                     document.querySelector('.gallery-slider');
+                sliderExists = !!gallerySlider;
               } else {
+                // For other slider types, check for slider container
+                const sliderContainer = document.getElementById('slider-' + sliderId);
+                sliderExists = !!sliderContainer;
+              }
+              
+              if (sliderExists) {
+                updateSliderById(sliderId);
+                console.log('✅ Slider initialized for ID:', sliderId, 'Type:', sliderType);
+              } else {
+                console.log('⏳ Waiting for slider elements to load...');
                 // Retry initialization after a short delay
                 setTimeout(initSlider, 100);
               }
@@ -1205,8 +1250,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761691794874;
-        const CURRENT_BUILD_VERSION = 1064;
+        const CURRENT_BUILD_TIMESTAMP = 1761693412145;
+        const CURRENT_BUILD_VERSION = 1080;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -1248,7 +1293,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1761691794874)');
+            console.log('wyerdcard.net - About page loaded (build: 1761693412145)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
