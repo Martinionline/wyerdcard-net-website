@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761659110719">
-    <meta name="build-version" content="931">
+    <meta name="build-timestamp" content="1761659473158">
+    <meta name="build-version" content="933">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761659110719">
+    <link rel="stylesheet" href="styles.css?v=1761659473158">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -384,12 +384,12 @@
         background-color: #ffffff;
         border: 0px solid #e5e7eb;
         border-radius: 8px;
-        
-        padding: 0px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        padding: 16px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        color: #000000;
+        color: #ffffff;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
         overflow: hidden;
         contain: layout style;
@@ -425,7 +425,7 @@
                 backface-visibility: hidden;
                 transform: translateZ(0);
               "
-              
+              onmouseover="this.style.transform='scale(1.05) translateZ(0)'" onmouseout="this.style.transform='scale(1) translateZ(0)'"
               loading="lazy"
             />
             
@@ -461,7 +461,7 @@
                 backface-visibility: hidden;
                 transform: translateZ(0);
               "
-              
+              onmouseover="this.style.transform='scale(1.05) translateZ(0)'" onmouseout="this.style.transform='scale(1) translateZ(0)'"
               loading="lazy"
             />
             
@@ -497,7 +497,7 @@
                 backface-visibility: hidden;
                 transform: translateZ(0);
               "
-              
+              onmouseover="this.style.transform='scale(1.05) translateZ(0)'" onmouseout="this.style.transform='scale(1) translateZ(0)'"
               loading="lazy"
             />
             
@@ -533,7 +533,7 @@
                 backface-visibility: hidden;
                 transform: translateZ(0);
               "
-              
+              onmouseover="this.style.transform='scale(1.05) translateZ(0)'" onmouseout="this.style.transform='scale(1) translateZ(0)'"
               loading="lazy"
             />
             
@@ -569,7 +569,7 @@
                 backface-visibility: hidden;
                 transform: translateZ(0);
               "
-              
+              onmouseover="this.style.transform='scale(1.05) translateZ(0)'" onmouseout="this.style.transform='scale(1) translateZ(0)'"
               loading="lazy"
             />
             
@@ -605,7 +605,7 @@
                 backface-visibility: hidden;
                 transform: translateZ(0);
               "
-              
+              onmouseover="this.style.transform='scale(1.05) translateZ(0)'" onmouseout="this.style.transform='scale(1) translateZ(0)'"
               loading="lazy"
             />
             
@@ -1047,8 +1047,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761659110719;
-        const CURRENT_BUILD_VERSION = 931;
+        const CURRENT_BUILD_TIMESTAMP = 1761659473158;
+        const CURRENT_BUILD_VERSION = 933;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -1090,7 +1090,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1761659110719)');
+            console.log('wyerdcard.net - About page loaded (build: 1761659473158)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
