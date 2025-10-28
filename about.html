@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761669303976">
-    <meta name="build-version" content="946">
+    <meta name="build-timestamp" content="1761670368880">
+    <meta name="build-version" content="956">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761669303976">
+    <link rel="stylesheet" href="styles.css?v=1761670368880">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -409,6 +409,7 @@
             display: flex;
             width: 600%;
             height: 100%;
+            position: relative;
             transition: transform 500ms ease-in-out;
           " id="slider-gallery-1761176574357">
           <div class="slide slide-0 slide-thumbnail" style="
@@ -837,136 +838,167 @@
         </div>
         
         <script>
+          // Simple, reliable slider implementation
           (function() {
             const sliderId = 'gallery-1761176574357';
             const slideCount = 6;
+            const sliderType = 'thumbnail';
             let currentSlide = 0;
             
-            // Initialize slider state storage if not exists
-            if (!window.sliderStates) window.sliderStates = {};
-            window.sliderStates[sliderId] = { currentSlide: 0, totalSlides: slideCount };
+            console.log('🎬 Initializing slider:', sliderId, 'Type:', sliderType, 'Slides:', slideCount);
             
-            // Enhanced global functions for better compatibility
-            if (!window.moveSlide) {
-              window.moveSlide = function(id, direction) {
-                const state = window.sliderStates[id];
-                if (!state) return;
-                
-                state.currentSlide = (state.currentSlide + direction + state.totalSlides) % state.totalSlides;
-                updateSliderById(id);
-              };
-            }
-            
-            if (!window.goToSlide) {
-              window.goToSlide = function(id, slideIndex) {
-                const state = window.sliderStates[id];
-                if (!state) return;
-                
-                state.currentSlide = slideIndex;
-                updateSliderById(id);
-              };
-            }
-            
-            function updateSliderById(id) {
-              const state = window.sliderStates[id];
-              if (!state) return;
+            // Global functions - ensure they exist and work
+            window.moveSlide = function(id, direction) {
+              if (id !== sliderId) return;
+              console.log('🔄 Moving slide:', direction, 'Current:', currentSlide);
               
-              const sliderContainer = document.getElementById('slider-' + id);
+              currentSlide = (currentSlide + direction + slideCount) % slideCount;
+              updateSlider();
+            };
+            
+            window.goToSlide = function(id, slideIndex) {
+              if (id !== sliderId) return;
+              console.log('🎯 Going to slide:', slideIndex);
+              
+              currentSlide = slideIndex;
+              updateSlider();
+            };
+            
+            function updateSlider() {
+              console.log('📱 Updating slider to slide:', currentSlide, 'Type:', sliderType);
+              
+              const sliderContainer = document.getElementById('slider-' + sliderId);
               const gallerySlider = sliderContainer ? sliderContainer.parentElement : null;
               const dotsContainer = gallerySlider ? gallerySlider.querySelector('.slider-dots') : null;
               const dots = dotsContainer ? dotsContainer.querySelectorAll('.slider-dot') : [];
-              const sliderType = sliderContainer ? sliderContainer.dataset.sliderType : 'carousel';
               
-              if (sliderContainer) {
-                // Handle different slider types
-                switch(sliderType.toLowerCase()) {
-                  case 'fade':
-                    // Fade effect - show/hide slides with opacity
-                    const slides = sliderContainer.querySelectorAll('.slide');
-                    slides.forEach((slide, index) => {
-                      slide.style.opacity = index === state.currentSlide ? '1' : '0';
-                      slide.style.zIndex = index === state.currentSlide ? '2' : '1';
-                    });
-                    break;
-                    
-                  case 'cube':
-                    // 3D cube effect
-                    const cubeSlides = sliderContainer.querySelectorAll('.slide');
-                    cubeSlides.forEach((slide, index) => {
-                      const angle = (index - state.currentSlide) * 90;
-                      slide.style.transform = 'rotateY(' + angle + 'deg) translateZ(50%)';
-                    });
-                    break;
-                    
-                  case 'parallax':
-                    // Parallax effect with depth
-                    const parallaxTranslateX = state.currentSlide * (100 / state.totalSlides);
-                    sliderContainer.style.transform = 'translateX(-' + parallaxTranslateX + '%) translateZ(0)';
-                    sliderContainer.style.transition = 'transform 500ms ease-out';
-                    
-                    // Add parallax effect to individual images
-                    const parallaxSlides = sliderContainer.querySelectorAll('.slide img');
-                    parallaxSlides.forEach((img, index) => {
-                      const offset = (index - state.currentSlide) * 20;
-                      img.style.transform = 'translateX(' + offset + 'px) scale(1.05)';
-                    });
-                    break;
-                    
-                  case 'ken burns':
-                    // Ken Burns effect with pan and zoom
-                    const kenSlides = sliderContainer.querySelectorAll('.slide');
-                    kenSlides.forEach((slide, index) => {
-                      const img = slide.querySelector('img');
-                      if (img) {
-                        if (index === state.currentSlide) {
-                          img.style.transform = 'scale(1.15) translateX(' + (Math.random() * 10 - 5) + 'px) translateY(' + (Math.random() * 10 - 5) + 'px)';
-                          slide.style.opacity = '1';
-                        } else {
-                          img.style.transform = 'scale(1.1)';
-                          slide.style.opacity = '0';
-                        }
+              if (!sliderContainer) {
+                console.error('❌ Slider container not found:', 'slider-' + sliderId);
+                return;
+              }
+              
+              // Handle different slider types
+              switch(sliderType) {
+                case 'fade':
+                  console.log('🔄 Applying fade effect');
+                  const fadeSlides = sliderContainer.querySelectorAll('.slide');
+                  fadeSlides.forEach((slide, index) => {
+                    slide.style.opacity = index === currentSlide ? '1' : '0';
+                    slide.style.zIndex = index === currentSlide ? '2' : '1';
+                    slide.style.transition = 'opacity 500ms ease-in-out';
+                  });
+                  break;
+                  
+                case 'cube':
+                  console.log('🎲 Applying cube effect');
+                  const cubeSlides = sliderContainer.querySelectorAll('.slide');
+                  cubeSlides.forEach((slide, index) => {
+                    const angle = (index - currentSlide) * 90;
+                    slide.style.transform = 'rotateY(' + angle + 'deg) translateZ(150px)';
+                    slide.style.transition = 'transform 500ms cubic-bezier(0.15, 0.9, 0.25, 1)';
+                  });
+                  break;
+                  
+                case 'parallax':
+                  console.log('🌊 Applying parallax effect');
+                  const translateX = currentSlide * (100 / slideCount);
+                  sliderContainer.style.transform = 'translateX(-' + translateX + '%)';
+                  sliderContainer.style.transition = 'transform 500ms ease-out';
+                  
+                  const parallaxSlides = sliderContainer.querySelectorAll('.slide img');
+                  parallaxSlides.forEach((img, index) => {
+                    const offset = (index - currentSlide) * 30;
+                    img.style.transform = 'translateX(' + offset + 'px) scale(1.05)';
+                  });
+                  break;
+                  
+                case 'ken burns':
+                  console.log('🎬 Applying Ken Burns effect');
+                  const kenSlides = sliderContainer.querySelectorAll('.slide');
+                  kenSlides.forEach((slide, index) => {
+                    const img = slide.querySelector('img');
+                    if (img) {
+                      if (index === currentSlide) {
+                        const randomX = Math.random() * 20 - 10;
+                        const randomY = Math.random() * 20 - 10;
+                        img.style.transform = 'scale(1.2) translateX(' + randomX + 'px) translateY(' + randomY + 'px)';
+                        slide.style.opacity = '1';
+                        slide.style.zIndex = '2';
+                      } else {
+                        img.style.transform = 'scale(1.1)';
+                        slide.style.opacity = '0';
+                        slide.style.zIndex = '1';
                       }
-                    });
-                    break;
-                    
-                  case 'fullscreen':
-                    // Fullscreen mode
-                    const fullscreenSlides = sliderContainer.querySelectorAll('.slide');
-                    fullscreenSlides.forEach((slide, index) => {
-                      slide.style.display = index === state.currentSlide ? 'block' : 'none';
-                    });
-                    break;
-                    
-                  default: // carousel
-                    const translateX = state.currentSlide * (100 / state.totalSlides);
-                    sliderContainer.style.transform = 'translateX(-' + translateX + '%)';
-                    sliderContainer.style.transition = 'transform 500ms ease-in-out';
-                }
+                      slide.style.transition = 'opacity 500ms ease-in-out';
+                      img.style.transition = 'transform 1000ms ease-in-out';
+                    }
+                  });
+                  break;
+                  
+                case 'fullscreen':
+                  console.log('🖥️ Applying fullscreen effect');
+                  const fullscreenSlides = sliderContainer.querySelectorAll('.slide');
+                  fullscreenSlides.forEach((slide, index) => {
+                    slide.style.display = index === currentSlide ? 'block' : 'none';
+                  });
+                  break;
+                  
+                default: // carousel
+                  console.log('🎠 Applying carousel effect');
+                  const carouselTranslateX = currentSlide * (100 / slideCount);
+                  sliderContainer.style.transform = 'translateX(-' + carouselTranslateX + '%)';
+                  sliderContainer.style.transition = 'transform 500ms ease-in-out';
               }
               
               // Update dots appearance
               dots.forEach((dot, index) => {
-                dot.style.background = index === state.currentSlide ? '#043481' : 'rgba(255,255,255,0.4)';
+                if (dot) {
+                  dot.style.background = index === currentSlide ? '#043481' : 'rgba(255,255,255,0.4)';
+                  dot.style.transition = 'background 300ms ease';
+                }
               });
+              
+              console.log('✅ Slider updated successfully');
             }
             
             // Initialize slider when DOM is ready
             function initSlider() {
+              console.log('🚀 Initializing slider:', sliderId);
               const sliderContainer = document.getElementById('slider-' + sliderId);
+              
               if (sliderContainer) {
-                updateSliderById(sliderId);
-                console.log('✅ Slider initialized for ID:', sliderId);
+                console.log('✅ Slider container found, applying initial state');
+                updateSlider();
+                
+                // For fade and Ken Burns, set up initial state properly
+                if (sliderType === 'fade' || sliderType === 'ken burns') {
+                  const slides = sliderContainer.querySelectorAll('.slide');
+                  slides.forEach((slide, index) => {
+                    if (index === 0) {
+                      slide.style.opacity = '1';
+                      slide.style.position = 'relative';
+                      slide.style.zIndex = '2';
+                    } else {
+                      slide.style.opacity = '0';
+                      slide.style.position = 'absolute';
+                      slide.style.top = '0';
+                      slide.style.left = '0';
+                      slide.style.zIndex = '1';
+                    }
+                  });
+                }
+                
+                console.log('🎬 Slider initialized successfully for:', sliderId);
               } else {
-                // Retry initialization after a short delay
-                setTimeout(initSlider, 100);
+                console.warn('⚠️ Slider container not found, retrying...', 'slider-' + sliderId);
+                setTimeout(initSlider, 200);
               }
             }
             
-            // Start initialization
+            // Start initialization immediately and also on DOM ready
+            initSlider();
             if (document.readyState === 'loading') {
               document.addEventListener('DOMContentLoaded', initSlider);
-            } else {
-              initSlider();
             }
             
             // Auto-play functionality
@@ -1188,8 +1220,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761669303976;
-        const CURRENT_BUILD_VERSION = 946;
+        const CURRENT_BUILD_TIMESTAMP = 1761670368880;
+        const CURRENT_BUILD_VERSION = 956;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -1231,7 +1263,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1761669303976)');
+            console.log('wyerdcard.net - About page loaded (build: 1761670368880)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
