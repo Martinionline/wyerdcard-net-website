@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761671499384">
-    <meta name="build-version" content="966">
+    <meta name="build-timestamp" content="1761672903882">
+    <meta name="build-version" content="978">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761671499384">
+    <link rel="stylesheet" href="styles.css?v=1761672903882">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -18,6 +18,29 @@
             line-height: 1.6;
         }
     </style>
+    <script>
+        // Initialize global slider functions before any HTML is rendered
+        window.sliderFunctions = {};
+        
+        // Global slider navigation functions
+        window.moveSlide = function(id, direction) {
+            const func = window.sliderFunctions['moveSlide_' + id];
+            if (func) {
+                func(direction);
+            } else {
+                console.error('❌ No moveSlide function found for:', id);
+            }
+        };
+        
+        window.goToSlide = function(id, slideIndex) {
+            const func = window.sliderFunctions['goToSlide_' + id];
+            if (func) {
+                func(slideIndex);
+            } else {
+                console.error('❌ No goToSlide function found for:', id);
+            }
+        };
+    </script>
 </head>
 <body>
     
@@ -217,7 +240,7 @@
           </h3-reg>
         </div></div><div class="segment segment-2" id="segment-1760923778501-2" style="position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center;left: 82.92482705665907%;top: 50.61250305175782%;transform: translate(-50%, -50%);width: 364px;height: 132px;"><div class="button-feature" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; pointer-events: none;">
           <style>
-            #button-5i2cky5bk {
+            #button-ince0muvz {
               background-color: #6b7280 !important; color: #ffffff !important; border-radius: 0px !important; font-size: 14px !important; font-weight: 500 !important; text-align: center !important; padding: 8px 16px !important;
               width: 100% !important;
               height: 56px !important;
@@ -239,7 +262,7 @@
           </style>
           
             <style>
-              #button-5i2cky5bk:hover {
+              #button-ince0muvz:hover {
                 background-color: #818793 !important;
                 
                 transform: translateY(-1px) !important;
@@ -247,7 +270,7 @@
                 transition: all 0.2s ease !important;
                 outline: none !important;
               }
-              #button-5i2cky5bk:active {
+              #button-ince0muvz:active {
                 background-color: #6b7280 !important;
                 
                 transform: translateY(1px) !important;
@@ -255,28 +278,28 @@
                 transition: all 0.1s ease !important;
                 outline: none !important;
               }
-              #button-5i2cky5bk:active .button-5i2cky5bk-icon {
+              #button-ince0muvz:active .button-ince0muvz-icon {
                 color: #222 !important;
               }
-              #button-5i2cky5bk:active .button-5i2cky5bk-text {
+              #button-ince0muvz:active .button-ince0muvz-text {
                 
               }
-              #button-5i2cky5bk:focus {
+              #button-ince0muvz:focus {
                 outline: none !important;
                 box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5) !important;
               }
             </style>
           
-          <button id="button-5i2cky5bk" class="custom-button">
+          <button id="button-ince0muvz" class="custom-button">
             
-            <span class="button-5i2cky5bk-text" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) translate(0px, 0px); z-index: 3; white-space: nowrap;">Square Button</span>
+            <span class="button-ince0muvz-text" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) translate(0px, 0px); z-index: 3; white-space: nowrap;">Square Button</span>
           </button>
         </div></div></div>
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761671499384;
-        const CURRENT_BUILD_VERSION = 966;
+        const CURRENT_BUILD_TIMESTAMP = 1761672903882;
+        const CURRENT_BUILD_VERSION = 978;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -318,7 +341,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - Home page loaded (build: 1761671499384)');
+            console.log('wyerdcard.net - Home page loaded (build: 1761672903882)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();

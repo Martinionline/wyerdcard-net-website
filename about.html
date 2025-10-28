@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761671499467">
-    <meta name="build-version" content="966">
+    <meta name="build-timestamp" content="1761672903930">
+    <meta name="build-version" content="978">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761671499467">
+    <link rel="stylesheet" href="styles.css?v=1761672903930">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -18,6 +18,29 @@
             line-height: 1.6;
         }
     </style>
+    <script>
+        // Initialize global slider functions before any HTML is rendered
+        window.sliderFunctions = {};
+        
+        // Global slider navigation functions
+        window.moveSlide = function(id, direction) {
+            const func = window.sliderFunctions['moveSlide_' + id];
+            if (func) {
+                func(direction);
+            } else {
+                console.error('❌ No moveSlide function found for:', id);
+            }
+        };
+        
+        window.goToSlide = function(id, slideIndex) {
+            const func = window.sliderFunctions['goToSlide_' + id];
+            if (func) {
+                func(slideIndex);
+            } else {
+                console.error('❌ No goToSlide function found for:', id);
+            }
+        };
+    </script>
 </head>
 <body>
     
@@ -838,7 +861,7 @@
         </div>
         
         <script>
-          // Simple, reliable slider implementation
+          // Robust slider implementation with immediate execution
           (function() {
             const sliderId = 'gallery-1761176574357';
             const slideCount = 6;
@@ -847,19 +870,18 @@
             
             console.log('🎬 Initializing slider:', sliderId, 'Type:', sliderType, 'Slides:', slideCount);
             
-            // Global functions - ensure they exist and work
-            window.moveSlide = function(id, direction) {
-              if (id !== sliderId) return;
+            // Ensure global functions are available immediately
+            if (!window.sliderFunctions) window.sliderFunctions = {};
+            
+            // Store functions globally with unique IDs to avoid conflicts
+            window.sliderFunctions['moveSlide_' + sliderId] = function(direction) {
               console.log('🔄 Moving slide:', direction, 'Current:', currentSlide);
-              
               currentSlide = (currentSlide + direction + slideCount) % slideCount;
               updateSlider();
             };
             
-            window.goToSlide = function(id, slideIndex) {
-              if (id !== sliderId) return;
+            window.sliderFunctions['goToSlide_' + sliderId] = function(slideIndex) {
               console.log('🎯 Going to slide:', slideIndex);
-              
               currentSlide = slideIndex;
               updateSlider();
             };
@@ -961,19 +983,20 @@
               console.log('✅ Slider updated successfully');
             }
             
-            // Initialize slider when DOM is ready
+            // Robust initialization with multiple fallbacks
             function initSlider() {
               console.log('🚀 Initializing slider:', sliderId);
               const sliderContainer = document.getElementById('slider-' + sliderId);
               
               if (sliderContainer) {
                 console.log('✅ Slider container found, applying initial state');
-                updateSlider();
                 
-                // For fade and Ken Burns, set up initial state properly
+                // Set up initial state for fade and Ken Burns sliders
                 if (sliderType === 'fade' || sliderType === 'ken burns') {
                   const slides = sliderContainer.querySelectorAll('.slide');
+                  console.log('🎭 Setting up', sliderType, 'slides:', slides.length);
                   slides.forEach((slide, index) => {
+                    slide.style.transition = 'opacity 500ms ease-in-out';
                     if (index === 0) {
                       slide.style.opacity = '1';
                       slide.style.position = 'relative';
@@ -983,23 +1006,54 @@
                       slide.style.position = 'absolute';
                       slide.style.top = '0';
                       slide.style.left = '0';
+                      slide.style.width = '100%';
+                      slide.style.height = '100%';
                       slide.style.zIndex = '1';
                     }
                   });
+                } else {
+                  // For carousel and other types, apply initial transform
+                  updateSlider();
                 }
+                
+                // Test navigation immediately
+                setTimeout(() => {
+                  console.log('🧪 Testing slider navigation...');
+                  if (window.moveSlide) {
+                    console.log('✅ moveSlide function available');
+                  } else {
+                    console.error('❌ moveSlide function not available');
+                  }
+                }, 100);
                 
                 console.log('🎬 Slider initialized successfully for:', sliderId);
               } else {
                 console.warn('⚠️ Slider container not found, retrying...', 'slider-' + sliderId);
-                setTimeout(initSlider, 200);
+                setTimeout(initSlider, 100);
               }
             }
             
-            // Start initialization immediately and also on DOM ready
-            initSlider();
-            if (document.readyState === 'loading') {
-              document.addEventListener('DOMContentLoaded', initSlider);
+            // Multiple initialization approaches
+            try {
+              initSlider();
+            } catch (e) {
+              console.error('❌ Error in immediate init:', e);
             }
+            
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', () => {
+                console.log('📄 DOM Content Loaded - initializing slider');
+                initSlider();
+              });
+            } else if (document.readyState === 'interactive' || document.readyState === 'complete') {
+              console.log('📄 Document already ready - initializing slider');
+              setTimeout(initSlider, 50);
+            }
+            
+            window.addEventListener('load', () => {
+              console.log('🌍 Window loaded - final slider init');
+              setTimeout(initSlider, 100);
+            });
             
             // Auto-play functionality
             
@@ -1220,8 +1274,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761671499467;
-        const CURRENT_BUILD_VERSION = 966;
+        const CURRENT_BUILD_TIMESTAMP = 1761672903930;
+        const CURRENT_BUILD_VERSION = 978;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -1263,7 +1317,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1761671499467)');
+            console.log('wyerdcard.net - About page loaded (build: 1761672903930)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
