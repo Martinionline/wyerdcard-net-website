@@ -80,12 +80,12 @@ button:focus {
 /* Gallery Styles */
 .gallery-feature {
     display: block !important;
-    
+    contain: layout style;
 }
 
 .gallery-slider {
     position: relative !important;
-    overflow: visible !important;
+    overflow: hidden !important;
     user-select: none;
 }
 
@@ -151,7 +151,7 @@ button:focus {
 }
 
 .gallery-item {
-    overflow: visible !important;
+    overflow: hidden !important;
     position: relative !important;
 }
 
