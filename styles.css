@@ -85,7 +85,7 @@ button:focus {
 
 .gallery-slider {
     position: relative !important;
-    overflow: hidden !important;
+    overflow: visible !important;
     user-select: none;
 }
 
@@ -151,7 +151,7 @@ button:focus {
 }
 
 .gallery-item {
-    overflow: hidden !important;
+    overflow: visible !important;
     position: relative !important;
 }
 
