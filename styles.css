@@ -80,7 +80,7 @@ button:focus {
 /* Gallery Styles */
 .gallery-feature {
     display: block !important;
-    contain: layout style;
+    
 }
 
 .gallery-slider {
