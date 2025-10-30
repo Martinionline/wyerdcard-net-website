@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1761782172214">
-    <meta name="build-version" content="1233">
+    <meta name="build-timestamp" content="1761783009664">
+    <meta name="build-version" content="1241">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1761782172214">
+    <link rel="stylesheet" href="styles.css?v=1761783009664">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -170,7 +170,7 @@
         <footer class="blog-meta" style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #e5e7eb;">
           <div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #374151;">
             <span class="blog-author">By Author</span>
-            <span class="blog-date">10/29/2025</span>
+            <span class="blog-date">10/30/2025</span>
           </div>
         </footer>
       </article>
@@ -395,14 +395,10 @@
         contain: layout style;
         isolation: isolate;
       ">
-        <div class="gallery-masonry" style="
+        <div class="gallery-grid" style="
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(3, 1fr);
-          grid-template-areas: 
-            'large small1'
-            'large small2'  
-            'small3 small4';
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
           gap: 4px;
           width: 100%;
           height: 100%;
@@ -413,7 +409,7 @@
             overflow: hidden;
             border-radius: 8px;
             background-color: #f3f4f6;
-            grid-area: large;
+            height: 100%;
             transition: all 500ms ease;
           ">
             <img 
@@ -424,6 +420,7 @@
                 height: 100%;
                 object-fit: cover;
                 transition: all 500ms ease;
+                pointer-events: none;
               "
               onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
               loading="lazy"
@@ -449,7 +446,7 @@
             overflow: hidden;
             border-radius: 8px;
             background-color: #f3f4f6;
-            grid-area: small1;
+            height: 100%;
             transition: all 500ms ease;
           ">
             <img 
@@ -460,6 +457,7 @@
                 height: 100%;
                 object-fit: cover;
                 transition: all 500ms ease;
+                pointer-events: none;
               "
               onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
               loading="lazy"
@@ -485,7 +483,7 @@
             overflow: hidden;
             border-radius: 8px;
             background-color: #f3f4f6;
-            grid-area: small2;
+            height: 100%;
             transition: all 500ms ease;
           ">
             <img 
@@ -496,6 +494,7 @@
                 height: 100%;
                 object-fit: cover;
                 transition: all 500ms ease;
+                pointer-events: none;
               "
               onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
               loading="lazy"
@@ -521,7 +520,7 @@
             overflow: hidden;
             border-radius: 8px;
             background-color: #f3f4f6;
-            grid-area: small3;
+            height: 100%;
             transition: all 500ms ease;
           ">
             <img 
@@ -532,6 +531,7 @@
                 height: 100%;
                 object-fit: cover;
                 transition: all 500ms ease;
+                pointer-events: none;
               "
               onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
               loading="lazy"
@@ -549,6 +549,80 @@
                 backdrop-filter: none;
               ">
                 Nature Scene
+              </div>
+            
+          </div>
+          <div class="gallery-item" style="
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #f3f4f6;
+            height: 100%;
+            transition: all 500ms ease;
+          ">
+            <img 
+              src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+              alt="Sample Image 5"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 500ms ease;
+                pointer-events: none;
+              "
+              onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
+              loading="lazy"
+            />
+            
+              <div class="image-caption" style="
+                position: absolute;
+                bottom: 0;
+                left: 0; text-align: left;
+                background: linear-gradient(transparent, rgba(0,0,0,0.7));
+                color: white;
+                padding: 16px 12px 8px;
+                font-size: 14px;
+                font-weight: 500;
+                backdrop-filter: none;
+              ">
+                Sunset View
+              </div>
+            
+          </div>
+          <div class="gallery-item" style="
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #f3f4f6;
+            height: 100%;
+            transition: all 500ms ease;
+          ">
+            <img 
+              src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+              alt="Sample Image 6"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 500ms ease;
+                pointer-events: none;
+              "
+              onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
+              loading="lazy"
+            />
+            
+              <div class="image-caption" style="
+                position: absolute;
+                bottom: 0;
+                left: 0; text-align: left;
+                background: linear-gradient(transparent, rgba(0,0,0,0.7));
+                color: white;
+                padding: 16px 12px 8px;
+                font-size: 14px;
+                font-weight: 500;
+                backdrop-filter: none;
+              ">
+                Ocean Waves
               </div>
             
           </div></div></div></div></div><div class="division division-3" id="division-1761195977713" style="position: relative; width: 100%; box-sizing: border-box; height: 1261.7px !important; min-height: 1261.7px !important; max-height: 1261.7px !important; padding: 24px; ; display: block; clear: both; overflow: hidden;"><div class="segment segment-0" id="1761244288032_0.6091506744114428" style="position: absolute; box-sizing: border-box; display: flex; align-items: stretch; justify-content: stretch;left: 79.80621516942963%;top: 26.91054108544028%;transform: translate(-50%, -50%);width: 527px;height: 550.3px;">
@@ -708,8 +782,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1761782172214;
-        const CURRENT_BUILD_VERSION = 1233;
+        const CURRENT_BUILD_TIMESTAMP = 1761783009664;
+        const CURRENT_BUILD_VERSION = 1241;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -751,7 +825,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1761782172214)');
+            console.log('wyerdcard.net - About page loaded (build: 1761783009664)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
