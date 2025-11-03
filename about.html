@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1762204102736">
-    <meta name="build-version" content="1392">
+    <meta name="build-timestamp" content="1762204252893">
+    <meta name="build-version" content="1394">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1762204102736">
+    <link rel="stylesheet" href="styles.css?v=1762204252893">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -382,7 +382,7 @@
         width: 100%; 
         height: 100%; 
         background-color: transparent;
-        padding: 8px;
+        padding: 0px;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -392,864 +392,170 @@
         contain: layout style;
         isolation: isolate;
       ">
-        <div class="gallery-slider" data-slider-id="gallery-1761176574357" style="
-          position: relative;
+        <div class="gallery-masonry" style="
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          grid-template-areas: 
+            'large small1'
+            'large small2'  
+            'small3 small4';
+          gap: 4px;
           width: 100%;
           height: 100%;
+          min-height: 0;
           overflow: hidden;
-          border-radius: 8px;
-          background-color: #fafafa;
-          display: flex;
-          border: 4px solid #060c19;
+          
+      border: 4px solid #060c19;
+      border-radius: 8px;
+      box-shadow: -9px 4px 27px rgba(255, 0, 0, 1);
+      background-color: #fafafa;
+    
         ">
-          
-            <!-- Thumbnail Layout -->
-            <div class="thumbnail-main-area" style="
-              flex: 1;
-              position: relative;
-              overflow: hidden;
-            ">
-            <div class="thumbnail-main-slide" style="
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              opacity: 1;
-              transition: opacity 500ms ease-in-out;
-            ">
-              <img 
-                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                alt="Sample Image 1"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                "
-                loading="lazy"
-              />
-              
-                <div class="thumbnail-caption" style="
-                  position: absolute;
-                  bottom: 16px;
-                  left: 16px;
-                  background: #000000;
-                  color: white;
-                  padding: 8px 12px;
-                  border-radius: 6px;
-                  backdrop-filter: blur(4px);
-                  z-index: 10;
-                ">
-                  <h3 style="font-size: 18px; font-weight: bold; margin: 0;">Beautiful Landscape</h3>
-                </div>
-              
-            </div>
-            <div class="thumbnail-main-slide" style="
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              opacity: 0;
-              transition: opacity 500ms ease-in-out;
-            ">
-              <img 
-                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                alt="Sample Image 2"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                "
-                loading="lazy"
-              />
-              
-                <div class="thumbnail-caption" style="
-                  position: absolute;
-                  bottom: 16px;
-                  left: 16px;
-                  background: #000000;
-                  color: white;
-                  padding: 8px 12px;
-                  border-radius: 6px;
-                  backdrop-filter: blur(4px);
-                  z-index: 10;
-                ">
-                  <h3 style="font-size: 18px; font-weight: bold; margin: 0;">Forest Path</h3>
-                </div>
-              
-            </div>
-            <div class="thumbnail-main-slide" style="
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              opacity: 0;
-              transition: opacity 500ms ease-in-out;
-            ">
-              <img 
-                src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                alt="Sample Image 3"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                "
-                loading="lazy"
-              />
-              
-                <div class="thumbnail-caption" style="
-                  position: absolute;
-                  bottom: 16px;
-                  left: 16px;
-                  background: #000000;
-                  color: white;
-                  padding: 8px 12px;
-                  border-radius: 6px;
-                  backdrop-filter: blur(4px);
-                  z-index: 10;
-                ">
-                  <h3 style="font-size: 18px; font-weight: bold; margin: 0;">Mountain View</h3>
-                </div>
-              
-            </div>
-            <div class="thumbnail-main-slide" style="
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              opacity: 0;
-              transition: opacity 500ms ease-in-out;
-            ">
-              <img 
-                src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                alt="Sample Image 4"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                "
-                loading="lazy"
-              />
-              
-                <div class="thumbnail-caption" style="
-                  position: absolute;
-                  bottom: 16px;
-                  left: 16px;
-                  background: #000000;
-                  color: white;
-                  padding: 8px 12px;
-                  border-radius: 6px;
-                  backdrop-filter: blur(4px);
-                  z-index: 10;
-                ">
-                  <h3 style="font-size: 18px; font-weight: bold; margin: 0;">Nature Scene</h3>
-                </div>
-              
-            </div>
-            <div class="thumbnail-main-slide" style="
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              opacity: 0;
-              transition: opacity 500ms ease-in-out;
-            ">
-              <img 
-                src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                alt="Sample Image 5"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                "
-                loading="lazy"
-              />
-              
-                <div class="thumbnail-caption" style="
-                  position: absolute;
-                  bottom: 16px;
-                  left: 16px;
-                  background: #000000;
-                  color: white;
-                  padding: 8px 12px;
-                  border-radius: 6px;
-                  backdrop-filter: blur(4px);
-                  z-index: 10;
-                ">
-                  <h3 style="font-size: 18px; font-weight: bold; margin: 0;">Sunset View</h3>
-                </div>
-              
-            </div>
-            <div class="thumbnail-main-slide" style="
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              opacity: 0;
-              transition: opacity 500ms ease-in-out;
-            ">
-              <img 
-                src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                alt="Sample Image 6"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                "
-                loading="lazy"
-              />
-              
-                <div class="thumbnail-caption" style="
-                  position: absolute;
-                  bottom: 16px;
-                  left: 16px;
-                  background: #000000;
-                  color: white;
-                  padding: 8px 12px;
-                  border-radius: 6px;
-                  backdrop-filter: blur(4px);
-                  z-index: 10;
-                ">
-                  <h3 style="font-size: 18px; font-weight: bold; margin: 0;">Ocean Waves</h3>
-                </div>
-              
-            </div>
-            </div>
-            <!-- Thumbnail Sidebar -->
-            <div class="thumbnail-sidebar" style="
-              width: 96px;
-              background: rgba(0, 0, 0, 0.1);
-              backdrop-filter: blur(4px);
-              display: flex;
-              flex-direction: column;
-              gap: 4px;
-              padding: 8px;
-              overflow-y: auto;
-            ">
-            <button 
-              class="thumbnail-btn" 
-              onclick="goToSlide('gallery-1761176574357', 0)"
-              style="
-                position: relative;
-                width: 80px;
-                height: 80px;
-                border-radius: 4px;
-                border: 2px solid white;
-                overflow: hidden;
-                cursor: pointer;
-                transition: all 300ms ease;
-                opacity: 1;
-                transform: scale(1.05);
-                box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-              "
-              onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)'"
-              onmouseout="this.style.opacity='1'; this.style.transform='scale(1.05)'"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                alt="Sample Image 1"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                "
-              />
-              <div style="position: absolute; inset: 0; background: #04348120;"></div>
-            </button>
-            <button 
-              class="thumbnail-btn" 
-              onclick="goToSlide('gallery-1761176574357', 1)"
-              style="
-                position: relative;
-                width: 80px;
-                height: 80px;
-                border-radius: 4px;
-                border: 2px solid transparent;
-                overflow: hidden;
-                cursor: pointer;
-                transition: all 300ms ease;
-                opacity: 0.7;
-                transform: scale(1);
-                box-shadow: none;
-              "
-              onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)'"
-              onmouseout="this.style.opacity='0.7'; this.style.transform='scale(1)'"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                alt="Sample Image 2"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                "
-              />
-              
-            </button>
-            <button 
-              class="thumbnail-btn" 
-              onclick="goToSlide('gallery-1761176574357', 2)"
-              style="
-                position: relative;
-                width: 80px;
-                height: 80px;
-                border-radius: 4px;
-                border: 2px solid transparent;
-                overflow: hidden;
-                cursor: pointer;
-                transition: all 300ms ease;
-                opacity: 0.7;
-                transform: scale(1);
-                box-shadow: none;
-              "
-              onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)'"
-              onmouseout="this.style.opacity='0.7'; this.style.transform='scale(1)'"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                alt="Sample Image 3"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                "
-              />
-              
-            </button>
-            <button 
-              class="thumbnail-btn" 
-              onclick="goToSlide('gallery-1761176574357', 3)"
-              style="
-                position: relative;
-                width: 80px;
-                height: 80px;
-                border-radius: 4px;
-                border: 2px solid transparent;
-                overflow: hidden;
-                cursor: pointer;
-                transition: all 300ms ease;
-                opacity: 0.7;
-                transform: scale(1);
-                box-shadow: none;
-              "
-              onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)'"
-              onmouseout="this.style.opacity='0.7'; this.style.transform='scale(1)'"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                alt="Sample Image 4"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                "
-              />
-              
-            </button>
-            <button 
-              class="thumbnail-btn" 
-              onclick="goToSlide('gallery-1761176574357', 4)"
-              style="
-                position: relative;
-                width: 80px;
-                height: 80px;
-                border-radius: 4px;
-                border: 2px solid transparent;
-                overflow: hidden;
-                cursor: pointer;
-                transition: all 300ms ease;
-                opacity: 0.7;
-                transform: scale(1);
-                box-shadow: none;
-              "
-              onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)'"
-              onmouseout="this.style.opacity='0.7'; this.style.transform='scale(1)'"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                alt="Sample Image 5"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                "
-              />
-              
-            </button>
-            <button 
-              class="thumbnail-btn" 
-              onclick="goToSlide('gallery-1761176574357', 5)"
-              style="
-                position: relative;
-                width: 80px;
-                height: 80px;
-                border-radius: 4px;
-                border: 2px solid transparent;
-                overflow: hidden;
-                cursor: pointer;
-                transition: all 300ms ease;
-                opacity: 0.7;
-                transform: scale(1);
-                box-shadow: none;
-              "
-              onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)'"
-              onmouseout="this.style.opacity='0.7'; this.style.transform='scale(1)'"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
-                alt="Sample Image 6"
-                style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                "
-              />
-              
-            </button>
-            </div>
-          </div>
-          
-          
-          <!-- Navigation arrows -->
-          <button 
-            class="slider-prev" 
-            onclick="moveSlide('gallery-1761176574357', -1)"
-            style="
-              position: absolute;
-              left: 16px;
-              top: 50%;
-              transform: translateY(-50%);
-              background: #043481aa;
-              color: white;
-              border: none;
-              border-radius: 50%;
-              width: 44px;
-              height: 44px;
-              font-size: 20px;
-              cursor: pointer;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              z-index: 15;
-              font-weight: bold;
-              box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-              transition: all 200ms ease;
-            "
-            onmouseover="this.style.background='#043481'; this.style.transform='translateY(-50%) scale(1.1)'"
-            onmouseout="this.style.background='#043481aa'; this.style.transform='translateY(-50%) scale(1)'"
-          >
-            ❮
-          </button>
-          
-          <button 
-            class="slider-next" 
-            onclick="moveSlide('gallery-1761176574357', 1)"
-            style="
-              position: absolute;
-              right: 16px;
-              top: 50%;
-              transform: translateY(-50%);
-              background: #043481aa;
-              color: white;
-              border: none;
-              border-radius: 50%;
-              width: 44px;
-              height: 44px;
-              font-size: 20px;
-              cursor: pointer;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              z-index: 15;
-              font-weight: bold;
-              box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-              transition: all 200ms ease;
-            "
-            onmouseover="this.style.background='#043481'; this.style.transform='translateY(-50%) scale(1.1)'"
-            onmouseout="this.style.background='#043481aa'; this.style.transform='translateY(-50%) scale(1)'"
-          >
-            ❯
-          </button>
-          
-          
-          
-          <!-- Dots indicator -->
-          <div class="slider-dots" style="
-            position: absolute;
-            bottom: 16px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 15;
-            background: rgba(0,0,0,0.3);
-            padding: 8px 16px;
-            border-radius: 20px;
-            backdrop-filter: blur(4px);
+          <div class="gallery-item" style="
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #f3f4f6;
+            grid-area: large;
+            transition: all 500ms ease;
           ">
-            <button 
-              class="slider-dot" 
-              onclick="goToSlide('gallery-1761176574357', 0)"
+            <img 
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+              alt="Sample Image 1"
               style="
-                width: 14px;
-                height: 14px;
-                border-radius: 50%;
-                border: 2px solid white;
-                background: #043481;
-                cursor: pointer;
-                transition: all 300ms ease;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 500ms ease;
               "
-              onmouseover="this.style.background='#043481'; this.style.transform='scale(1.2)'"
-              onmouseout="this.style.background='#043481'; this.style.transform='scale(1)'"
-            ></button>
-            <button 
-              class="slider-dot" 
-              onclick="goToSlide('gallery-1761176574357', 1)"
-              style="
-                width: 14px;
-                height: 14px;
-                border-radius: 50%;
-                border: 2px solid white;
-                background: rgba(255,255,255,0.4);
-                cursor: pointer;
-                transition: all 300ms ease;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-              "
-              onmouseover="this.style.background='#043481'; this.style.transform='scale(1.2)'"
-              onmouseout="this.style.background='rgba(255,255,255,0.4)'; this.style.transform='scale(1)'"
-            ></button>
-            <button 
-              class="slider-dot" 
-              onclick="goToSlide('gallery-1761176574357', 2)"
-              style="
-                width: 14px;
-                height: 14px;
-                border-radius: 50%;
-                border: 2px solid white;
-                background: rgba(255,255,255,0.4);
-                cursor: pointer;
-                transition: all 300ms ease;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-              "
-              onmouseover="this.style.background='#043481'; this.style.transform='scale(1.2)'"
-              onmouseout="this.style.background='rgba(255,255,255,0.4)'; this.style.transform='scale(1)'"
-            ></button>
-            <button 
-              class="slider-dot" 
-              onclick="goToSlide('gallery-1761176574357', 3)"
-              style="
-                width: 14px;
-                height: 14px;
-                border-radius: 50%;
-                border: 2px solid white;
-                background: rgba(255,255,255,0.4);
-                cursor: pointer;
-                transition: all 300ms ease;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-              "
-              onmouseover="this.style.background='#043481'; this.style.transform='scale(1.2)'"
-              onmouseout="this.style.background='rgba(255,255,255,0.4)'; this.style.transform='scale(1)'"
-            ></button>
-            <button 
-              class="slider-dot" 
-              onclick="goToSlide('gallery-1761176574357', 4)"
-              style="
-                width: 14px;
-                height: 14px;
-                border-radius: 50%;
-                border: 2px solid white;
-                background: rgba(255,255,255,0.4);
-                cursor: pointer;
-                transition: all 300ms ease;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-              "
-              onmouseover="this.style.background='#043481'; this.style.transform='scale(1.2)'"
-              onmouseout="this.style.background='rgba(255,255,255,0.4)'; this.style.transform='scale(1)'"
-            ></button>
-            <button 
-              class="slider-dot" 
-              onclick="goToSlide('gallery-1761176574357', 5)"
-              style="
-                width: 14px;
-                height: 14px;
-                border-radius: 50%;
-                border: 2px solid white;
-                background: rgba(255,255,255,0.4);
-                cursor: pointer;
-                transition: all 300ms ease;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-              "
-              onmouseover="this.style.background='#043481'; this.style.transform='scale(1.2)'"
-              onmouseout="this.style.background='rgba(255,255,255,0.4)'; this.style.transform='scale(1)'"
-            ></button>
+              onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
+              loading="lazy"
+            />
+            
+              <div class="image-caption" style="
+                position: absolute;
+                bottom: 0;
+                left: 0; text-align: left;
+                background: linear-gradient(transparent, rgba(0,0,0,0.7));
+                color: white;
+                padding: 16px 12px 8px;
+                font-size: 14px;
+                font-weight: 500;
+                backdrop-filter: none;
+              ">
+                Beautiful Landscape
+              </div>
+            
           </div>
-        </div>
-        
-        <script>
-          (function() {
-            const sliderId = 'gallery-1761176574357';
-            const slideCount = 6;
-            const sliderType = 'thumbnail';
-            const accentColor = '#043481';
-            let currentSlide = 0;
+          <div class="gallery-item" style="
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #f3f4f6;
+            grid-area: small1;
+            transition: all 500ms ease;
+          ">
+            <img 
+              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+              alt="Sample Image 2"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 500ms ease;
+              "
+              onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
+              loading="lazy"
+            />
             
-            console.log('🎬 Initializing slider:', sliderId, 'Type:', sliderType, 'Slides:', slideCount);
+              <div class="image-caption" style="
+                position: absolute;
+                bottom: 0;
+                left: 0; text-align: left;
+                background: linear-gradient(transparent, rgba(0,0,0,0.7));
+                color: white;
+                padding: 16px 12px 8px;
+                font-size: 14px;
+                font-weight: 500;
+                backdrop-filter: none;
+              ">
+                Forest Path
+              </div>
             
-            // Initialize slider state storage if not exists
-            if (!window.sliderStates) window.sliderStates = {};
-            window.sliderStates[sliderId] = { currentSlide: 0, totalSlides: slideCount, sliderType: sliderType };
+          </div>
+          <div class="gallery-item" style="
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #f3f4f6;
+            grid-area: small2;
+            transition: all 500ms ease;
+          ">
+            <img 
+              src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+              alt="Sample Image 3"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 500ms ease;
+              "
+              onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
+              loading="lazy"
+            />
             
-            // Enhanced global functions for better compatibility
-            if (!window.moveSlide) {
-              window.moveSlide = function(id, direction) {
-                console.log('🎯 moveSlide called:', id, direction);
-                const state = window.sliderStates[id];
-                if (!state) {
-                  console.error('❌ No slider state found for ID:', id);
-                  return;
-                }
-                
-                const oldSlide = state.currentSlide;
-                state.currentSlide = (state.currentSlide + direction + state.totalSlides) % state.totalSlides;
-                console.log('📱 Slide changed from', oldSlide, 'to', state.currentSlide);
-                updateSliderById(id);
-              };
-            }
+              <div class="image-caption" style="
+                position: absolute;
+                bottom: 0;
+                left: 0; text-align: left;
+                background: linear-gradient(transparent, rgba(0,0,0,0.7));
+                color: white;
+                padding: 16px 12px 8px;
+                font-size: 14px;
+                font-weight: 500;
+                backdrop-filter: none;
+              ">
+                Mountain View
+              </div>
             
-            if (!window.goToSlide) {
-              window.goToSlide = function(id, slideIndex) {
-                console.log('🎯 goToSlide called:', id, slideIndex);
-                const state = window.sliderStates[id];
-                if (!state) {
-                  console.error('❌ No slider state found for ID:', id);
-                  return;
-                }
-                
-                const oldSlide = state.currentSlide;
-                state.currentSlide = slideIndex;
-                console.log('📱 Slide jumped from', oldSlide, 'to', state.currentSlide);
-                updateSliderById(id);
-              };
-            }
+          </div>
+          <div class="gallery-item" style="
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #f3f4f6;
+            grid-area: small3;
+            transition: all 500ms ease;
+          ">
+            <img 
+              src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
+              alt="Sample Image 4"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 500ms ease;
+              "
+              onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"
+              loading="lazy"
+            />
             
-            function updateSliderById(id) {
-              const state = window.sliderStates[id];
-              if (!state) return;
-              
-              console.log('📱 Updating slider to slide:', state.currentSlide, 'Type:', state.sliderType);
-              
-              // For thumbnail sliders, we need to find the gallery-slider container directly
-              let sliderContainer, gallerySlider;
-              
-              if (state.sliderType === 'thumbnail') {
-                // For thumbnails, find the gallery-slider container
-                gallerySlider = document.querySelector('.gallery-slider[data-slider-id="' + id + '"]') || 
-                               document.querySelector('.gallery-slider');
-                sliderContainer = gallerySlider ? gallerySlider.querySelector('.thumbnail-main-area') : null;
-              } else {
-                // For other slider types, use the regular slider container
-                sliderContainer = document.getElementById('slider-' + id);
-                gallerySlider = sliderContainer ? sliderContainer.parentElement : null;
-              }
-              
-              const dotsContainer = gallerySlider ? gallerySlider.querySelector('.slider-dots') : null;
-              const dots = dotsContainer ? dotsContainer.querySelectorAll('.slider-dot') : [];
-              
-              if (!sliderContainer && state.sliderType !== 'thumbnail') {
-                console.error('❌ Slider container not found:', 'slider-' + id);
-                return;
-              }
-              
-              if (!gallerySlider) {
-                console.error('❌ Gallery slider container not found for:', id);
-                return;
-              }
-              
-              // Handle different slider types
-              switch(state.sliderType || 'carousel') {
-                case 'thumbnail':
-                  console.log('🖼️ Applying thumbnail slider effect');
-                  // Use the gallerySlider we already found
-                  const thumbnailMainSlides = gallerySlider ? gallerySlider.querySelectorAll('.thumbnail-main-slide') : [];
-                  const thumbnailBtns = gallerySlider ? gallerySlider.querySelectorAll('.thumbnail-btn') : [];
-                  
-                  console.log('🔍 Found main slides:', thumbnailMainSlides.length);
-                  console.log('🔍 Found thumbnail buttons:', thumbnailBtns.length);
-                  
-                  // Update main slides
-                  thumbnailMainSlides.forEach((slide, index) => {
-                    slide.style.opacity = index === state.currentSlide ? '1' : '0';
-                    slide.style.transition = 'opacity 500ms ease-in-out';
-                    console.log('📱 Slide', index, 'opacity:', slide.style.opacity);
-                  });
-                  
-                  // Update thumbnail buttons
-                  thumbnailBtns.forEach((btn, index) => {
-                    if (index === state.currentSlide) {
-                      btn.style.borderColor = 'white';
-                      btn.style.opacity = '1';
-                      btn.style.transform = 'scale(1.05)';
-                      btn.style.boxShadow = '0 2px 8px rgba(0,0,0,0.3)';
-                    } else {
-                      btn.style.borderColor = 'transparent';
-                      btn.style.opacity = '0.7';
-                      btn.style.transform = 'scale(1)';
-                      btn.style.boxShadow = 'none';
-                    }
-                  });
-                  break; // Continue to update dots
-                
-                case 'fade':
-                  console.log('🔄 Applying fade effect');
-                  const fadeSlides = sliderContainer.querySelectorAll('.slide');
-                  fadeSlides.forEach((slide, index) => {
-                    slide.style.opacity = index === state.currentSlide ? '1' : '0';
-                    slide.style.zIndex = index === state.currentSlide ? '2' : '1';
-                    slide.style.transition = 'opacity 500ms ease-in-out';
-                  });
-                  break;
-                  
-                default: // carousel
-                  console.log('🎠 Applying carousel effect');
-                  const carouselTranslateX = state.currentSlide * (100 / state.totalSlides);
-                  sliderContainer.style.transform = 'translateX(-' + carouselTranslateX + '%)';
-                  sliderContainer.style.transition = 'transform 500ms ease-in-out';
-              }
-              
-              // Update dots appearance
-              dots.forEach((dot, index) => {
-                if (dot) {
-                  dot.style.background = index === state.currentSlide ? accentColor : 'rgba(255,255,255,0.4)';
-                  dot.style.transition = 'background 300ms ease';
-                }
-              });
-              
-              console.log('✅ Slider updated successfully');
-            }
+              <div class="image-caption" style="
+                position: absolute;
+                bottom: 0;
+                left: 0; text-align: left;
+                background: linear-gradient(transparent, rgba(0,0,0,0.7));
+                color: white;
+                padding: 16px 12px 8px;
+                font-size: 14px;
+                font-weight: 500;
+                backdrop-filter: none;
+              ">
+                Nature Scene
+              </div>
             
-            // Initialize slider when DOM is ready
-            function initSlider() {
-              let sliderExists = false;
-              
-              if (sliderType === 'thumbnail') {
-                // For thumbnail sliders, check for gallery-slider container
-                const gallerySlider = document.querySelector('.gallery-slider[data-slider-id="' + sliderId + '"]') ||
-                                     document.querySelector('.gallery-slider');
-                sliderExists = !!gallerySlider;
-              } else {
-                // For other slider types, check for slider container
-                const sliderContainer = document.getElementById('slider-' + sliderId);
-                sliderExists = !!sliderContainer;
-              }
-              
-              if (sliderExists) {
-                updateSliderById(sliderId);
-                console.log('✅ Slider initialized for ID:', sliderId, 'Type:', sliderType);
-              } else {
-                console.log('⏳ Waiting for slider elements to load...');
-                // Retry initialization after a short delay
-                setTimeout(initSlider, 100);
-              }
-            }
-            
-            // Start initialization
-            if (document.readyState === 'loading') {
-              document.addEventListener('DOMContentLoaded', initSlider);
-            } else {
-              initSlider();
-            }
-            
-            // Auto-play functionality
-            
-            let autoplayInterval_gallery_1761176574357;
-            const startAutoplay = () => {
-              autoplayInterval_gallery_1761176574357 = setInterval(() => {
-                window.moveSlide('gallery-1761176574357', 1);
-              }, 2000);
-            };
-            
-            const stopAutoplay = () => {
-              if (autoplayInterval_gallery_1761176574357) {
-                clearInterval(autoplayInterval_gallery_1761176574357);
-              }
-            };
-            
-            // Start autoplay
-            startAutoplay();
-            
-            // Pause on hover if enabled
-            
-            const sliderContainer = document.getElementById('slider-gallery-1761176574357').parentElement;
-            sliderContainer.addEventListener('mouseenter', stopAutoplay);
-            sliderContainer.addEventListener('mouseleave', startAutoplay);
-            
-            
-            
-            // Keyboard navigation
-            
-            document.addEventListener('keydown', (e) => {
-              if (e.key === 'ArrowLeft') {
-                window.moveSlide('gallery-1761176574357', -1);
-              } else if (e.key === 'ArrowRight') {
-                window.moveSlide('gallery-1761176574357', 1);
-              }
-            });
-            
-            
-            // Touch/swipe support
-            
-            function initTouchSupport() {
-              let touchStartX = 0;
-              let touchEndX = 0;
-              let swipeContainer = null;
-              
-              // Find the appropriate container based on slider type
-              if (sliderType === 'thumbnail') {
-                swipeContainer = document.querySelector('.gallery-slider[data-slider-id="gallery-1761176574357"]');
-              } else {
-                const sliderElement = document.getElementById('slider-gallery-1761176574357');
-                swipeContainer = sliderElement ? sliderElement.parentElement : null;
-              }
-              
-              if (!swipeContainer) {
-                console.log('⚠️ Swipe container not found for slider:', 'gallery-1761176574357');
-                return;
-              }
-              
-              swipeContainer.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-              });
-              
-              swipeContainer.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                const swipeDistance = touchStartX - touchEndX;
-                const minSwipeDistance = 50;
-                
-                if (Math.abs(swipeDistance) > minSwipeDistance) {
-                  if (swipeDistance > 0) {
-                    window.moveSlide('gallery-1761176574357', 1); // Swipe left - next slide
-                  } else {
-                    window.moveSlide('gallery-1761176574357', -1); // Swipe right - previous slide
-                  }
-                }
-              });
-            }
-            
-            // Initialize touch support after DOM is ready
-            if (document.readyState === 'loading') {
-              document.addEventListener('DOMContentLoaded', initTouchSupport);
-            } else {
-              setTimeout(initTouchSupport, 100);
-            }
-            
-          })();
-        </script></div></div></div><div class="division division-3" id="division-1761195977713" style="position: relative; width: 100%; box-sizing: border-box; height: 1261.7px !important; min-height: 1261.7px !important; max-height: 1261.7px !important; padding: 24px; ; display: block; clear: both; overflow: hidden;"><div class="segment segment-0" id="1761244288032_0.6091506744114428" style="position: absolute; box-sizing: border-box; display: flex; align-items: stretch; justify-content: stretch;left: 79.80621516942963%;top: 26.91054108544028%;transform: translate(-50%, -50%);width: 527px;height: 550.3px;">
+          </div></div></div></div></div><div class="division division-3" id="division-1761195977713" style="position: relative; width: 100%; box-sizing: border-box; height: 1261.7px !important; min-height: 1261.7px !important; max-height: 1261.7px !important; padding: 24px; ; display: block; clear: both; overflow: hidden;"><div class="segment segment-0" id="1761244288032_0.6091506744114428" style="position: absolute; box-sizing: border-box; display: flex; align-items: stretch; justify-content: stretch;left: 79.80621516942963%;top: 26.91054108544028%;transform: translate(-50%, -50%);width: 527px;height: 550.3px;">
       <div class="form-feature" style="
         width: 100%; 
         height: 100%; 
@@ -1406,8 +712,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1762204102736;
-        const CURRENT_BUILD_VERSION = 1392;
+        const CURRENT_BUILD_TIMESTAMP = 1762204252893;
+        const CURRENT_BUILD_VERSION = 1394;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -1449,7 +755,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1762204102736)');
+            console.log('wyerdcard.net - About page loaded (build: 1762204252893)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
