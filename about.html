@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1762204252893">
-    <meta name="build-version" content="1394">
+    <meta name="build-timestamp" content="1762204730621">
+    <meta name="build-version" content="1399">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1762204252893">
+    <link rel="stylesheet" href="styles.css?v=1762204730621">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -400,7 +400,7 @@
             'large small1'
             'large small2'  
             'small3 small4';
-          gap: 4px;
+          gap: 0px;
           width: 100%;
           height: 100%;
           min-height: 0;
@@ -415,8 +415,8 @@
           <div class="gallery-item" style="
             position: relative;
             overflow: hidden;
-            border-radius: 8px;
-            background-color: #f3f4f6;
+            border-radius: 0px;
+            background-color: transparent;
             grid-area: large;
             transition: all 500ms ease;
           ">
@@ -451,8 +451,8 @@
           <div class="gallery-item" style="
             position: relative;
             overflow: hidden;
-            border-radius: 8px;
-            background-color: #f3f4f6;
+            border-radius: 0px;
+            background-color: transparent;
             grid-area: small1;
             transition: all 500ms ease;
           ">
@@ -487,8 +487,8 @@
           <div class="gallery-item" style="
             position: relative;
             overflow: hidden;
-            border-radius: 8px;
-            background-color: #f3f4f6;
+            border-radius: 0px;
+            background-color: transparent;
             grid-area: small2;
             transition: all 500ms ease;
           ">
@@ -523,8 +523,8 @@
           <div class="gallery-item" style="
             position: relative;
             overflow: hidden;
-            border-radius: 8px;
-            background-color: #f3f4f6;
+            border-radius: 0px;
+            background-color: transparent;
             grid-area: small3;
             transition: all 500ms ease;
           ">
@@ -712,8 +712,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1762204252893;
-        const CURRENT_BUILD_VERSION = 1394;
+        const CURRENT_BUILD_TIMESTAMP = 1762204730621;
+        const CURRENT_BUILD_VERSION = 1399;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -755,7 +755,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1762204252893)');
+            console.log('wyerdcard.net - About page loaded (build: 1762204730621)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
