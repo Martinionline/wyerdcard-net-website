@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1763044580619">
-    <meta name="build-version" content="2250">
+    <meta name="build-timestamp" content="1763045387193">
+    <meta name="build-version" content="2258">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1763044580619">
+    <link rel="stylesheet" href="styles.css?v=1763045387193">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -602,6 +602,31 @@
             />
             
               </div></div></div></div></div></div><div class="division division-3" id="division-1762965155860" style="position: relative; width: 100%; box-sizing: border-box; min-height: 450px; padding: 24px; ; display: block; clear: both; overflow: hidden;"><div class="segment segment-0" id="segment-1762965156030-0" style="position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center;left: 24.5762709786047%;top: 53.956253051757805%;transform: translate(-50%, -50%);width: 653px;height: 368px;">
+        <style>
+          @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% { transform: translate3d(0,0,0); }
+            40%, 43% { transform: translate3d(0,-30px,0); }
+            70% { transform: translate3d(0,-15px,0); }
+            90% { transform: translate3d(0,-4px,0); }
+          }
+          @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+          }
+          @keyframes slideInLeft {
+            from { transform: translate3d(-100%, 0, 0); visibility: visible; }
+            to { transform: translate3d(0, 0, 0); }
+          }
+          @keyframes slideInRight {
+            from { transform: translate3d(100%, 0, 0); visibility: visible; }
+            to { transform: translate3d(0, 0, 0); }
+          }
+          @keyframes zoomIn {
+            from { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+            50% { opacity: 1; }
+          }
+        </style>
       <div class="qa-feature" style="
         width: 100%; 
         height: 100%; 
@@ -611,38 +636,40 @@
         padding: 12px;
         min-height: 200px;
       ">
-        <div id="qa-wwbku4q7w" style="
+        <div id="qa-ek2xxx6ac" style="
           position: relative;
           width: 100%;
-          background: linear-gradient(135deg, #ecfc03 0%, rgba(249, 250, 251, 0.8) 100%);
-          border: 1px solid rgba(229, 231, 235, 0.8);
-          border-radius: 12px;
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-          backdrop-filter: blur(8px);
+          height: auto;
+          background-color: rgba(236, 252, 3, 1);
+          border: 5 dashed #0254f7;
+          border-radius: 8px;
+          box-shadow: 0 8px 25px -2px rgba(247, 2, 2, 0.88);
           overflow: hidden;
           max-height: 400px;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+          animation: bounce 2s infinite;
         ">
           <div style="
             position: absolute;
             top: 12px;
             left: 12px;
             padding: 6px 12px;
-            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #3b82f6dd 100%);
             backdrop-filter: blur(8px);
             color: white;
             font-size: 12px;
             border-radius: 6px;
             font-weight: 600;
-            border: 1px solid rgba(139, 92, 246, 0.3);
+            border: 1px solid rgba(59, 130, 246, 0.3);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             z-index: 10;
           ">Tab FAQ</div>
           <div style="
-            padding: 16px;
+            padding: 21px;
             max-height: 384px;
             overflow-y: auto;
-            color: #374151;
+            font-family: inherit;
+            font-size: 14px;
           "><div style="display: flex; flex-direction: column; gap: 8px;">
             <div 
               class="qa-item" 
@@ -650,41 +677,44 @@
               data-answer="we offer a 30-day return policy on all items. items must be in original condition."
               data-category="General"
               style="
-                border: 1px solid #e5e7eb;
+                border: 5 dashed #0254f7;
                 border-radius: 8px;
                 overflow: hidden;
-                transition: all 0.2s ease;
+                transition: all 300ms ease-in-out;
+                box-shadow: 0 8px 25px -2px rgba(247, 2, 2, 0.88);
               "
             >
               <button 
-                onclick="toggleAccordion('qa-wwbku4q7w', 1)"
+                onclick="toggleAccordion('qa-ek2xxx6ac', 1)"
                 style="
                   width: 100%;
-                  padding: 12px 16px;
+                  padding: 21px;
                   text-align: left;
-                  background-color: #f9fafb;
+                  background-color: rgba(53, 3, 3, 1);
                   border: none;
                   cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  color: #111827;
-                  font-weight: 500;
-                  font-size: 14px;
-                  transition: background-color 0.2s ease;
+                  color: #e205ff;
+                  font-weight: 600;
+                  font-size: 18px;
+                  font-family: inherit;
+                  transition: all 300ms ease-in-out;
                 "
-                onmouseover="this.style.backgroundColor='#f3f4f6'"
-                onmouseout="this.style.backgroundColor='#f9fafb'"
+                onmouseover="this.style.backgroundColor='rgba(43, 0, 0, 1)'; this.style.transform='translateY(-1px)'"
+                onmouseout="this.style.backgroundColor='rgba(53, 3, 3, 1)'; this.style.transform='translateY(0)'"
               >
-                <span>What is your return policy?</span>
+                <span style="line-height: 1.4;">What is your return policy?</span>
                 <svg 
-                  id="qa-wwbku4q7w-icon-1"
+                  id="qa-ek2xxx6ac-icon-1"
                   style="
-                    width: 20px; 
-                    height: 20px; 
-                    transition: transform 0.2s ease; 
-                    color: #6b7280;
+                    width: 24px; 
+                    height: 24px; 
+                    transition: transform 300ms ease-in-out; 
+                    color: #3b82f6;
                     flex-shrink: 0;
+                    margin-left: 12px;
                   "
                   fill="none" 
                   stroke="currentColor" 
@@ -694,15 +724,17 @@
                 </svg>
               </button>
               <div 
-                id="qa-wwbku4q7w-answer-1"
+                id="qa-ek2xxx6ac-answer-1"
                 style="
                   display: none;
-                  padding: 12px 16px;
-                  background-color: #ffffff;
-                  border-top: 1px solid #e5e7eb;
-                  color: #6b7280;
+                  padding: 21px;
+                  background-color: rgba(236, 252, 3, 1);
+                  border-top: 5 dashed #0254f7;
+                  color: #03fc2c;
                   font-size: 14px;
+                  font-family: inherit;
                   line-height: 1.6;
+                  transition: all 300ms ease-in-out;
                 "
               >We offer a 30-day return policy on all items. Items must be in original condition.</div>
             </div>
@@ -712,41 +744,44 @@
               data-answer="standard shipping takes 3-5 business days. express shipping is available for next-day delivery."
               data-category="Shipping"
               style="
-                border: 1px solid #e5e7eb;
+                border: 5 dashed #0254f7;
                 border-radius: 8px;
                 overflow: hidden;
-                transition: all 0.2s ease;
+                transition: all 300ms ease-in-out;
+                box-shadow: 0 8px 25px -2px rgba(247, 2, 2, 0.88);
               "
             >
               <button 
-                onclick="toggleAccordion('qa-wwbku4q7w', 2)"
+                onclick="toggleAccordion('qa-ek2xxx6ac', 2)"
                 style="
                   width: 100%;
-                  padding: 12px 16px;
+                  padding: 21px;
                   text-align: left;
-                  background-color: #f9fafb;
+                  background-color: rgba(53, 3, 3, 1);
                   border: none;
                   cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  color: #111827;
-                  font-weight: 500;
-                  font-size: 14px;
-                  transition: background-color 0.2s ease;
+                  color: #e205ff;
+                  font-weight: 600;
+                  font-size: 18px;
+                  font-family: inherit;
+                  transition: all 300ms ease-in-out;
                 "
-                onmouseover="this.style.backgroundColor='#f3f4f6'"
-                onmouseout="this.style.backgroundColor='#f9fafb'"
+                onmouseover="this.style.backgroundColor='rgba(43, 0, 0, 1)'; this.style.transform='translateY(-1px)'"
+                onmouseout="this.style.backgroundColor='rgba(53, 3, 3, 1)'; this.style.transform='translateY(0)'"
               >
-                <span>How long does shipping take?</span>
+                <span style="line-height: 1.4;">How long does shipping take?</span>
                 <svg 
-                  id="qa-wwbku4q7w-icon-2"
+                  id="qa-ek2xxx6ac-icon-2"
                   style="
-                    width: 20px; 
-                    height: 20px; 
-                    transition: transform 0.2s ease; 
-                    color: #6b7280;
+                    width: 24px; 
+                    height: 24px; 
+                    transition: transform 300ms ease-in-out; 
+                    color: #3b82f6;
                     flex-shrink: 0;
+                    margin-left: 12px;
                   "
                   fill="none" 
                   stroke="currentColor" 
@@ -756,15 +791,17 @@
                 </svg>
               </button>
               <div 
-                id="qa-wwbku4q7w-answer-2"
+                id="qa-ek2xxx6ac-answer-2"
                 style="
                   display: none;
-                  padding: 12px 16px;
-                  background-color: #ffffff;
-                  border-top: 1px solid #e5e7eb;
-                  color: #6b7280;
+                  padding: 21px;
+                  background-color: rgba(236, 252, 3, 1);
+                  border-top: 5 dashed #0254f7;
+                  color: #03fc2c;
                   font-size: 14px;
+                  font-family: inherit;
                   line-height: 1.6;
+                  transition: all 300ms ease-in-out;
                 "
               >Standard shipping takes 3-5 business days. Express shipping is available for next-day delivery.</div>
             </div>
@@ -774,41 +811,44 @@
               data-answer="yes, we provide 24/7 customer support via email, phone, and live chat."
               data-category="Support"
               style="
-                border: 1px solid #e5e7eb;
+                border: 5 dashed #0254f7;
                 border-radius: 8px;
                 overflow: hidden;
-                transition: all 0.2s ease;
+                transition: all 300ms ease-in-out;
+                box-shadow: 0 8px 25px -2px rgba(247, 2, 2, 0.88);
               "
             >
               <button 
-                onclick="toggleAccordion('qa-wwbku4q7w', 3)"
+                onclick="toggleAccordion('qa-ek2xxx6ac', 3)"
                 style="
                   width: 100%;
-                  padding: 12px 16px;
+                  padding: 21px;
                   text-align: left;
-                  background-color: #f9fafb;
+                  background-color: rgba(53, 3, 3, 1);
                   border: none;
                   cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  color: #111827;
-                  font-weight: 500;
-                  font-size: 14px;
-                  transition: background-color 0.2s ease;
+                  color: #e205ff;
+                  font-weight: 600;
+                  font-size: 18px;
+                  font-family: inherit;
+                  transition: all 300ms ease-in-out;
                 "
-                onmouseover="this.style.backgroundColor='#f3f4f6'"
-                onmouseout="this.style.backgroundColor='#f9fafb'"
+                onmouseover="this.style.backgroundColor='rgba(43, 0, 0, 1)'; this.style.transform='translateY(-1px)'"
+                onmouseout="this.style.backgroundColor='rgba(53, 3, 3, 1)'; this.style.transform='translateY(0)'"
               >
-                <span>Do you offer customer support?</span>
+                <span style="line-height: 1.4;">Do you offer customer support?</span>
                 <svg 
-                  id="qa-wwbku4q7w-icon-3"
+                  id="qa-ek2xxx6ac-icon-3"
                   style="
-                    width: 20px; 
-                    height: 20px; 
-                    transition: transform 0.2s ease; 
-                    color: #6b7280;
+                    width: 24px; 
+                    height: 24px; 
+                    transition: transform 300ms ease-in-out; 
+                    color: #3b82f6;
                     flex-shrink: 0;
+                    margin-left: 12px;
                   "
                   fill="none" 
                   stroke="currentColor" 
@@ -818,15 +858,17 @@
                 </svg>
               </button>
               <div 
-                id="qa-wwbku4q7w-answer-3"
+                id="qa-ek2xxx6ac-answer-3"
                 style="
                   display: none;
-                  padding: 12px 16px;
-                  background-color: #ffffff;
-                  border-top: 1px solid #e5e7eb;
-                  color: #6b7280;
+                  padding: 21px;
+                  background-color: rgba(236, 252, 3, 1);
+                  border-top: 5 dashed #0254f7;
+                  color: #03fc2c;
                   font-size: 14px;
+                  font-family: inherit;
                   line-height: 1.6;
+                  transition: all 300ms ease-in-out;
                 "
               >Yes, we provide 24/7 customer support via email, phone, and live chat.</div>
             </div>
@@ -836,41 +878,44 @@
               data-answer="please provide your answer here..."
               data-category="Business"
               style="
-                border: 1px solid #e5e7eb;
+                border: 5 dashed #0254f7;
                 border-radius: 8px;
                 overflow: hidden;
-                transition: all 0.2s ease;
+                transition: all 300ms ease-in-out;
+                box-shadow: 0 8px 25px -2px rgba(247, 2, 2, 0.88);
               "
             >
               <button 
-                onclick="toggleAccordion('qa-wwbku4q7w', 4)"
+                onclick="toggleAccordion('qa-ek2xxx6ac', 4)"
                 style="
                   width: 100%;
-                  padding: 12px 16px;
+                  padding: 21px;
                   text-align: left;
-                  background-color: #f9fafb;
+                  background-color: rgba(53, 3, 3, 1);
                   border: none;
                   cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  color: #111827;
-                  font-weight: 500;
-                  font-size: 14px;
-                  transition: background-color 0.2s ease;
+                  color: #e205ff;
+                  font-weight: 600;
+                  font-size: 18px;
+                  font-family: inherit;
+                  transition: all 300ms ease-in-out;
                 "
-                onmouseover="this.style.backgroundColor='#f3f4f6'"
-                onmouseout="this.style.backgroundColor='#f9fafb'"
+                onmouseover="this.style.backgroundColor='rgba(43, 0, 0, 1)'; this.style.transform='translateY(-1px)'"
+                onmouseout="this.style.backgroundColor='rgba(53, 3, 3, 1)'; this.style.transform='translateY(0)'"
               >
-                <span>What problem does your business solve?</span>
+                <span style="line-height: 1.4;">What problem does your business solve?</span>
                 <svg 
-                  id="qa-wwbku4q7w-icon-4"
+                  id="qa-ek2xxx6ac-icon-4"
                   style="
-                    width: 20px; 
-                    height: 20px; 
-                    transition: transform 0.2s ease; 
-                    color: #6b7280;
+                    width: 24px; 
+                    height: 24px; 
+                    transition: transform 300ms ease-in-out; 
+                    color: #3b82f6;
                     flex-shrink: 0;
+                    margin-left: 12px;
                   "
                   fill="none" 
                   stroke="currentColor" 
@@ -880,15 +925,17 @@
                 </svg>
               </button>
               <div 
-                id="qa-wwbku4q7w-answer-4"
+                id="qa-ek2xxx6ac-answer-4"
                 style="
                   display: none;
-                  padding: 12px 16px;
-                  background-color: #ffffff;
-                  border-top: 1px solid #e5e7eb;
-                  color: #6b7280;
+                  padding: 21px;
+                  background-color: rgba(236, 252, 3, 1);
+                  border-top: 5 dashed #0254f7;
+                  color: #03fc2c;
                   font-size: 14px;
+                  font-family: inherit;
                   line-height: 1.6;
+                  transition: all 300ms ease-in-out;
                 "
               >Please provide your answer here...</div>
             </div>
@@ -898,41 +945,44 @@
               data-answer="please provide your answer here..."
               data-category="Business"
               style="
-                border: 1px solid #e5e7eb;
+                border: 5 dashed #0254f7;
                 border-radius: 8px;
                 overflow: hidden;
-                transition: all 0.2s ease;
+                transition: all 300ms ease-in-out;
+                box-shadow: 0 8px 25px -2px rgba(247, 2, 2, 0.88);
               "
             >
               <button 
-                onclick="toggleAccordion('qa-wwbku4q7w', 5)"
+                onclick="toggleAccordion('qa-ek2xxx6ac', 5)"
                 style="
                   width: 100%;
-                  padding: 12px 16px;
+                  padding: 21px;
                   text-align: left;
-                  background-color: #f9fafb;
+                  background-color: rgba(53, 3, 3, 1);
                   border: none;
                   cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  color: #111827;
-                  font-weight: 500;
-                  font-size: 14px;
-                  transition: background-color 0.2s ease;
+                  color: #e205ff;
+                  font-weight: 600;
+                  font-size: 18px;
+                  font-family: inherit;
+                  transition: all 300ms ease-in-out;
                 "
-                onmouseover="this.style.backgroundColor='#f3f4f6'"
-                onmouseout="this.style.backgroundColor='#f9fafb'"
+                onmouseover="this.style.backgroundColor='rgba(43, 0, 0, 1)'; this.style.transform='translateY(-1px)'"
+                onmouseout="this.style.backgroundColor='rgba(53, 3, 3, 1)'; this.style.transform='translateY(0)'"
               >
-                <span>What sets you apart from competitors?</span>
+                <span style="line-height: 1.4;">What sets you apart from competitors?</span>
                 <svg 
-                  id="qa-wwbku4q7w-icon-5"
+                  id="qa-ek2xxx6ac-icon-5"
                   style="
-                    width: 20px; 
-                    height: 20px; 
-                    transition: transform 0.2s ease; 
-                    color: #6b7280;
+                    width: 24px; 
+                    height: 24px; 
+                    transition: transform 300ms ease-in-out; 
+                    color: #3b82f6;
                     flex-shrink: 0;
+                    margin-left: 12px;
                   "
                   fill="none" 
                   stroke="currentColor" 
@@ -942,15 +992,17 @@
                 </svg>
               </button>
               <div 
-                id="qa-wwbku4q7w-answer-5"
+                id="qa-ek2xxx6ac-answer-5"
                 style="
                   display: none;
-                  padding: 12px 16px;
-                  background-color: #ffffff;
-                  border-top: 1px solid #e5e7eb;
-                  color: #6b7280;
+                  padding: 21px;
+                  background-color: rgba(236, 252, 3, 1);
+                  border-top: 5 dashed #0254f7;
+                  color: #03fc2c;
                   font-size: 14px;
+                  font-family: inherit;
                   line-height: 1.6;
+                  transition: all 300ms ease-in-out;
                 "
               >Please provide your answer here...</div>
             </div>
@@ -960,41 +1012,44 @@
               data-answer="please provide your answer here..."
               data-category="Business"
               style="
-                border: 1px solid #e5e7eb;
+                border: 5 dashed #0254f7;
                 border-radius: 8px;
                 overflow: hidden;
-                transition: all 0.2s ease;
+                transition: all 300ms ease-in-out;
+                box-shadow: 0 8px 25px -2px rgba(247, 2, 2, 0.88);
               "
             >
               <button 
-                onclick="toggleAccordion('qa-wwbku4q7w', 6)"
+                onclick="toggleAccordion('qa-ek2xxx6ac', 6)"
                 style="
                   width: 100%;
-                  padding: 12px 16px;
+                  padding: 21px;
                   text-align: left;
-                  background-color: #f9fafb;
+                  background-color: rgba(53, 3, 3, 1);
                   border: none;
                   cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  color: #111827;
-                  font-weight: 500;
-                  font-size: 14px;
-                  transition: background-color 0.2s ease;
+                  color: #e205ff;
+                  font-weight: 600;
+                  font-size: 18px;
+                  font-family: inherit;
+                  transition: all 300ms ease-in-out;
                 "
-                onmouseover="this.style.backgroundColor='#f3f4f6'"
-                onmouseout="this.style.backgroundColor='#f9fafb'"
+                onmouseover="this.style.backgroundColor='rgba(43, 0, 0, 1)'; this.style.transform='translateY(-1px)'"
+                onmouseout="this.style.backgroundColor='rgba(53, 3, 3, 1)'; this.style.transform='translateY(0)'"
               >
-                <span>What has been your biggest challenge?</span>
+                <span style="line-height: 1.4;">What has been your biggest challenge?</span>
                 <svg 
-                  id="qa-wwbku4q7w-icon-6"
+                  id="qa-ek2xxx6ac-icon-6"
                   style="
-                    width: 20px; 
-                    height: 20px; 
-                    transition: transform 0.2s ease; 
-                    color: #6b7280;
+                    width: 24px; 
+                    height: 24px; 
+                    transition: transform 300ms ease-in-out; 
+                    color: #3b82f6;
                     flex-shrink: 0;
+                    margin-left: 12px;
                   "
                   fill="none" 
                   stroke="currentColor" 
@@ -1004,15 +1059,17 @@
                 </svg>
               </button>
               <div 
-                id="qa-wwbku4q7w-answer-6"
+                id="qa-ek2xxx6ac-answer-6"
                 style="
                   display: none;
-                  padding: 12px 16px;
-                  background-color: #ffffff;
-                  border-top: 1px solid #e5e7eb;
-                  color: #6b7280;
+                  padding: 21px;
+                  background-color: rgba(236, 252, 3, 1);
+                  border-top: 5 dashed #0254f7;
+                  color: #03fc2c;
                   font-size: 14px;
+                  font-family: inherit;
                   line-height: 1.6;
+                  transition: all 300ms ease-in-out;
                 "
               >Please provide your answer here...</div>
             </div>
@@ -1022,41 +1079,44 @@
               data-answer="please provide your answer here..."
               data-category="Business"
               style="
-                border: 1px solid #e5e7eb;
+                border: 5 dashed #0254f7;
                 border-radius: 8px;
                 overflow: hidden;
-                transition: all 0.2s ease;
+                transition: all 300ms ease-in-out;
+                box-shadow: 0 8px 25px -2px rgba(247, 2, 2, 0.88);
               "
             >
               <button 
-                onclick="toggleAccordion('qa-wwbku4q7w', 7)"
+                onclick="toggleAccordion('qa-ek2xxx6ac', 7)"
                 style="
                   width: 100%;
-                  padding: 12px 16px;
+                  padding: 21px;
                   text-align: left;
-                  background-color: #f9fafb;
+                  background-color: rgba(53, 3, 3, 1);
                   border: none;
                   cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  color: #111827;
-                  font-weight: 500;
-                  font-size: 14px;
-                  transition: background-color 0.2s ease;
+                  color: #e205ff;
+                  font-weight: 600;
+                  font-size: 18px;
+                  font-family: inherit;
+                  transition: all 300ms ease-in-out;
                 "
-                onmouseover="this.style.backgroundColor='#f3f4f6'"
-                onmouseout="this.style.backgroundColor='#f9fafb'"
+                onmouseover="this.style.backgroundColor='rgba(43, 0, 0, 1)'; this.style.transform='translateY(-1px)'"
+                onmouseout="this.style.backgroundColor='rgba(53, 3, 3, 1)'; this.style.transform='translateY(0)'"
               >
-                <span>What are your future plans and goals?</span>
+                <span style="line-height: 1.4;">What are your future plans and goals?</span>
                 <svg 
-                  id="qa-wwbku4q7w-icon-7"
+                  id="qa-ek2xxx6ac-icon-7"
                   style="
-                    width: 20px; 
-                    height: 20px; 
-                    transition: transform 0.2s ease; 
-                    color: #6b7280;
+                    width: 24px; 
+                    height: 24px; 
+                    transition: transform 300ms ease-in-out; 
+                    color: #3b82f6;
                     flex-shrink: 0;
+                    margin-left: 12px;
                   "
                   fill="none" 
                   stroke="currentColor" 
@@ -1066,15 +1126,17 @@
                 </svg>
               </button>
               <div 
-                id="qa-wwbku4q7w-answer-7"
+                id="qa-ek2xxx6ac-answer-7"
                 style="
                   display: none;
-                  padding: 12px 16px;
-                  background-color: #ffffff;
-                  border-top: 1px solid #e5e7eb;
-                  color: #6b7280;
+                  padding: 21px;
+                  background-color: rgba(236, 252, 3, 1);
+                  border-top: 5 dashed #0254f7;
+                  color: #03fc2c;
                   font-size: 14px;
+                  font-family: inherit;
                   line-height: 1.6;
+                  transition: all 300ms ease-in-out;
                 "
               >Please provide your answer here...</div>
             </div>
@@ -1084,41 +1146,44 @@
               data-answer="please provide your answer here..."
               data-category="Personal"
               style="
-                border: 1px solid #e5e7eb;
+                border: 5 dashed #0254f7;
                 border-radius: 8px;
                 overflow: hidden;
-                transition: all 0.2s ease;
+                transition: all 300ms ease-in-out;
+                box-shadow: 0 8px 25px -2px rgba(247, 2, 2, 0.88);
               "
             >
               <button 
-                onclick="toggleAccordion('qa-wwbku4q7w', 8)"
+                onclick="toggleAccordion('qa-ek2xxx6ac', 8)"
                 style="
                   width: 100%;
-                  padding: 12px 16px;
+                  padding: 21px;
                   text-align: left;
-                  background-color: #f9fafb;
+                  background-color: rgba(53, 3, 3, 1);
                   border: none;
                   cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  color: #111827;
-                  font-weight: 500;
-                  font-size: 14px;
-                  transition: background-color 0.2s ease;
+                  color: #e205ff;
+                  font-weight: 600;
+                  font-size: 18px;
+                  font-family: inherit;
+                  transition: all 300ms ease-in-out;
                 "
-                onmouseover="this.style.backgroundColor='#f3f4f6'"
-                onmouseout="this.style.backgroundColor='#f9fafb'"
+                onmouseover="this.style.backgroundColor='rgba(43, 0, 0, 1)'; this.style.transform='translateY(-1px)'"
+                onmouseout="this.style.backgroundColor='rgba(53, 3, 3, 1)'; this.style.transform='translateY(0)'"
               >
-                <span>What inspired you to start this journey?</span>
+                <span style="line-height: 1.4;">What inspired you to start this journey?</span>
                 <svg 
-                  id="qa-wwbku4q7w-icon-8"
+                  id="qa-ek2xxx6ac-icon-8"
                   style="
-                    width: 20px; 
-                    height: 20px; 
-                    transition: transform 0.2s ease; 
-                    color: #6b7280;
+                    width: 24px; 
+                    height: 24px; 
+                    transition: transform 300ms ease-in-out; 
+                    color: #3b82f6;
                     flex-shrink: 0;
+                    margin-left: 12px;
                   "
                   fill="none" 
                   stroke="currentColor" 
@@ -1128,15 +1193,17 @@
                 </svg>
               </button>
               <div 
-                id="qa-wwbku4q7w-answer-8"
+                id="qa-ek2xxx6ac-answer-8"
                 style="
                   display: none;
-                  padding: 12px 16px;
-                  background-color: #ffffff;
-                  border-top: 1px solid #e5e7eb;
-                  color: #6b7280;
+                  padding: 21px;
+                  background-color: rgba(236, 252, 3, 1);
+                  border-top: 5 dashed #0254f7;
+                  color: #03fc2c;
                   font-size: 14px;
+                  font-family: inherit;
                   line-height: 1.6;
+                  transition: all 300ms ease-in-out;
                 "
               >Please provide your answer here...</div>
             </div>
@@ -1146,41 +1213,44 @@
               data-answer="please provide your answer here..."
               data-category="Personal"
               style="
-                border: 1px solid #e5e7eb;
+                border: 5 dashed #0254f7;
                 border-radius: 8px;
                 overflow: hidden;
-                transition: all 0.2s ease;
+                transition: all 300ms ease-in-out;
+                box-shadow: 0 8px 25px -2px rgba(247, 2, 2, 0.88);
               "
             >
               <button 
-                onclick="toggleAccordion('qa-wwbku4q7w', 9)"
+                onclick="toggleAccordion('qa-ek2xxx6ac', 9)"
                 style="
                   width: 100%;
-                  padding: 12px 16px;
+                  padding: 21px;
                   text-align: left;
-                  background-color: #f9fafb;
+                  background-color: rgba(53, 3, 3, 1);
                   border: none;
                   cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  color: #111827;
-                  font-weight: 500;
-                  font-size: 14px;
-                  transition: background-color 0.2s ease;
+                  color: #e205ff;
+                  font-weight: 600;
+                  font-size: 18px;
+                  font-family: inherit;
+                  transition: all 300ms ease-in-out;
                 "
-                onmouseover="this.style.backgroundColor='#f3f4f6'"
-                onmouseout="this.style.backgroundColor='#f9fafb'"
+                onmouseover="this.style.backgroundColor='rgba(43, 0, 0, 1)'; this.style.transform='translateY(-1px)'"
+                onmouseout="this.style.backgroundColor='rgba(53, 3, 3, 1)'; this.style.transform='translateY(0)'"
               >
-                <span>What has been your biggest learning experience?</span>
+                <span style="line-height: 1.4;">What has been your biggest learning experience?</span>
                 <svg 
-                  id="qa-wwbku4q7w-icon-9"
+                  id="qa-ek2xxx6ac-icon-9"
                   style="
-                    width: 20px; 
-                    height: 20px; 
-                    transition: transform 0.2s ease; 
-                    color: #6b7280;
+                    width: 24px; 
+                    height: 24px; 
+                    transition: transform 300ms ease-in-out; 
+                    color: #3b82f6;
                     flex-shrink: 0;
+                    margin-left: 12px;
                   "
                   fill="none" 
                   stroke="currentColor" 
@@ -1190,15 +1260,17 @@
                 </svg>
               </button>
               <div 
-                id="qa-wwbku4q7w-answer-9"
+                id="qa-ek2xxx6ac-answer-9"
                 style="
                   display: none;
-                  padding: 12px 16px;
-                  background-color: #ffffff;
-                  border-top: 1px solid #e5e7eb;
-                  color: #6b7280;
+                  padding: 21px;
+                  background-color: rgba(236, 252, 3, 1);
+                  border-top: 5 dashed #0254f7;
+                  color: #03fc2c;
                   font-size: 14px;
+                  font-family: inherit;
                   line-height: 1.6;
+                  transition: all 300ms ease-in-out;
                 "
               >Please provide your answer here...</div>
             </div>
@@ -1208,41 +1280,44 @@
               data-answer="please provide your answer here..."
               data-category="Personal"
               style="
-                border: 1px solid #e5e7eb;
+                border: 5 dashed #0254f7;
                 border-radius: 8px;
                 overflow: hidden;
-                transition: all 0.2s ease;
+                transition: all 300ms ease-in-out;
+                box-shadow: 0 8px 25px -2px rgba(247, 2, 2, 0.88);
               "
             >
               <button 
-                onclick="toggleAccordion('qa-wwbku4q7w', 10)"
+                onclick="toggleAccordion('qa-ek2xxx6ac', 10)"
                 style="
                   width: 100%;
-                  padding: 12px 16px;
+                  padding: 21px;
                   text-align: left;
-                  background-color: #f9fafb;
+                  background-color: rgba(53, 3, 3, 1);
                   border: none;
                   cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  color: #111827;
-                  font-weight: 500;
-                  font-size: 14px;
-                  transition: background-color 0.2s ease;
+                  color: #e205ff;
+                  font-weight: 600;
+                  font-size: 18px;
+                  font-family: inherit;
+                  transition: all 300ms ease-in-out;
                 "
-                onmouseover="this.style.backgroundColor='#f3f4f6'"
-                onmouseout="this.style.backgroundColor='#f9fafb'"
+                onmouseover="this.style.backgroundColor='rgba(43, 0, 0, 1)'; this.style.transform='translateY(-1px)'"
+                onmouseout="this.style.backgroundColor='rgba(53, 3, 3, 1)'; this.style.transform='translateY(0)'"
               >
-                <span>How do you stay motivated during challenging times?</span>
+                <span style="line-height: 1.4;">How do you stay motivated during challenging times?</span>
                 <svg 
-                  id="qa-wwbku4q7w-icon-10"
+                  id="qa-ek2xxx6ac-icon-10"
                   style="
-                    width: 20px; 
-                    height: 20px; 
-                    transition: transform 0.2s ease; 
-                    color: #6b7280;
+                    width: 24px; 
+                    height: 24px; 
+                    transition: transform 300ms ease-in-out; 
+                    color: #3b82f6;
                     flex-shrink: 0;
+                    margin-left: 12px;
                   "
                   fill="none" 
                   stroke="currentColor" 
@@ -1252,15 +1327,17 @@
                 </svg>
               </button>
               <div 
-                id="qa-wwbku4q7w-answer-10"
+                id="qa-ek2xxx6ac-answer-10"
                 style="
                   display: none;
-                  padding: 12px 16px;
-                  background-color: #ffffff;
-                  border-top: 1px solid #e5e7eb;
-                  color: #6b7280;
+                  padding: 21px;
+                  background-color: rgba(236, 252, 3, 1);
+                  border-top: 5 dashed #0254f7;
+                  color: #03fc2c;
                   font-size: 14px;
+                  font-family: inherit;
                   line-height: 1.6;
+                  transition: all 300ms ease-in-out;
                 "
               >Please provide your answer here...</div>
             </div>
@@ -1270,41 +1347,44 @@
               data-answer="please provide your answer here..."
               data-category="Personal"
               style="
-                border: 1px solid #e5e7eb;
+                border: 5 dashed #0254f7;
                 border-radius: 8px;
                 overflow: hidden;
-                transition: all 0.2s ease;
+                transition: all 300ms ease-in-out;
+                box-shadow: 0 8px 25px -2px rgba(247, 2, 2, 0.88);
               "
             >
               <button 
-                onclick="toggleAccordion('qa-wwbku4q7w', 11)"
+                onclick="toggleAccordion('qa-ek2xxx6ac', 11)"
                 style="
                   width: 100%;
-                  padding: 12px 16px;
+                  padding: 21px;
                   text-align: left;
-                  background-color: #f9fafb;
+                  background-color: rgba(53, 3, 3, 1);
                   border: none;
                   cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  color: #111827;
-                  font-weight: 500;
-                  font-size: 14px;
-                  transition: background-color 0.2s ease;
+                  color: #e205ff;
+                  font-weight: 600;
+                  font-size: 18px;
+                  font-family: inherit;
+                  transition: all 300ms ease-in-out;
                 "
-                onmouseover="this.style.backgroundColor='#f3f4f6'"
-                onmouseout="this.style.backgroundColor='#f9fafb'"
+                onmouseover="this.style.backgroundColor='rgba(43, 0, 0, 1)'; this.style.transform='translateY(-1px)'"
+                onmouseout="this.style.backgroundColor='rgba(53, 3, 3, 1)'; this.style.transform='translateY(0)'"
               >
-                <span>What advice would you give to someone starting out?</span>
+                <span style="line-height: 1.4;">What advice would you give to someone starting out?</span>
                 <svg 
-                  id="qa-wwbku4q7w-icon-11"
+                  id="qa-ek2xxx6ac-icon-11"
                   style="
-                    width: 20px; 
-                    height: 20px; 
-                    transition: transform 0.2s ease; 
-                    color: #6b7280;
+                    width: 24px; 
+                    height: 24px; 
+                    transition: transform 300ms ease-in-out; 
+                    color: #3b82f6;
                     flex-shrink: 0;
+                    margin-left: 12px;
                   "
                   fill="none" 
                   stroke="currentColor" 
@@ -1314,15 +1394,17 @@
                 </svg>
               </button>
               <div 
-                id="qa-wwbku4q7w-answer-11"
+                id="qa-ek2xxx6ac-answer-11"
                 style="
                   display: none;
-                  padding: 12px 16px;
-                  background-color: #ffffff;
-                  border-top: 1px solid #e5e7eb;
-                  color: #6b7280;
+                  padding: 21px;
+                  background-color: rgba(236, 252, 3, 1);
+                  border-top: 5 dashed #0254f7;
+                  color: #03fc2c;
                   font-size: 14px;
+                  font-family: inherit;
                   line-height: 1.6;
+                  transition: all 300ms ease-in-out;
                 "
               >Please provide your answer here...</div>
             </div></div>
@@ -1333,7 +1415,7 @@
         (function() {
           // Initialize Q&A state
           window.qaState = window.qaState || {};
-          window.qaState['qa-wwbku4q7w'] = {
+          window.qaState['qa-ek2xxx6ac'] = {
             expandMultiple: false,
             currentInterview: 0,
             totalQuestions: 11,
@@ -1347,39 +1429,112 @@
             
             const answerEl = document.getElementById(qaId + '-answer-' + questionId);
             const iconEl = document.getElementById(qaId + '-icon-' + questionId);
+            const containerEl = answerEl ? answerEl.closest('.qa-item') : null;
             
             if (!answerEl || !iconEl) return;
             
             if (!state.expandMultiple) {
-              // Close all other items
+              // Close all other items with animation
               document.querySelectorAll('#' + qaId + ' [id^="' + qaId + '-answer-"]').forEach(el => {
                 if (el.id !== qaId + '-answer-' + questionId) {
-                  el.style.display = 'none';
+                  if (true) {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(-10px)';
+                    setTimeout(() => el.style.display = 'none', 150);
+                  } else {
+                    el.style.display = 'none';
+                  }
                   const id = el.id.split('-').pop();
                   state.openItems.delete(parseInt(id));
                   const icon = document.getElementById(qaId + '-icon-' + id);
                   if (icon) icon.style.transform = 'rotate(0deg)';
+                  
+                  // Reset container background
+                  const container = el.closest('.qa-item');
+                  if (container) {
+                    container.style.backgroundColor = 'rgba(53, 3, 3, 1)';
+                  }
                 }
               });
             }
             
             const isOpen = answerEl.style.display !== 'none';
-            answerEl.style.display = isOpen ? 'none' : 'block';
-            iconEl.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
             
             if (isOpen) {
+              // Closing
+              if (true) {
+                answerEl.style.opacity = '0';
+                answerEl.style.transform = 'translateY(-10px)';
+                setTimeout(() => answerEl.style.display = 'none', 150);
+              } else {
+                answerEl.style.display = 'none';
+              }
+              iconEl.style.transform = 'rotate(0deg)';
               state.openItems.delete(questionId);
+              
+              // Reset container background
+              if (containerEl) {
+                containerEl.style.backgroundColor = 'rgba(53, 3, 3, 1)';
+              }
             } else {
+              // Opening
+              answerEl.style.display = 'block';
+              if (true) {
+                answerEl.style.opacity = '0';
+                answerEl.style.transform = 'translateY(-10px)';
+                requestAnimationFrame(() => {
+                  answerEl.style.opacity = '1';
+                  answerEl.style.transform = 'translateY(0)';
+                });
+              }
+              iconEl.style.transform = 'rotate(180deg)';
               state.openItems.add(questionId);
+              
+              // Highlight container
+              if (containerEl) {
+                containerEl.style.backgroundColor = 'rgba(59, 130, 246, 0.1)';
+              }
             }
           };
           
           window.toggleQA = function(qaId, questionId) {
             const answerEl = document.getElementById(qaId + '-toggle-' + questionId);
+            const containerEl = answerEl ? answerEl.closest('.qa-item') : null;
             if (!answerEl) return;
             
             const isOpen = answerEl.style.display !== 'none';
-            answerEl.style.display = isOpen ? 'none' : 'block';
+            
+            if (isOpen) {
+              // Closing
+              if (true) {
+                answerEl.style.opacity = '0';
+                answerEl.style.transform = 'translateY(-10px)';
+                setTimeout(() => answerEl.style.display = 'none', 150);
+              } else {
+                answerEl.style.display = 'none';
+              }
+              
+              // Reset container background
+              if (containerEl) {
+                containerEl.style.backgroundColor = 'rgba(53, 3, 3, 1)';
+              }
+            } else {
+              // Opening
+              answerEl.style.display = 'block';
+              if (true) {
+                answerEl.style.opacity = '0';
+                answerEl.style.transform = 'translateY(-10px)';
+                requestAnimationFrame(() => {
+                  answerEl.style.opacity = '1';
+                  answerEl.style.transform = 'translateY(0)';
+                });
+              }
+              
+              // Highlight container
+              if (containerEl) {
+                containerEl.style.backgroundColor = 'rgba(59, 130, 246, 0.1)';
+              }
+            }
           };
           
           window.navigateInterview = function(qaId, direction) {
@@ -1393,33 +1548,52 @@
             
             if (!items.length || !prevBtn || !nextBtn || !indicator) return;
             
-            // Hide current item
-            if (items[state.currentInterview]) {
-              items[state.currentInterview].style.display = 'none';
+            // Animate out current item
+            if (items[state.currentInterview] && true) {
+              items[state.currentInterview].style.opacity = '0';
+              items[state.currentInterview].style.transform = direction > 0 ? 'translateX(-20px)' : 'translateX(20px)';
             }
             
-            // Update index
-            state.currentInterview += direction;
-            if (state.currentInterview < 0) state.currentInterview = 0;
-            if (state.currentInterview >= state.totalQuestions) state.currentInterview = state.totalQuestions - 1;
-            
-            // Show new item
-            if (items[state.currentInterview]) {
-              items[state.currentInterview].style.display = 'block';
-            }
-            
-            // Update buttons and indicator
-            prevBtn.disabled = state.currentInterview === 0;
-            nextBtn.disabled = state.currentInterview === state.totalQuestions - 1;
-            indicator.textContent = (state.currentInterview + 1) + ' of ' + state.totalQuestions;
-            
-            // Update button styles
-            prevBtn.style.backgroundColor = prevBtn.disabled ? '#e5e7eb' : '#374151';
-            prevBtn.style.color = prevBtn.disabled ? '#9ca3af' : 'white';
-            prevBtn.style.cursor = prevBtn.disabled ? 'not-allowed' : 'pointer';
-            nextBtn.style.backgroundColor = nextBtn.disabled ? '#e5e7eb' : '#3b82f6';
-            nextBtn.style.color = nextBtn.disabled ? '#9ca3af' : 'white';
-            nextBtn.style.cursor = nextBtn.disabled ? 'not-allowed' : 'pointer';
+            setTimeout(() => {
+              // Hide current item
+              if (items[state.currentInterview]) {
+                items[state.currentInterview].style.display = 'none';
+              }
+              
+              // Update index
+              state.currentInterview += direction;
+              if (state.currentInterview < 0) state.currentInterview = 0;
+              if (state.currentInterview >= state.totalQuestions) state.currentInterview = state.totalQuestions - 1;
+              
+              // Show new item
+              if (items[state.currentInterview]) {
+                items[state.currentInterview].style.display = 'block';
+                
+                // Animate in new item
+                if (true) {
+                  items[state.currentInterview].style.opacity = '0';
+                  items[state.currentInterview].style.transform = direction > 0 ? 'translateX(20px)' : 'translateX(-20px)';
+                  
+                  requestAnimationFrame(() => {
+                    items[state.currentInterview].style.opacity = '1';
+                    items[state.currentInterview].style.transform = 'translateX(0)';
+                  });
+                }
+              }
+              
+              // Update buttons and indicator
+              prevBtn.disabled = state.currentInterview === 0;
+              nextBtn.disabled = state.currentInterview === state.totalQuestions - 1;
+              indicator.textContent = (state.currentInterview + 1) + ' of ' + state.totalQuestions;
+              
+              // Update button styles with theming
+              prevBtn.style.backgroundColor = prevBtn.disabled ? '#e5e7eb' : '#3b82f6';
+              prevBtn.style.color = prevBtn.disabled ? '#9ca3af' : 'white';
+              prevBtn.style.cursor = prevBtn.disabled ? 'not-allowed' : 'pointer';
+              nextBtn.style.backgroundColor = nextBtn.disabled ? '#e5e7eb' : '#3b82f6';
+              nextBtn.style.color = nextBtn.disabled ? '#9ca3af' : 'white';
+              nextBtn.style.cursor = nextBtn.disabled ? 'not-allowed' : 'pointer';
+            }, 150);
           };
           
           window.filterQA = function(qaId) {
@@ -1429,11 +1603,32 @@
             const query = searchInput.value.toLowerCase();
             const items = document.querySelectorAll('#' + qaId + ' .qa-item');
             
-            items.forEach(item => {
+            items.forEach((item, index) => {
               const question = item.dataset.question || '';
               const answer = item.dataset.answer || '';
               const matches = question.includes(query) || answer.includes(query);
-              item.style.display = matches ? 'block' : 'none';
+              
+              if (matches) {
+                item.style.display = 'block';
+                if (true) {
+                  item.style.opacity = '0';
+                  item.style.transform = 'translateY(-10px)';
+                  setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                  }, index * 50); // Staggered animation
+                }
+              } else {
+                if (true) {
+                  item.style.opacity = '0';
+                  item.style.transform = 'translateY(-10px)';
+                  setTimeout(() => {
+                    item.style.display = 'none';
+                  }, 150);
+                } else {
+                  item.style.display = 'none';
+                }
+              }
             });
           };
           
@@ -1441,24 +1636,47 @@
             const items = document.querySelectorAll('#' + qaId + ' .qa-item');
             const buttons = document.querySelectorAll('#' + qaId + ' .category-btn');
             
-            // Update button styles
+            // Update button styles with theming
             buttons.forEach(btn => {
               btn.classList.remove('active');
               if (btn.dataset.category === category) {
                 btn.style.backgroundColor = '#3b82f6';
                 btn.style.color = 'white';
+                btn.style.boxShadow = '0 8px 25px -2px rgba(247, 2, 2, 0.88)';
                 btn.classList.add('active');
               } else {
-                btn.style.backgroundColor = '#e5e7eb';
-                btn.style.color = '#374151';
+                btn.style.backgroundColor = 'rgba(53, 3, 3, 1)';
+                btn.style.color = '#03fc2c';
+                btn.style.boxShadow = '0 8px 25px -2px rgba(247, 2, 2, 0.88)';
               }
             });
             
-            // Filter items
-            items.forEach(item => {
+            // Filter items with animation
+            items.forEach((item, index) => {
               const itemCategory = item.dataset.category || 'General';
               const matches = category === 'all' || itemCategory === category;
-              item.style.display = matches ? 'block' : 'none';
+              
+              if (matches) {
+                item.style.display = 'block';
+                if (true) {
+                  item.style.opacity = '0';
+                  item.style.transform = 'translateY(-10px)';
+                  setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                  }, index * 50); // Staggered animation
+                }
+              } else {
+                if (true) {
+                  item.style.opacity = '0';
+                  item.style.transform = 'translateY(-10px)';
+                  setTimeout(() => {
+                    item.style.display = 'none';
+                  }, 150);
+                } else {
+                  item.style.display = 'none';
+                }
+              }
             });
           };
         })();
@@ -1496,8 +1714,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1763044580619;
-        const CURRENT_BUILD_VERSION = 2250;
+        const CURRENT_BUILD_TIMESTAMP = 1763045387193;
+        const CURRENT_BUILD_VERSION = 2258;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -1539,7 +1757,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1763044580619)');
+            console.log('wyerdcard.net - About page loaded (build: 1763045387193)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
