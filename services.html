@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1763048458964">
-    <meta name="build-version" content="2286">
+    <meta name="build-timestamp" content="1763049812912">
+    <meta name="build-version" content="2287">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1763048458964">
+    <link rel="stylesheet" href="styles.css?v=1763049812912">
+    <!-- Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyk75jjPkzYuY-wlLQDuSLO4XTQ8iH9xI&libraries=places"></script>
+    <!-- Leaflet (OpenStreetMap) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -159,8 +164,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1763048458964;
-        const CURRENT_BUILD_VERSION = 2286;
+        const CURRENT_BUILD_TIMESTAMP = 1763049812912;
+        const CURRENT_BUILD_VERSION = 2287;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -202,7 +207,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - Services page loaded (build: 1763048458964)');
+            console.log('wyerdcard.net - Services page loaded (build: 1763049812912)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();

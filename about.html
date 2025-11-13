@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1763048458916">
-    <meta name="build-version" content="2286">
+    <meta name="build-timestamp" content="1763049812880">
+    <meta name="build-version" content="2287">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1763048458916">
+    <link rel="stylesheet" href="styles.css?v=1763049812880">
+    <!-- Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyk75jjPkzYuY-wlLQDuSLO4XTQ8iH9xI&libraries=places"></script>
+    <!-- Leaflet (OpenStreetMap) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -636,7 +641,7 @@
         padding: 12px;
         min-height: 200px;
       ">
-        <div id="qa-1hd6wnnxk" style="
+        <div id="qa-ojc44mzfo" style="
           position: relative;
           width: 100%;
           height: auto;
@@ -685,7 +690,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-1hd6wnnxk', 1)"
+                onclick="toggleAccordion('qa-ojc44mzfo', 1)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -707,7 +712,7 @@
               >
                 <span style="line-height: 1.4;">What is your return policy?</span>
                 <svg 
-                  id="qa-1hd6wnnxk-icon-1"
+                  id="qa-ojc44mzfo-icon-1"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -724,7 +729,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-1hd6wnnxk-answer-1"
+                id="qa-ojc44mzfo-answer-1"
                 style="
                   display: none;
                   padding: 21px;
@@ -752,7 +757,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-1hd6wnnxk', 2)"
+                onclick="toggleAccordion('qa-ojc44mzfo', 2)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -774,7 +779,7 @@
               >
                 <span style="line-height: 1.4;">How long does shipping take?</span>
                 <svg 
-                  id="qa-1hd6wnnxk-icon-2"
+                  id="qa-ojc44mzfo-icon-2"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -791,7 +796,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-1hd6wnnxk-answer-2"
+                id="qa-ojc44mzfo-answer-2"
                 style="
                   display: none;
                   padding: 21px;
@@ -819,7 +824,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-1hd6wnnxk', 3)"
+                onclick="toggleAccordion('qa-ojc44mzfo', 3)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -841,7 +846,7 @@
               >
                 <span style="line-height: 1.4;">Do you offer customer support?</span>
                 <svg 
-                  id="qa-1hd6wnnxk-icon-3"
+                  id="qa-ojc44mzfo-icon-3"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -858,7 +863,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-1hd6wnnxk-answer-3"
+                id="qa-ojc44mzfo-answer-3"
                 style="
                   display: none;
                   padding: 21px;
@@ -886,7 +891,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-1hd6wnnxk', 4)"
+                onclick="toggleAccordion('qa-ojc44mzfo', 4)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -908,7 +913,7 @@
               >
                 <span style="line-height: 1.4;">What problem does your business solve?</span>
                 <svg 
-                  id="qa-1hd6wnnxk-icon-4"
+                  id="qa-ojc44mzfo-icon-4"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -925,7 +930,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-1hd6wnnxk-answer-4"
+                id="qa-ojc44mzfo-answer-4"
                 style="
                   display: none;
                   padding: 21px;
@@ -953,7 +958,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-1hd6wnnxk', 5)"
+                onclick="toggleAccordion('qa-ojc44mzfo', 5)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -975,7 +980,7 @@
               >
                 <span style="line-height: 1.4;">What sets you apart from competitors?</span>
                 <svg 
-                  id="qa-1hd6wnnxk-icon-5"
+                  id="qa-ojc44mzfo-icon-5"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -992,7 +997,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-1hd6wnnxk-answer-5"
+                id="qa-ojc44mzfo-answer-5"
                 style="
                   display: none;
                   padding: 21px;
@@ -1020,7 +1025,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-1hd6wnnxk', 6)"
+                onclick="toggleAccordion('qa-ojc44mzfo', 6)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -1042,7 +1047,7 @@
               >
                 <span style="line-height: 1.4;">What has been your biggest challenge?</span>
                 <svg 
-                  id="qa-1hd6wnnxk-icon-6"
+                  id="qa-ojc44mzfo-icon-6"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -1059,7 +1064,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-1hd6wnnxk-answer-6"
+                id="qa-ojc44mzfo-answer-6"
                 style="
                   display: none;
                   padding: 21px;
@@ -1087,7 +1092,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-1hd6wnnxk', 7)"
+                onclick="toggleAccordion('qa-ojc44mzfo', 7)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -1109,7 +1114,7 @@
               >
                 <span style="line-height: 1.4;">What are your future plans and goals?</span>
                 <svg 
-                  id="qa-1hd6wnnxk-icon-7"
+                  id="qa-ojc44mzfo-icon-7"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -1126,7 +1131,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-1hd6wnnxk-answer-7"
+                id="qa-ojc44mzfo-answer-7"
                 style="
                   display: none;
                   padding: 21px;
@@ -1154,7 +1159,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-1hd6wnnxk', 8)"
+                onclick="toggleAccordion('qa-ojc44mzfo', 8)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -1176,7 +1181,7 @@
               >
                 <span style="line-height: 1.4;">What inspired you to start this journey?</span>
                 <svg 
-                  id="qa-1hd6wnnxk-icon-8"
+                  id="qa-ojc44mzfo-icon-8"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -1193,7 +1198,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-1hd6wnnxk-answer-8"
+                id="qa-ojc44mzfo-answer-8"
                 style="
                   display: none;
                   padding: 21px;
@@ -1221,7 +1226,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-1hd6wnnxk', 9)"
+                onclick="toggleAccordion('qa-ojc44mzfo', 9)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -1243,7 +1248,7 @@
               >
                 <span style="line-height: 1.4;">What has been your biggest learning experience?</span>
                 <svg 
-                  id="qa-1hd6wnnxk-icon-9"
+                  id="qa-ojc44mzfo-icon-9"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -1260,7 +1265,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-1hd6wnnxk-answer-9"
+                id="qa-ojc44mzfo-answer-9"
                 style="
                   display: none;
                   padding: 21px;
@@ -1288,7 +1293,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-1hd6wnnxk', 10)"
+                onclick="toggleAccordion('qa-ojc44mzfo', 10)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -1310,7 +1315,7 @@
               >
                 <span style="line-height: 1.4;">How do you stay motivated during challenging times?</span>
                 <svg 
-                  id="qa-1hd6wnnxk-icon-10"
+                  id="qa-ojc44mzfo-icon-10"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -1327,7 +1332,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-1hd6wnnxk-answer-10"
+                id="qa-ojc44mzfo-answer-10"
                 style="
                   display: none;
                   padding: 21px;
@@ -1355,7 +1360,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-1hd6wnnxk', 11)"
+                onclick="toggleAccordion('qa-ojc44mzfo', 11)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -1377,7 +1382,7 @@
               >
                 <span style="line-height: 1.4;">What advice would you give to someone starting out?</span>
                 <svg 
-                  id="qa-1hd6wnnxk-icon-11"
+                  id="qa-ojc44mzfo-icon-11"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -1394,7 +1399,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-1hd6wnnxk-answer-11"
+                id="qa-ojc44mzfo-answer-11"
                 style="
                   display: none;
                   padding: 21px;
@@ -1415,7 +1420,7 @@
         (function() {
           // Initialize Q&A state
           window.qaState = window.qaState || {};
-          window.qaState['qa-1hd6wnnxk'] = {
+          window.qaState['qa-ojc44mzfo'] = {
             expandMultiple: false,
             currentInterview: 0,
             totalQuestions: 11,
@@ -1708,14 +1713,150 @@
           <div class="feature-content">Calendar</div>
         </div></div><div class="segment segment-1" id="1763012864248_0.9928465809867323" style="position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center;left: 49.12788354093074%;top: 50.698765493073935%;transform: translate(-50%, -50%);width: 200px;height: 120px;"><div class="feature feature-countdown" style="background-color: #ffffff; border-color: #e5e7eb; border-radius: 8px; text-color: #374151; accent-color: #ef4444; font-size: 24px; font-weight: 600; text-align: center; padding: 20px;">
           <div class="feature-content">Countdown</div>
-        </div></div><div class="segment segment-2" id="1763012864248_0.3495774738976414" style="position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center;left: 80.75047198794992%;top: 46.2077476201897%;transform: translate(-50%, -50%);width: 200px;height: 120px;"><div class="feature feature-map" style="background-color: #f8f9fa; border: 1px solid #e5e7eb; border-radius: 8px; padding: 0; width: 100%; height: 300px;">
-          <div class="feature-content">Map</div>
-        </div></div></div>
+        </div></div><div class="segment segment-2" id="1763012864248_0.3495774738976414" style="position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center;left: 80.75047198794992%;top: 46.2077476201897%;transform: translate(-50%, -50%);width: 200px;height: 120px;">
+      <div class="map-feature" style="
+        width: 100%;
+        height: 300px;
+        border: 2px solid #3b82f6;
+        border-radius: 8pxpx;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.015), 0 2px 4px rgba(0, 0, 0, 0.009);
+        background-color: rgba(248, 249, 250, 1);
+        padding: 16px;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+      ">
+        <div id="map-1763049812880-1pidcv991" style="
+          width: 100%;
+          height: 268px;
+          background-color: #e5e5e5;
+          border-radius: NaNpx;
+          position: relative;
+          overflow: hidden;
+        "></div>
+        <div class="map-controls" style="
+          margin-top: 16px;
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+          justify-content: center;
+        ">
+          <button 
+            onclick="getDirectionsToMap('40.7128', '-74.006', '')"
+            style="
+              background-color: #3b82f6;
+              color: white;
+              border: none;
+              border-radius: 6px;
+              padding: 8px 16px;
+              font-size: 14px;
+              font-family: inherit;
+              cursor: pointer;
+              transition: background-color 0.2s;
+            "
+            onmouseover="this.style.backgroundColor='#2563eb'"
+            onmouseout="this.style.backgroundColor='#3b82f6'"
+          >
+            🗺️ Get Directions
+          </button></div></div>
+      <script>
+        function initializeMapmap17630498128801pidcv991() {
+          const mapElement = document.getElementById('map-1763049812880-1pidcv991');
+          if (!mapElement) return;
+          
+          const markers = [{"id":"691571b4cb9af52841c34826","position":{"lat":40.7128,"lng":-74.006},"title":"New York City","content":"Default location in New York City","icon":"default"},{"id":"691571b4cb9af52841c34824","position":{"lat":40.7128,"lng":-74.006},"title":"New York City","content":"Default location in New York City","icon":"default"},{"position":{"lat":40.7128,"lng":-74.006},"title":"New York City","content":"Default location in New York City","icon":"default"},{"position":{"lat":40.7128,"lng":-74.006},"title":"New York City","content":"Default location in New York City","icon":"default"}];
+          const mapOptions = {
+            center: { lat: 40.7128, lng: -74.006 },
+            zoom: 13,
+            mapTypeId: 'roadmap',
+            
+            
+            
+            
+            
+            styles: null
+          };
+          
+          if (typeof google !== 'undefined' && google.maps) {
+            // Google Maps
+            const map = new google.maps.Map(mapElement, mapOptions);
+            
+            // Add markers
+            markers.forEach(markerData => {
+              const marker = new google.maps.Marker({
+                position: markerData.position,
+                map: map,
+                title: markerData.title
+              });
+              
+              if (markerData.content) {
+                const infoWindow = new google.maps.InfoWindow({
+                  content: '<div style="padding: 8px; color: #333;"><strong>' + markerData.title + '</strong><br>' + markerData.content + '</div>'
+                });
+                
+                marker.addListener('click', () => {
+                  infoWindow.open(map, marker);
+                });
+              }
+            });
+            
+            // Add overlays if enabled
+            
+            
+            
+            
+            
+            
+          } else if (typeof L !== 'undefined') {
+            // Leaflet (OpenStreetMap)
+            const map = L.map('map-1763049812880-1pidcv991').setView([40.7128, -74.006], 13);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            
+            // Add markers
+            markers.forEach(markerData => {
+              const marker = L.marker([markerData.position.lat, markerData.position.lng]).addTo(map);
+              
+              if (markerData.title || markerData.content) {
+                marker.bindPopup('<div style="padding: 8px;"><strong>' + markerData.title + '</strong><br>' + markerData.content + '</div>');
+              }
+            });
+            
+            // Disable interactions if configured
+            
+            
+            
+          } else {
+            // Fallback: Show static content
+            mapElement.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666; text-align: center;"><div><div style="font-size: 48px; margin-bottom: 16px;">📍</div><div>Map loading...</div><div style="font-size: 12px; margin-top: 8px;">Please enable JavaScript or check your internet connection</div></div></div>';
+          }
+        }
+        
+        function getDirectionsToMap(lat, lng, address) {
+          const destination = address || lat + ',' + lng;
+          const url = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(destination);
+          window.open(url, '_blank');
+        }
+        
+        // Initialize map when page loads
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initializeMapmap17630498128801pidcv991);
+        } else {
+          initializeMapmap17630498128801pidcv991();
+        }
+        
+        // Also try to initialize if Google Maps API loads later
+        window.addEventListener('load', () => {
+          setTimeout(initializeMapmap17630498128801pidcv991, 1000);
+        });
+      </script></div></div>
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1763048458916;
-        const CURRENT_BUILD_VERSION = 2286;
+        const CURRENT_BUILD_TIMESTAMP = 1763049812880;
+        const CURRENT_BUILD_VERSION = 2287;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -1757,7 +1898,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1763048458916)');
+            console.log('wyerdcard.net - About page loaded (build: 1763049812880)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
