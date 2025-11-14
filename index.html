@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1763138284889">
-    <meta name="build-version" content="2332">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1763138284889">
-    <!-- Google Maps API -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyk75jjPkzYuY-wlLQDuSLO4XTQ8iH9xI&libraries=places"></script>
-    <!-- Leaflet (OpenStreetMap) -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <meta name="build-timestamp" content="1763150136784">
+    <meta name="build-version" content="2385">
+    <!-- Production-ready Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=1763150136784">
+    <!-- Google Maps API with proper async loading -->
+    <script>
+      function initGoogleMaps() {
+        // Google Maps initialization will be handled in map components
+        window.googleMapsLoaded = true;
+        if (window.initMapComponents) {
+          window.initMapComponents();
+        }
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyk75jjPkzYuY-wlLQDuSLO4XTQ8iH9xI&libraries=places&callback=initGoogleMaps&loading=async"></script>
+    <!-- Leaflet (OpenStreetMap) from reliable CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -442,7 +452,7 @@
           </h3-reg>
         </div></div><div class="segment segment-2" id="segment-1760923778501-2" style="position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center;left: 82.92482705665907%;top: 50.61250305175782%;transform: translate(-50%, -50%);width: 364px;height: 132px;"><div class="button-feature" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; pointer-events: none;">
           <style>
-            #button-64u0mpv37 {
+            #button-63jtkzxdr {
               background-color: #6b7280 !important; color: #ffffff !important; border-radius: 0px !important; font-size: 14px !important; font-weight: 500 !important; text-align: center !important; padding: 8px 16px !important;
               width: 100% !important;
               height: 56px !important;
@@ -464,7 +474,7 @@
           </style>
           
             <style>
-              #button-64u0mpv37:hover {
+              #button-63jtkzxdr:hover {
                 background-color: #818793 !important;
                 
                 transform: translateY(-1px) !important;
@@ -472,7 +482,7 @@
                 transition: all 0.2s ease !important;
                 outline: none !important;
               }
-              #button-64u0mpv37:active {
+              #button-63jtkzxdr:active {
                 background-color: #6b7280 !important;
                 
                 transform: translateY(1px) !important;
@@ -480,28 +490,28 @@
                 transition: all 0.1s ease !important;
                 outline: none !important;
               }
-              #button-64u0mpv37:active .button-64u0mpv37-icon {
+              #button-63jtkzxdr:active .button-63jtkzxdr-icon {
                 color: #222 !important;
               }
-              #button-64u0mpv37:active .button-64u0mpv37-text {
+              #button-63jtkzxdr:active .button-63jtkzxdr-text {
                 
               }
-              #button-64u0mpv37:focus {
+              #button-63jtkzxdr:focus {
                 outline: none !important;
                 box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5) !important;
               }
             </style>
           
-          <button id="button-64u0mpv37" class="custom-button">
+          <button id="button-63jtkzxdr" class="custom-button">
             
-            <span class="button-64u0mpv37-text" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) translate(0px, 0px); z-index: 3; white-space: nowrap;">Square Button</span>
+            <span class="button-63jtkzxdr-text" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) translate(0px, 0px); z-index: 3; white-space: nowrap;">Square Button</span>
           </button>
         </div></div></div>
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1763138284889;
-        const CURRENT_BUILD_VERSION = 2332;
+        const CURRENT_BUILD_TIMESTAMP = 1763150136784;
+        const CURRENT_BUILD_VERSION = 2385;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -543,7 +553,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - Home page loaded (build: 1763138284889)');
+            console.log('wyerdcard.net - Home page loaded (build: 1763150136784)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();

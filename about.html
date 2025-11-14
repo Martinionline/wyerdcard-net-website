@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1763138285702">
-    <meta name="build-version" content="2332">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css?v=1763138285702">
-    <!-- Google Maps API -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyk75jjPkzYuY-wlLQDuSLO4XTQ8iH9xI&libraries=places"></script>
-    <!-- Leaflet (OpenStreetMap) -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <meta name="build-timestamp" content="1763150137572">
+    <meta name="build-version" content="2385">
+    <!-- Production-ready Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=1763150137572">
+    <!-- Google Maps API with proper async loading -->
+    <script>
+      function initGoogleMaps() {
+        // Google Maps initialization will be handled in map components
+        window.googleMapsLoaded = true;
+        if (window.initMapComponents) {
+          window.initMapComponents();
+        }
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyk75jjPkzYuY-wlLQDuSLO4XTQ8iH9xI&libraries=places&callback=initGoogleMaps&loading=async"></script>
+    <!-- Leaflet (OpenStreetMap) from reliable CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -641,7 +651,7 @@
         padding: 12px;
         min-height: 200px;
       ">
-        <div id="qa-2942nknej" style="
+        <div id="qa-htxe81en3" style="
           position: relative;
           width: 100%;
           height: auto;
@@ -690,7 +700,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-2942nknej', 1)"
+                onclick="toggleAccordion('qa-htxe81en3', 1)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -712,7 +722,7 @@
               >
                 <span style="line-height: 1.4;">What is your return policy?</span>
                 <svg 
-                  id="qa-2942nknej-icon-1"
+                  id="qa-htxe81en3-icon-1"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -729,7 +739,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-2942nknej-answer-1"
+                id="qa-htxe81en3-answer-1"
                 style="
                   display: none;
                   padding: 21px;
@@ -757,7 +767,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-2942nknej', 2)"
+                onclick="toggleAccordion('qa-htxe81en3', 2)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -779,7 +789,7 @@
               >
                 <span style="line-height: 1.4;">How long does shipping take?</span>
                 <svg 
-                  id="qa-2942nknej-icon-2"
+                  id="qa-htxe81en3-icon-2"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -796,7 +806,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-2942nknej-answer-2"
+                id="qa-htxe81en3-answer-2"
                 style="
                   display: none;
                   padding: 21px;
@@ -824,7 +834,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-2942nknej', 3)"
+                onclick="toggleAccordion('qa-htxe81en3', 3)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -846,7 +856,7 @@
               >
                 <span style="line-height: 1.4;">Do you offer customer support?</span>
                 <svg 
-                  id="qa-2942nknej-icon-3"
+                  id="qa-htxe81en3-icon-3"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -863,7 +873,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-2942nknej-answer-3"
+                id="qa-htxe81en3-answer-3"
                 style="
                   display: none;
                   padding: 21px;
@@ -891,7 +901,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-2942nknej', 4)"
+                onclick="toggleAccordion('qa-htxe81en3', 4)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -913,7 +923,7 @@
               >
                 <span style="line-height: 1.4;">What problem does your business solve?</span>
                 <svg 
-                  id="qa-2942nknej-icon-4"
+                  id="qa-htxe81en3-icon-4"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -930,7 +940,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-2942nknej-answer-4"
+                id="qa-htxe81en3-answer-4"
                 style="
                   display: none;
                   padding: 21px;
@@ -958,7 +968,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-2942nknej', 5)"
+                onclick="toggleAccordion('qa-htxe81en3', 5)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -980,7 +990,7 @@
               >
                 <span style="line-height: 1.4;">What sets you apart from competitors?</span>
                 <svg 
-                  id="qa-2942nknej-icon-5"
+                  id="qa-htxe81en3-icon-5"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -997,7 +1007,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-2942nknej-answer-5"
+                id="qa-htxe81en3-answer-5"
                 style="
                   display: none;
                   padding: 21px;
@@ -1025,7 +1035,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-2942nknej', 6)"
+                onclick="toggleAccordion('qa-htxe81en3', 6)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -1047,7 +1057,7 @@
               >
                 <span style="line-height: 1.4;">What has been your biggest challenge?</span>
                 <svg 
-                  id="qa-2942nknej-icon-6"
+                  id="qa-htxe81en3-icon-6"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -1064,7 +1074,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-2942nknej-answer-6"
+                id="qa-htxe81en3-answer-6"
                 style="
                   display: none;
                   padding: 21px;
@@ -1092,7 +1102,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-2942nknej', 7)"
+                onclick="toggleAccordion('qa-htxe81en3', 7)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -1114,7 +1124,7 @@
               >
                 <span style="line-height: 1.4;">What are your future plans and goals?</span>
                 <svg 
-                  id="qa-2942nknej-icon-7"
+                  id="qa-htxe81en3-icon-7"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -1131,7 +1141,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-2942nknej-answer-7"
+                id="qa-htxe81en3-answer-7"
                 style="
                   display: none;
                   padding: 21px;
@@ -1159,7 +1169,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-2942nknej', 8)"
+                onclick="toggleAccordion('qa-htxe81en3', 8)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -1181,7 +1191,7 @@
               >
                 <span style="line-height: 1.4;">What inspired you to start this journey?</span>
                 <svg 
-                  id="qa-2942nknej-icon-8"
+                  id="qa-htxe81en3-icon-8"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -1198,7 +1208,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-2942nknej-answer-8"
+                id="qa-htxe81en3-answer-8"
                 style="
                   display: none;
                   padding: 21px;
@@ -1226,7 +1236,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-2942nknej', 9)"
+                onclick="toggleAccordion('qa-htxe81en3', 9)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -1248,7 +1258,7 @@
               >
                 <span style="line-height: 1.4;">What has been your biggest learning experience?</span>
                 <svg 
-                  id="qa-2942nknej-icon-9"
+                  id="qa-htxe81en3-icon-9"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -1265,7 +1275,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-2942nknej-answer-9"
+                id="qa-htxe81en3-answer-9"
                 style="
                   display: none;
                   padding: 21px;
@@ -1293,7 +1303,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-2942nknej', 10)"
+                onclick="toggleAccordion('qa-htxe81en3', 10)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -1315,7 +1325,7 @@
               >
                 <span style="line-height: 1.4;">How do you stay motivated during challenging times?</span>
                 <svg 
-                  id="qa-2942nknej-icon-10"
+                  id="qa-htxe81en3-icon-10"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -1332,7 +1342,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-2942nknej-answer-10"
+                id="qa-htxe81en3-answer-10"
                 style="
                   display: none;
                   padding: 21px;
@@ -1360,7 +1370,7 @@
               "
             >
               <button 
-                onclick="toggleAccordion('qa-2942nknej', 11)"
+                onclick="toggleAccordion('qa-htxe81en3', 11)"
                 style="
                   width: 100%;
                   padding: 21px;
@@ -1382,7 +1392,7 @@
               >
                 <span style="line-height: 1.4;">What advice would you give to someone starting out?</span>
                 <svg 
-                  id="qa-2942nknej-icon-11"
+                  id="qa-htxe81en3-icon-11"
                   style="
                     width: 24px; 
                     height: 24px; 
@@ -1399,7 +1409,7 @@
                 </svg>
               </button>
               <div 
-                id="qa-2942nknej-answer-11"
+                id="qa-htxe81en3-answer-11"
                 style="
                   display: none;
                   padding: 21px;
@@ -1420,7 +1430,7 @@
         (function() {
           // Initialize Q&A state
           window.qaState = window.qaState || {};
-          window.qaState['qa-2942nknej'] = {
+          window.qaState['qa-htxe81en3'] = {
             expandMultiple: false,
             currentInterview: 0,
             totalQuestions: 11,
@@ -1725,7 +1735,7 @@
         overflow: hidden;
         position: relative;
       ">
-        <div id="map-1763138285701-rnfmuqrhc" style="
+        <div id="map-1763150137571-6q7uyb0q5" style="
           width: 100%;
           height: 100%;
           background-color: #e5e5e5;
@@ -1765,9 +1775,14 @@
             🗺️ Get Directions
           </button></div></div>
       <script>
-        function initializeMapmap1763138285701rnfmuqrhc() {
-          const mapElement = document.getElementById('map-1763138285701-rnfmuqrhc');
+        function initializeMapmap17631501375716q7uyb0q5() {
+          const mapElement = document.getElementById('map-1763150137571-6q7uyb0q5');
           if (!mapElement) return;
+          
+          // Ensure map element has proper height
+          if (mapElement.offsetHeight === 0) {
+            mapElement.style.height = '400px';
+          }
           
           const markers = [{"id":"691571b4cb9af52841c34826","position":{"lat":40.7128,"lng":-74.006},"title":"New York City","content":"Default location in New York City","icon":"default"},{"id":"691571b4cb9af52841c34824","position":{"lat":40.7128,"lng":-74.006},"title":"New York City","content":"Default location in New York City","icon":"default"},{"position":{"lat":40.7128,"lng":-74.006},"title":"New York City","content":"Default location in New York City","icon":"default"},{"position":{"lat":40.7128,"lng":-74.006},"title":"New York City","content":"Default location in New York City","icon":"default"}];
           const mapOptions = {
@@ -1782,7 +1797,8 @@
             styles: null
           };
           
-          if (typeof google !== 'undefined' && google.maps) {
+          function tryInitializeGoogleMap() {
+            if (typeof google !== 'undefined' && google.maps) {
             // Google Maps
             const map = new google.maps.Map(mapElement, mapOptions);
             
@@ -1811,10 +1827,13 @@
             
             
             
-            
-          } else if (typeof L !== 'undefined') {
+            }
+          }
+          
+          function tryInitializeLeafletMap() {
+            if (typeof L !== 'undefined') {
             // Leaflet (OpenStreetMap)
-            const map = L.map('map-1763138285701-rnfmuqrhc').setView([40.7128, -74.006], 13);
+            const map = L.map('map-1763150137571-6q7uyb0q5').setView([40.7128, -74.006], 13);
             
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
               attribution: '© OpenStreetMap contributors'
@@ -1846,22 +1865,38 @@
         }
         
         // Initialize map when page loads
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', initializeMapmap1763138285701rnfmuqrhc);
-        } else {
-          initializeMapmap1763138285701rnfmuqrhc();
+        function tryInitializeMap() {
+          if (window.google && window.google.maps) {
+            tryInitializeGoogleMap();
+          } else {
+            tryInitializeLeafletMap();
+          }
         }
         
-        // Also try to initialize if Google Maps API loads later
-        window.addEventListener('load', () => {
-          setTimeout(initializeMapmap1763138285701rnfmuqrhc, 1000);
-        });
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', tryInitializeMap);
+        } else {
+          tryInitializeMap();
+        }
+        
+        // Register this map for initialization when Google Maps loads
+        if (!window.initMapComponents) {
+          window.initMapComponents = function() {
+            tryInitializeMap();
+          };
+        } else {
+          const oldInit = window.initMapComponents;
+          window.initMapComponents = function() {
+            oldInit();
+            tryInitializeMap();
+          };
+        }
       </script></div></div>
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1763138285702;
-        const CURRENT_BUILD_VERSION = 2332;
+        const CURRENT_BUILD_TIMESTAMP = 1763150137572;
+        const CURRENT_BUILD_VERSION = 2385;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -1903,7 +1938,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('wyerdcard.net - About page loaded (build: 1763138285702)');
+            console.log('wyerdcard.net - About page loaded (build: 1763150137572)');
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
