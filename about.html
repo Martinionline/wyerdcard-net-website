@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1763396093700">
-    <meta name="build-version" content="2771">
+    <meta name="build-timestamp" content="1763408164185">
+    <meta name="build-version" content="2783">
     <!-- Production-ready Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=1763396093700">
+    <link rel="stylesheet" href="styles.css?v=1763408164185">
     <!-- Google Maps API with proper async loading -->
     <script>
       function initGoogleMaps() {
@@ -53,18 +53,210 @@
 </head>
 <body>
     
-      <nav class="main-navigation">
-          <div class="nav-container">
-              <a href="index.html" class="nav-item ">Home</a><a href="about.html" class="nav-item active">About</a><a href="services.html" class="nav-item ">Services</a><a href="contact.html" class="nav-item ">Contact</a><a href="support.html" class="nav-item ">Support</a><a href="job.html" class="nav-item ">Job</a>
+    <nav class="main-navigation">
+      <div class="navigation-container h-full flex flex-col justify-center transition-opacity duration-200" 
+           style="background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; font-family: "Courier New"; padding: 12px 16px; font-size: 14px; font-weight: 500; color: #374151; height: 80px; min-height: 80px">
+        
+            <div class="flex items-center w-full h-full justify-between">
+              
+      <div class="flex items-center mr-4">
+        
+          <div class="font-bold cursor-pointer transition-colors duration-200" 
+               style="
+                 color: #1f2937;
+                 font-family: inherit;
+                 font-size: 40px;
+                 font-weight: bold;
+                 
+               "
+               onmouseover="this.style.color='#1d4ed8'"
+               onmouseout="this.style.color='#1f2937'"
+          >
+            My Website
           </div>
-      </nav>
+        
+      </div>
+    
+              <div class="flex items-center  flex  flex-1 justify-center" style="gap: 16px;">
+                
+        <button class="transition-all duration-200 flex items-center gap-2 hover:shadow-sm" 
+                onclick="window.location.href='index.html'"
+                style="
+                  padding: 8px 12px;
+                  font-size: 14px;
+                  font-weight: 500;
+                  border-radius: 6px;
+                  background-color: transparent; color: #374151;
+                  border: none;
+                  cursor: pointer;
+                  transition: all 0.2s ease;
+                "
+                onmouseover="if (!false) { this.style.backgroundColor='#f3f4f6'; this.style.boxShadow='0 1px 2px rgba(0,0,0,0.05)'; }"
+                onmouseout="if (!false) { this.style.backgroundColor='transparent'; this.style.boxShadow='none'; }"
+        >
+          <span>Home</span>
+        </button>
+        <button class="transition-all duration-200 flex items-center gap-2 shadow-md" 
+                onclick="window.location.href='about.html'"
+                style="
+                  padding: 8px 12px;
+                  font-size: 14px;
+                  font-weight: 500;
+                  border-radius: 6px;
+                  background-color: #1d4ed8; color: white; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                  border: none;
+                  cursor: pointer;
+                  transition: all 0.2s ease;
+                "
+                onmouseover="if (!true) { this.style.backgroundColor='#f3f4f6'; this.style.boxShadow='0 1px 2px rgba(0,0,0,0.05)'; }"
+                onmouseout="if (!true) { this.style.backgroundColor='transparent'; this.style.boxShadow='none'; }"
+        >
+          <span>About</span>
+        </button>
+        <button class="transition-all duration-200 flex items-center gap-2 hover:shadow-sm" 
+                onclick="window.location.href='services.html'"
+                style="
+                  padding: 8px 12px;
+                  font-size: 14px;
+                  font-weight: 500;
+                  border-radius: 6px;
+                  background-color: transparent; color: #374151;
+                  border: none;
+                  cursor: pointer;
+                  transition: all 0.2s ease;
+                "
+                onmouseover="if (!false) { this.style.backgroundColor='#f3f4f6'; this.style.boxShadow='0 1px 2px rgba(0,0,0,0.05)'; }"
+                onmouseout="if (!false) { this.style.backgroundColor='transparent'; this.style.boxShadow='none'; }"
+        >
+          <span>Services</span>
+        </button>
+        <button class="transition-all duration-200 flex items-center gap-2 hover:shadow-sm" 
+                onclick="window.location.href='contact.html'"
+                style="
+                  padding: 8px 12px;
+                  font-size: 14px;
+                  font-weight: 500;
+                  border-radius: 6px;
+                  background-color: transparent; color: #374151;
+                  border: none;
+                  cursor: pointer;
+                  transition: all 0.2s ease;
+                "
+                onmouseover="if (!false) { this.style.backgroundColor='#f3f4f6'; this.style.boxShadow='0 1px 2px rgba(0,0,0,0.05)'; }"
+                onmouseout="if (!false) { this.style.backgroundColor='transparent'; this.style.boxShadow='none'; }"
+        >
+          <span>Contact</span>
+        </button>
+        <button class="transition-all duration-200 flex items-center gap-2 hover:shadow-sm" 
+                onclick="window.location.href='support.html'"
+                style="
+                  padding: 8px 12px;
+                  font-size: 14px;
+                  font-weight: 500;
+                  border-radius: 6px;
+                  background-color: transparent; color: #374151;
+                  border: none;
+                  cursor: pointer;
+                  transition: all 0.2s ease;
+                "
+                onmouseover="if (!false) { this.style.backgroundColor='#f3f4f6'; this.style.boxShadow='0 1px 2px rgba(0,0,0,0.05)'; }"
+                onmouseout="if (!false) { this.style.backgroundColor='transparent'; this.style.boxShadow='none'; }"
+        >
+          <span>Support</span>
+        </button>
+        <button class="transition-all duration-200 flex items-center gap-2 hover:shadow-sm" 
+                onclick="window.location.href='job.html'"
+                style="
+                  padding: 8px 12px;
+                  font-size: 14px;
+                  font-weight: 500;
+                  border-radius: 6px;
+                  background-color: transparent; color: #374151;
+                  border: none;
+                  cursor: pointer;
+                  transition: all 0.2s ease;
+                "
+                onmouseover="if (!false) { this.style.backgroundColor='#f3f4f6'; this.style.boxShadow='0 1px 2px rgba(0,0,0,0.05)'; }"
+                onmouseout="if (!false) { this.style.backgroundColor='transparent'; this.style.boxShadow='none'; }"
+        >
+          <span>Job</span>
+        </button>
+              </div>
+            </div>
+          
+      </div>
+    </nav>
     <main>
-        <div class="empty-page"><h1>Welcome to this page</h1><p>Content is being updated.</p></div>
+        <div class="division division-1" id="division-1763397234115" style="position: relative; width: 100%; box-sizing: border-box; min-height: 450px; padding: 24px; ; display: block; clear: both; overflow: hidden;"><div class="segment segment-0" id="segment-1763397234218-0" style="position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center;left: 25%;top: 50%;transform: translate(-50%, -50%);width: 400px;height: 300px;"></div><div class="segment segment-1" id="segment-1763397234218-1" style="position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center;left: 77.44303385416667%;top: 48.28515625%;transform: translate(-50%, -50%);width: 407px;height: 229px;"><div class="timer-feature" style="width: 407px; height: 229px;">
+      
+      <div id="timer-yboizr5ar" class="timer-container" style="
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 120px;
+      ">
+        <h3 style="color: #1f2937; font-family: Inter; margin: 0 0 16px 0; text-align: center;">Timer</h3>
+        
+        <div id="timer-yboizr5ar-clock-display">
+          
+          <div style="text-align: center; background-color: #fdf6e3; padding: 12px; border-radius: 2px; border: 2px solid #eee8d5; width: 160px; box-shadow: 2px 2px 8px rgba(0,0,0,0.15); transform: rotate(-1deg);">
+            <div id="timer-yboizr5ar-paper" style="font-size: 18px; font-weight: 400; color: #586e75; font-family: serif; letter-spacing: 1px;">2:34 PM</div>
+            <div style="font-size: 8px; color: #839496; text-transform: uppercase;">Paper Clock</div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <script>
+        (function() {
+          let clockIntervaltimeryboizr5ar;
+          
+          function updateClocktimeryboizr5ar() {
+            const now = new Date();
+            const timeString12 = now.toLocaleTimeString('en-US', { hour12: true, hour: 'numeric', minute: '2-digit' });
+            const timeString24 = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
+            const timeStringWithSeconds = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit', fractionalSecondDigits: 3 });
+            const dateString = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' });
+            
+            
+          const clockEl = document.getElementById('timer-yboizr5ar-paper');
+          if (clockEl) clockEl.textContent = timeString12;
+        
+          }
+          
+          function startClocktimeryboizr5ar() {
+            updateClocktimeryboizr5ar();
+            clockIntervaltimeryboizr5ar = setInterval(updateClocktimeryboizr5ar, 1000);
+          }
+          
+          function stopClocktimeryboizr5ar() {
+            if (clockIntervaltimeryboizr5ar) {
+              clearInterval(clockIntervaltimeryboizr5ar);
+            }
+          }
+          
+          // Start clock when page loads
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', startClocktimeryboizr5ar);
+          } else {
+            startClocktimeryboizr5ar();
+          }
+          
+          // Cleanup when page unloads
+          window.addEventListener('beforeunload', stopClocktimeryboizr5ar);
+        })();
+      </script>
+    
+    
+    </div></div></div>
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1763396093700;
-        const CURRENT_BUILD_VERSION = 2771;
+        const CURRENT_BUILD_TIMESTAMP = 1763408164185;
+        const CURRENT_BUILD_VERSION = 2783;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -106,7 +298,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener("DOMContentLoaded", function() {
-            console.log("wyerdcard.net - About page loaded (build: 1763396093700)");
+            console.log("wyerdcard.net - About page loaded (build: 1763408164185)");
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
