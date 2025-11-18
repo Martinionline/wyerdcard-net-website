@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1763476692966">
-    <meta name="build-version" content="2824">
+    <meta name="build-timestamp" content="1763480074778">
+    <meta name="build-version" content="2858">
     <!-- Production-ready Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=1763476692966">
+    <link rel="stylesheet" href="styles.css?v=1763480074778">
     <!-- Google Maps API with proper async loading -->
     <script>
       function initGoogleMaps() {
@@ -189,7 +189,7 @@
     <main>
         <div class="division division-1" id="division-1763397234115" style="position: relative; width: 100%; box-sizing: border-box; min-height: 450px; padding: 24px; ; display: block; clear: both; overflow: hidden;"><div class="segment segment-0" id="segment-1763397234218-0" style="position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center;left: 25%;top: 50%;transform: translate(-50%, -50%);width: 400px;height: 300px;"></div><div class="segment segment-1" id="segment-1763397234218-1" style="position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center;left: 76.82887200445569%;top: 48.16015625%;transform: translate(-50%, -50%);width: 424px;height: 228px;"><div class="timer-feature" style="width: 424px; height: 228px;">
       
-      <div id="timer-g7f55ez3l" class="timer-container" style="
+      <div id="timer-i72x2vs2x" class="timer-container" style="
         width: 100%;
         height: 100%;
         display: flex;
@@ -197,14 +197,16 @@
         align-items: center;
         justify-content: center;
         min-height: 120px;
+        box-sizing: border-box;
+        position: relative;
       ">
-        <h3 style="color: #1f2937; font-family: Inter; margin: 0 0 16px 0; text-align: center;">Live Clock</h3>
+        <h3 style="color: #1f2937; font-family: Inter; margin: 0 0 1em 0; text-align: center; font-size: 1rem;">Live Clock</h3>
         
-        <div id="timer-g7f55ez3l-clock-display">
+        <div id="timer-i72x2vs2x-clock-display" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex: 1;">
           
-          <div style="text-align: center; background: linear-gradient(135deg, #c0c0c0 0%, #808080 50%, #a0a0a0 100%); padding: 12px; border-radius: 8px; border: 2px solid #999999; width: 200px; box-shadow: inset 0 2px 4px rgba(255,255,255,0.5), inset 0 -2px 4px rgba(0,0,0,0.3);">
-            <div id="timer-g7f55ez3l-metallic" style="font-size: 18px; font-weight: 700; color: #2c2c2c; text-shadow: 1px 1px 2px rgba(255,255,255,0.8); letter-spacing: 2px;">2:34 PM</div>
-            <div style="font-size: 8px; color: #4a4a4a; text-transform: uppercase;">Steel Clock</div>
+          <div style="text-align: center; background: linear-gradient(135deg, #c0c0c0 0%, #808080 50%, #a0a0a0 100%); padding: 3%; border-radius: 8px; border: 2px solid #999999; width: 100%; box-shadow: inset 0 2px 4px rgba(255,255,255,0.5), inset 0 -2px 4px rgba(0,0,0,0.3);">
+            <div id="timer-i72x2vs2x-metallic" style="font-size: 1.8rem; font-weight: 700; color: #2c2c2c; text-shadow: 1px 1px 2px rgba(255,255,255,0.8); letter-spacing: 2px;">2:34 PM</div>
+            <div style="font-size: 0.5rem; color: #4a4a4a; text-transform: uppercase;">Steel Clock</div>
           </div>
         </div>
       </div>
@@ -212,9 +214,9 @@
       
       <script>
         (function() {
-          let clockIntervaltimerg7f55ez3l;
+          let clockIntervaltimeri72x2vs2x;
           
-          function updateClocktimerg7f55ez3l() {
+          function updateClocktimeri72x2vs2x() {
             const now = new Date();
             const timeString12 = now.toLocaleTimeString('en-US', { hour12: true, hour: 'numeric', minute: '2-digit' });
             const timeString24 = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
@@ -222,31 +224,31 @@
             const dateString = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' });
             
             
-          const clockEl = document.getElementById('timer-g7f55ez3l-metallic');
+          const clockEl = document.getElementById('timer-i72x2vs2x-metallic');
           if (clockEl) clockEl.textContent = timeString12;
         
           }
           
-          function startClocktimerg7f55ez3l() {
-            updateClocktimerg7f55ez3l();
-            clockIntervaltimerg7f55ez3l = setInterval(updateClocktimerg7f55ez3l, 1000);
+          function startClocktimeri72x2vs2x() {
+            updateClocktimeri72x2vs2x();
+            clockIntervaltimeri72x2vs2x = setInterval(updateClocktimeri72x2vs2x, 1000);
           }
           
-          function stopClocktimerg7f55ez3l() {
-            if (clockIntervaltimerg7f55ez3l) {
-              clearInterval(clockIntervaltimerg7f55ez3l);
+          function stopClocktimeri72x2vs2x() {
+            if (clockIntervaltimeri72x2vs2x) {
+              clearInterval(clockIntervaltimeri72x2vs2x);
             }
           }
           
           // Start clock when page loads
           if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', startClocktimerg7f55ez3l);
+            document.addEventListener('DOMContentLoaded', startClocktimeri72x2vs2x);
           } else {
-            startClocktimerg7f55ez3l();
+            startClocktimeri72x2vs2x();
           }
           
           // Cleanup when page unloads
-          window.addEventListener('beforeunload', stopClocktimerg7f55ez3l);
+          window.addEventListener('beforeunload', stopClocktimeri72x2vs2x);
         })();
       </script>
     
@@ -255,8 +257,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1763476692966;
-        const CURRENT_BUILD_VERSION = 2824;
+        const CURRENT_BUILD_TIMESTAMP = 1763480074778;
+        const CURRENT_BUILD_VERSION = 2858;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -298,7 +300,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener("DOMContentLoaded", function() {
-            console.log("wyerdcard.net - About page loaded (build: 1763476692966)");
+            console.log("wyerdcard.net - About page loaded (build: 1763480074778)");
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
