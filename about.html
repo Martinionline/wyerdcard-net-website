@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - wyerdcard.net</title>
-    <meta name="build-timestamp" content="1763427760102">
-    <meta name="build-version" content="2788">
+    <meta name="build-timestamp" content="1763428741151">
+    <meta name="build-version" content="2789">
     <!-- Production-ready Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=1763427760102">
+    <link rel="stylesheet" href="styles.css?v=1763428741151">
     <!-- Google Maps API with proper async loading -->
     <script>
       function initGoogleMaps() {
@@ -189,7 +189,7 @@
     <main>
         <div class="division division-1" id="division-1763397234115" style="position: relative; width: 100%; box-sizing: border-box; min-height: 450px; padding: 24px; ; display: block; clear: both; overflow: hidden;"><div class="segment segment-0" id="segment-1763397234218-0" style="position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center;left: 25%;top: 50%;transform: translate(-50%, -50%);width: 400px;height: 300px;"></div><div class="segment segment-1" id="segment-1763397234218-1" style="position: absolute; box-sizing: border-box; display: flex; align-items: center; justify-content: center;left: 77.44303385416667%;top: 48.28515625%;transform: translate(-50%, -50%);width: 407px;height: 229px;"><div class="timer-feature" style="width: 407px; height: 229px;">
       
-      <div id="timer-pgdr1bvvh" class="timer-container" style="
+      <div id="timer-9lgfjzk27" class="timer-container" style="
         width: 100%;
         height: 100%;
         display: flex;
@@ -200,10 +200,10 @@
       ">
         <h3 style="color: #1f2937; font-family: Inter; margin: 0 0 16px 0; text-align: center;">Timer</h3>
         
-        <div id="timer-pgdr1bvvh-clock-display">
+        <div id="timer-9lgfjzk27-clock-display">
           
           <div style="text-align: center; background-color: #fdf6e3; padding: 12px; border-radius: 2px; border: 2px solid #eee8d5; width: 160px; box-shadow: 2px 2px 8px rgba(0,0,0,0.15); transform: rotate(-1deg);">
-            <div id="timer-pgdr1bvvh-paper" style="font-size: 18px; font-weight: 400; color: #586e75; font-family: serif; letter-spacing: 1px;">2:34 PM</div>
+            <div id="timer-9lgfjzk27-paper" style="font-size: 18px; font-weight: 400; color: #586e75; font-family: serif; letter-spacing: 1px;">2:34 PM</div>
             <div style="font-size: 8px; color: #839496; text-transform: uppercase;">Paper Clock</div>
           </div>
         </div>
@@ -212,9 +212,9 @@
       
       <script>
         (function() {
-          let clockIntervaltimerpgdr1bvvh;
+          let clockIntervaltimer9lgfjzk27;
           
-          function updateClocktimerpgdr1bvvh() {
+          function updateClocktimer9lgfjzk27() {
             const now = new Date();
             const timeString12 = now.toLocaleTimeString('en-US', { hour12: true, hour: 'numeric', minute: '2-digit' });
             const timeString24 = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
@@ -222,31 +222,31 @@
             const dateString = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' });
             
             
-          const clockEl = document.getElementById('timer-pgdr1bvvh-paper');
+          const clockEl = document.getElementById('timer-9lgfjzk27-paper');
           if (clockEl) clockEl.textContent = timeString12;
         
           }
           
-          function startClocktimerpgdr1bvvh() {
-            updateClocktimerpgdr1bvvh();
-            clockIntervaltimerpgdr1bvvh = setInterval(updateClocktimerpgdr1bvvh, 1000);
+          function startClocktimer9lgfjzk27() {
+            updateClocktimer9lgfjzk27();
+            clockIntervaltimer9lgfjzk27 = setInterval(updateClocktimer9lgfjzk27, 1000);
           }
           
-          function stopClocktimerpgdr1bvvh() {
-            if (clockIntervaltimerpgdr1bvvh) {
-              clearInterval(clockIntervaltimerpgdr1bvvh);
+          function stopClocktimer9lgfjzk27() {
+            if (clockIntervaltimer9lgfjzk27) {
+              clearInterval(clockIntervaltimer9lgfjzk27);
             }
           }
           
           // Start clock when page loads
           if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', startClocktimerpgdr1bvvh);
+            document.addEventListener('DOMContentLoaded', startClocktimer9lgfjzk27);
           } else {
-            startClocktimerpgdr1bvvh();
+            startClocktimer9lgfjzk27();
           }
           
           // Cleanup when page unloads
-          window.addEventListener('beforeunload', stopClocktimerpgdr1bvvh);
+          window.addEventListener('beforeunload', stopClocktimer9lgfjzk27);
         })();
       </script>
     
@@ -255,8 +255,8 @@
     </main>
     <script>
         // Cache busting and auto-refresh mechanism
-        const CURRENT_BUILD_TIMESTAMP = 1763427760102;
-        const CURRENT_BUILD_VERSION = 2788;
+        const CURRENT_BUILD_TIMESTAMP = 1763428741151;
+        const CURRENT_BUILD_VERSION = 2789;
         
         // Check for updates every 30 seconds when page is visible
         let updateCheckInterval;
@@ -298,7 +298,7 @@
         
         // Start checking for updates when page loads
         document.addEventListener("DOMContentLoaded", function() {
-            console.log("wyerdcard.net - About page loaded (build: 1763427760102)");
+            console.log("wyerdcard.net - About page loaded (build: 1763428741151)");
             
             // Check for updates immediately and then every 30 seconds
             checkForUpdates();
